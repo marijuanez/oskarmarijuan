@@ -1,335 +1,784 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <title>Marijuanez Portal</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="description" content="Template by Dry Themes" />
-        <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
-        <meta name="author" content="Marijuanez" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 
-        <link rel="shortcut icon" href="images/favicon.png" />    
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700' rel='stylesheet' type='text/css'>		
-        <link rel="stylesheet" type="text/css"  href='css/clear.css' />
-        <link rel="stylesheet" type="text/css"  href='css/common.css' />
-        <link rel="stylesheet" type="text/css"  href='css/font-awesome.min.css' />
-        <link rel="stylesheet" type="text/css"  href='css/carouFredSel.css' />
-        <link rel="stylesheet" type="text/css"  href='css/prettyPhoto.css' />        
-        <link rel="stylesheet" type="text/css"  href='css/sm-clean.css' />        
-        <link rel="stylesheet" type="text/css"  href='style.css' />
-        <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Oskar Marijuan</title>
+    <meta name="description" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
 
-        <!--[if lt IE 9]>
-                <script src="js/html5shiv.js"></script>                
-                <script src="js/respond.min.js"></script>                
-        <![endif]-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
-    </head>
-    <body class="page">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', "sans-serif"],
+                    },
+                    colors: {
+                        anthracite: {
+                            50: "#f6f7f9",
+                            100: "#eceef2",
+                            200: "#dce1e9",
+                            300: "#c4cddb",
+                            400: "#a6b3c9",
+                            500: "#8696b3",
+                            600: "#687999",
+                            700: "#54637f",
+                            800: "#465166",
+                            850: "#353c4b",
+                            900: "#282d37",
+                            950: "#1a1d23",
+                        },
+                        accent: {
+                            400: "#38bdf8",
+                            500: "#0ea5e9",
+                            600: "#0284c7",
+                        },
+                    },
+                },
+            },
+        };
+    </script>
 
-        <table class="doc-loader">
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="images/ajax-document-loader.gif" alt="Loading...">                    
-                    </td>
-                </tr>
-            </tbody>
-        </table>   
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
 
-        <div class="header-search">
-            <div class="content-1330 center-relative">
-                <form class="search-form">
-                    <label>		
-                        <input type="search" class="search-field" placeholder="Search ..." value="" name="s" title="Search for:">                        
-                    </label>    
-                </form>               
-            </div>
-        </div>
+        ::-webkit-scrollbar-track {
+            background: #1a1d23;
+        }
 
+        ::-webkit-scrollbar-thumb {
+            background: #465166;
+            border-radius: 5px;
+            border: 2px solid #1a1d23;
+        }
 
-        <div class="body-wrapper">           
-            <div class="content-1330 header-holder center-relative">
-                <div class="header-logo left">
+        ::-webkit-scrollbar-thumb:hover {
+            background: #54637f;
+        }
 
-                    <h1 class="site-title">
-                        <a href="index.html">
-                            <img src="images/sunDefaultLogo.png" alt="Sun-">
-                        </a>               
-                    </h1>
+        body {
+            background-color: #1a1d23;
+            color: #e2e8f0;
+        }
 
+        .glass {
+            background: rgba(40, 45, 55, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(53, 60, 75, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(53, 60, 75, 0.6);
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-filter.active {
+            color: #38bdf8;
+            border-bottom-color: #38bdf8;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-accent-500 selection:text-white overflow-x-hidden">
+    <!-- Navbar / Filter Menu -->
+    <nav class="fixed w-full z-50 top-0 glass transition-all duration-300 border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.location.href='index.html'">
+                    <span class="text-2xl font-extrabold tracking-tighter text-white">OSKAR<span
+                            class="text-accent-400">MARIJUAN</span></span>
                 </div>
 
-                <div class="header-menu right">
-                    <nav id="header-main-menu" class="left">
-                        <ul class="main-menu sm sm-clean">
-                            <li>
-                                <a href="index.html">Home</a>
-                                <!--<ul class="sub-menu">
-                                   <li>
-                                        <a href="index-image.html">Home & Image</a>
-                                    </li>
-                                </ul>-->
-                                </li>
-                                <li>
-                                    <a href="portfolio.html">Portfolio</a>
-                                </li> 
-                                <li>
-                                    <a href="about.html">Biography </a>
-                                    </li>       
-                                <li>
-                                <a href="contact.html">Contact</a>
-                                </li>
-                        </ul>
-                    </nav>
-                    
-                    						
-                </div>
-                <div class="clear"></div>
-            </div>
-
-            <div id="content" class="site-content">
-                <article>
-                    <div class="content-1330 center-relative">
-                        <div class="page-desc">
-                            <b>Oskar Marijuan</b> is a Basque artist born in <b>Bilbao</b> area in the 1973’s.  At a early age he starts practicing drawing and distinguishes himself thanks to his bright, rebellious and creative mind.
-                         </div>
-                        <div class="clear"></div>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <div class="button-group filters-button-group">
-                            <div class="button is-checked" data-filter="*">All</div>
-                            <div class="button" data-filter=".image">Painting</div>
-                            <div class="button" data-filter=".mockups">Mockups</div> 
-                            <div class="button" data-filter=".pictures">Pictures</div>
-                            <div class="button" data-filter=".drawing">Drawing</div> 
-                                                          
-                        </div>
-                        <div class="grid" id="portfolio">
-                            <div class="grid-sizer"></div>
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/sun_portfolio_image01.jpg">
-                                    <img src="demo-images/sun_portfolio_image01.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>La señora del sombrero</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/sun_portfolio_image03.jpg">
-                                    <img src="demo-images/sun_portfolio_image03.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Beso enamorado</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/sun_item_image02.jpg">
-                                    <img src="demo-images/sun_item_image02.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Narcisista</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/sun_portfolio_image02.jpg">
-                                    <img src="demo-images/sun_portfolio_image02.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Elegantina</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/sun_portfolio_image13.jpg">
-                                    <img src="demo-images/sun_portfolio_image13.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>La bella en la playa</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third image">
-                                <a href="demo-images/home_img_01.jpg">
-                                    <img src="demo-images/home_img_01.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>La mirada</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="grid-item element-item p_one_third drawing">
-                                <a href="demo-images/sun_portfolio_image10.jpg">
-                                    <img src="demo-images/sun_portfolio_image10.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Adolescente sentada</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third drawing">
-                                <a href="demo-images/sun_portfolio_image11.jpg">
-                                    <img src="demo-images/sun_portfolio_image11.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>La mujer del paraguas</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/sun_portfolio_image04.jpg">
-                                    <img src="demo-images/sun_portfolio_image04.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="grid-item element-item p_one_third drawing">
-                                <a href="demo-images/sun_portfolio_image12.jpg">
-                                    <img src="demo-images/sun_portfolio_image12.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/sun_portfolio_image05.jpg">
-                                    <img src="demo-images/sun_portfolio_image05.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/sun_portfolio_image6.jpg">
-                                    <img src="demo-images/sun_portfolio_image6.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/sun_portfolio_image7.jpg">
-                                    <img src="demo-images/sun_portfolio_image7.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/sun_portfolio_image8.jpg">
-                                    <img src="demo-images/sun_portfolio_image8.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/home_img_03.jpg">
-                                    <img src="demo-images/home_img_03.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid-item element-item p_one_third pictures">
-                                <a href="demo-images/home_img_02.jpg">
-                                    <img src="demo-images/home_img_02.jpg" alt="">
-                                    <div class="portfolio-text-holder">
-                                        <p>Hombre guapo</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div>
-                        <div class="clear"></div>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <div class="one_half">
-                            <p>
-                                <strong>The Story</strong>
-                                <br>
-                                In fact, he was forced by his father to study Graphic Arts.
-                                He went to work on it without having finished the professional training cycle.
-                                Displaying a strong interest and skills in graphic design and photography. 
-                                In what has become a calm and peaceful space, he organizes himself an unusual and secluded universe where he acquires photographs, drawings, paintings, collages and other artistic creations.</p>
-                        </div>
-                        <div class="one_half last">
-                            <p>
-                                <strong>Career</strong>
-                                <br>
-                                After having lived in Bilbao, Tenerife, London, Madrid and finally in Munich, sometimes without being able to enjoy the passion for painting for reasons of space or work that as a Webmaster he has been developing in his life.
-                                In what has become a calm and peaceful space, he organizes himself an unusual and secluded universe where he acquires photographs, drawings, paintings and other artistic creations.
-                                  </p>
-                            <p>&nbsp;</p>                            
-                            <div class="text-left">
-                                <a href="images/cv.pdf" target="_blank" class="button ">CV Download</a>
-                            </div>                        
-                        </div>
-                        <!--<div class="clear"></div>-->
+                <!-- Desktop Menu Filters -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <button
+                            class="nav-filter active text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="all">Todos</button>
+                        <button
+                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="web">Web & Landings</button>
+                        <button
+                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="email">Email</button>
+                        <button
+                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="assets">Activos & Diseño</button>
+                        <button
+                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="wireframes">Wireframes</button>
                     </div>
-                </article>
-            </div>
-
-            <!--Footer-->
-
-            <footer class="footer">
-                <div class="content-1330 center-relative">			
-                    <ul>
-                        <li class="left-footer-content">
-                            © 2021 <i class="fa fa-heart"></i>by <a href="https://marijuanez.web.app/">Marijuanez</a>.            
-                        </li>
-                        <li class="center-footer-content">                
-                            <a href="index.html">
-                                <img src="images/sunDefaultLogoFooter.png" alt="Sun-">
-                            </a>                
-                        </li>
-                        <li class="right-footer-contnet">
-                            <a href="https://marijuanez.github.io/profile/">Github</a>
-                            <a href="https://twitter.com/oskarm37286484">Twitter</a>
-                            <a href="https://www.linkedin.com/in/oscarmarijuan/">Linkedin</a>
-                            <a href="https://dribbble.com/marijuan">Dribbble</a>
-                            <a href="https://www.instagram.com/oskarmarijuan/">Instagram</a>            
-                        </li>
-                        <li class="left-footer-content mobile">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://marijuanez.web.app/" target="_blank">Marijuanez</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </li>
-                    </ul>
                 </div>
-            </footer>
 
-            <!-- End .body-border -->
+                <!-- Right Actions -->
+                <div class="hidden md:block">
+                    <a href="index.html"
+                        class="text-gray-400 hover:text-white text-sm font-medium transition-colors flex items-center gap-1">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Perfil
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-anthracite-900 border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="all" onclick="toggleMenu()">Todos</button>
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="web" onclick="toggleMenu()">Web & Landings</button>
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="email" onclick="toggleMenu()">Email</button>
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="assets" onclick="toggleMenu()">Activos & Diseño</button>
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="wireframes" onclick="toggleMenu()">Wireframes</button>
+                <div class="border-t border-gray-700 mt-2 pt-2">
+                    <a href="index.html" class="block px-3 py-2 text-accent-400 font-bold">Volver al Perfil</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Compact -->
+    <section class="pt-32 pb-8 bg-anthracite-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('images/hero-bg.png')] bg-cover bg-center opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4" data-aos="fade-down">
+                Portfolio <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-8 bg-anthracite-950 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+
+                <!-- ROBUR Video (Top Item) -->
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/robur_video.mp4" class="glightbox" data-title="ROBUR Video"
+                            data-description="Video corporativo ROBUR">
+                            <img src="images/portfolio/robur_spie.png" alt="ROBUR Video"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="play-circle"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">ROBUR Video</h3>
+                        <p class="text-sm text-accent-400">Corporate Video</p>
+                    </div>
+                </div>
+
+                <!-- Web Items -->
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/RS_1.png" class="glightbox" data-title="RS Components Web"
+                            data-description="Desarrollo web y optimización UX para RS Components">
+                            <img src="images/portfolio/RS_1.png" alt="RS Components"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">RS Components</h3>
+                                <p class="text-sm text-accent-400">Web Development</p>
+                            </div>
+                            <a href="https://es.rs-online.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/rs_landing.png" class="glightbox" data-title="RS Landing Page"
+                            data-description="Diseño de Landing Page para campañas de conversión">
+                            <img src="images/portfolio/rs_landing.png" alt="RS Landing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">RS Landing Page</h3>
+                                <p class="text-sm text-accent-400">Campaign Landing</p>
+                            </div>
+                            <a href="https://uk.rs-online.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/fossil.png" class="glightbox" data-title="Fossil Group"
+                            data-description="Diseño digital y newsletters para Fossil Group">
+                            <img src="images/portfolio/fossil.png" alt="Fossil"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Fossil Group</h3>
+                                <p class="text-sm text-accent-400">Newsletter & Web</p>
+                            </div>
+                            <a href="https://www.fossilgroup.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/armani.png" class="glightbox" data-title="Armani Exchange"
+                            data-description="Activos de campaña para Armani Exchange">
+                            <img src="images/portfolio/armani.png" alt="Armani"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Armani Exchange</h3>
+                                <p class="text-sm text-accent-400">Campaign Assets</p>
+                            </div>
+                            <a href="https://www.armaniexchange.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/skagen.png" class="glightbox" data-title="Skagen Denmark"
+                            data-description="Diseño de Microsite para Skagen">
+                            <img src="images/portfolio/skagen.png" alt="Skagen"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Skagen Denmark</h3>
+                                <p class="text-sm text-accent-400">Microsite Design</p>
+                            </div>
+                            <a href="https://www.skagen.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/cervantes.png" class="glightbox" data-title="Instituto Cervantes"
+                            data-description="Diseño Web Corporativo">
+                            <img src="images/portfolio/cervantes.png" alt="Cervantes"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Instituto Cervantes</h3>
+                                <p class="text-sm text-accent-400">Web Design</p>
+                            </div>
+                            <a href="https://www.cervantes.es/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/muntxos.png" class="glightbox" data-title="Muntxos"
+                            data-description="Proyecto Wordpress Integral">
+                            <img src="images/portfolio/muntxos.png" alt="Muntxos"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Muntxos</h3>
+                                <p class="text-sm text-accent-400">Wordpress Project</p>
+                            </div>
+                            <button disabled class="p-2 bg-anthracite-900 rounded-lg text-gray-600 cursor-not-allowed"
+                                title="Offline">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW ITEMS -->
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/ferreiro.png" class="glightbox" data-title="Joyeria Ferreiros"
+                            data-description="Diseño Web Corporativo">
+                            <img src="images/portfolio/ferreiro.png" alt="Joyeria Ferreiros"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Joyeria Ferreiros</h3>
+                                <p class="text-sm text-accent-400">Web Design</p>
+                            </div>
+                            <a href="https://joyeriaferreiros.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/fm.png" class="glightbox" data-title="FM Control"
+                            data-description="Web Corporativa">
+                            <img src="images/portfolio/fm.png" alt="FM Control"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">FM Control</h3>
+                                <p class="text-sm text-accent-400">Web Corporativa</p>
+                            </div>
+                            <a href="https://fmcontrol.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/peter.png" class="glightbox" data-title="Peter Kuett"
+                            data-description="Website Personal">
+                            <img src="images/portfolio/peter.png" alt="Peter Kuett"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Peter Kuett</h3>
+                                <p class="text-sm text-accent-400">Personal Website</p>
+                            </div>
+                            <a href="https://www.peter-kuett.org/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/marijuanez_wp.png" class="glightbox" data-title="Oskar Marijuan"
+                            data-description="Portfolio Legacy">
+                            <img src="images/portfolio/marijuanez_wp.png" alt="Oskar Marijuan"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Oskar Marijuan</h3>
+                                <p class="text-sm text-accent-400">Legacy Portfolio</p>
+                            </div>
+                            <a href="https://oskar-marijuan.web.app/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/gulp.png" class="glightbox" data-title="Gulp Project"
+                            data-description="SalesForce Project">
+                            <img src="images/portfolio/gulp.png" alt="Gulp Project"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Gulp Project</h3>
+                                <p class="text-sm text-accent-400">SalesForce Project</p>
+                            </div>
+                            <button disabled class="p-2 bg-anthracite-900 rounded-lg text-gray-600 cursor-not-allowed"
+                                title="No link available">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/sgi.png" class="glightbox" data-title="SGI"
+                            data-description="Web Corporativa SGI">
+                            <img src="images/portfolio/sgi.png" alt="SGI"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">SGI</h3>
+                        <p class="text-sm text-accent-400">Corporate Web</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/peak.png" class="glightbox" data-title="Peak Performance"
+                            data-description="E-commerce y UI para Peak Performance">
+                            <img src="images/portfolio/peak.png" alt="Peak"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Peak Performance</h3>
+                                <p class="text-sm text-accent-400">E-commerce</p>
+                            </div>
+                            <a href="https://www.peakperformance.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item wireframes glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/cost.png" class="glightbox" data-title="Cost Controller"
+                            data-description="Dashboard de Costes UI - Wireframe">
+                            <img src="images/portfolio/cost.png" alt="Cost"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Cost Controller</h3>
+                        <p class="text-sm text-accent-400">Dashboard Wireframe</p>
+                    </div>
+                </div>
+
+                <!-- Email Items -->
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/RS_email.png" class="glightbox" data-title="Email Campaigns"
+                            data-description="Campañas automatizadas de Email Marketing">
+                            <img src="images/portfolio/RS_email.png" alt="RS Email"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Email Campaigns</h3>
+                        <p class="text-sm text-accent-400">Automated Newsletter</p>
+                    </div>
+                </div>
+
+                <!-- Assets / Design -->
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/883X885_master.png" class="glightbox" data-title="Master Design Asset"
+                            data-description="Sistema de diseño maestro">
+                            <img src="images/portfolio/883X885_master.png" alt="Master Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Master Design Asset</h3>
+                        <p class="text-sm text-accent-400">Design System</p>
+                    </div>
+                </div>
 
 
-        <!--Load JavaScript-->
-        <script src="js/jquery.js"></script>			                                       
-        <script src='js/jquery.fitvids.js'></script>
-        <script src='js/jquery.smartmenus.min.js'></script>        
-        <script src='js/imagesloaded.pkgd.js'></script>        
-        <script src='js/isotope.pkgd.js'></script>        
-        <script src='js/jquery.carouFredSel-6.0.0-packed.js'></script>
-        <script src='js/jquery.mousewheel.min.js'></script>
-        <script src='js/jquery.touchSwipe.min.js'></script>
-        <script src='js/jquery.easing.1.3.js'></script>
-        <script src='js/jquery.prettyPhoto.js'></script>        
-        <script src='js/jquery.ba-throttle-debounce.min.js'></script>                
-        <script src='js/jquery.nicescroll.min.js'></script>
-        <script src='js/main.js'></script>
-        </body>
+
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/marijanez_mac.png" class="glightbox" data-title="Device Mockups"
+                            data-description="Presentación en dispositivos">
+                            <img src="images/portfolio/marijanez_mac.png" alt="Mockups"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Device Mockups</h3>
+                        <p class="text-sm text-accent-400">Presentation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/purchasing.png" class="glightbox" data-title="Purchasing System"
+                            data-description="Diseño UI de Sistema de Compras">
+                            <img src="images/portfolio/purchasing.png" alt="Purchasing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Purchasing System</h3>
+                        <p class="text-sm text-accent-400">UI Wireframe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-anthracite-950 border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <span class="text-xl font-extrabold tracking-tighter text-white">OSKAR<span
+                        class="text-accent-400">MARIJUAN</span></span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">
+                Designed in California made by Oskar Marijuan
+            </p>
+            <p class="text-gray-600 text-xs">
+                &copy; 2025 Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // Initialize Lightbox
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+
+        // Filter Logic
+        const filterBtns = document.querySelectorAll('.nav-filter');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        function filterItems(filterValue) {
+            items.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                    item.classList.add('block');
+                } else {
+                    item.classList.remove('block');
+                    item.classList.add('hidden');
+                }
+            });
+            // Re-layout Layout if using Masonry? (Not using masonry here, CSS Grid deals with hidden items well, but we should animate)
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+                filterItems(filterValue);
+            });
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        }
+
+        // 3D Tilt Effect
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+    </script>
+</body>
+
 </html>

@@ -1,183 +1,1778 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <title>Marijuanez Portal</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="description" content="Template by Marijuanez" />
-        <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
-        <meta name="author" content="Marijuanez" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 
-        <link rel="shortcut icon" href="images/favicon.png" />    
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CPT+Serif:400,700' rel='stylesheet' type='text/css'>		
-        <link rel="stylesheet" type="text/css"  href='css/clear.css' />
-        <link rel="stylesheet" type="text/css"  href='css/common.css' />
-        <link rel="stylesheet" type="text/css"  href='css/font-awesome.min.css' />
-        <link rel="stylesheet" type="text/css"  href='css/carouFredSel.css' />
-        <link rel="stylesheet" type="text/css"  href='css/prettyPhoto.css' />        
-        <link rel="stylesheet" type="text/css"  href='css/sm-clean.css' />        
-        <link rel="stylesheet" type="text/css"  href='style.css' />
-        <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oskar Marijuan | Senior AI Designer & DesignOps Lead</title>
+    <meta name="description" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
 
-        <!--[if lt IE 9]>
-                <script src="js/html5shiv.js"></script>                
-                <script src="js/respond.min.js"></script>                
-        <![endif]-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    </head>
-    <body class="page">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', "sans-serif"],
+                    },
+                    colors: {
+                        anthracite: {
+                            50: "#f6f7f9",
+                            100: "#eceef2",
+                            200: "#dce1e9",
+                            300: "#c4cddb",
+                            400: "#a6b3c9",
+                            500: "#8696b3",
+                            600: "#687999",
+                            700: "#54637f",
+                            800: "#465166", // Lighter Anthracite
+                            850: "#353c4b", // Base Card
+                            900: "#282d37", // Base Background
+                            950: "#1a1d23", // Deepest Anthracite
+                        },
+                        accent: {
+                            400: "#38bdf8", // Sky Blue
+                            500: "#0ea5e9", // Sky Blue Darker
+                            600: "#0284c7",
+                        },
+                        gold: {
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                        },
+                    },
+                    animation: {
+                        blob: "blob 7s infinite",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": {
+                                transform: "translate(0px, 0px) scale(1)",
+                            },
+                            "33%": {
+                                transform: "translate(30px, -50px) scale(1.1)",
+                            },
+                            "66%": {
+                                transform: "translate(-20px, 20px) scale(0.9)",
+                            },
+                            "100%": {
+                                transform: "translate(0px, 0px) scale(1)",
+                            },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
 
-        <table class="doc-loader">
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="images/ajax-document-loader.gif" alt="Loading...">                    
-                    </td>
-                </tr>
-            </tbody>
-        </table>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
 
-        <div class="header-search">
-            <div class="content-1330 center-relative">
-                <form class="search-form">
-                    <label>		
-                        <input type="search" class="search-field" placeholder="Search ..." value="" name="s" title="Search for:">                        
-                    </label>    
-                </form>               
-            </div>
-        </div>
+        ::-webkit-scrollbar-track {
+            background: #1a1d23;
+        }
 
+        ::-webkit-scrollbar-thumb {
+            background: #465166;
+            border-radius: 5px;
+            border: 2px solid #1a1d23;
+        }
 
-        <div class="body-wrapper">           
-            <div class="content-1330 header-holder center-relative">
-                <div class="header-logo left">
+        ::-webkit-scrollbar-thumb:hover {
+            background: #54637f;
+        }
 
-                    <h1 class="site-title">
-                        <a href="index.html">
-                            <img src="images/sunDefaultLogo.png" alt="Sun-">
-                        </a>               
-                    </h1>
+        body {
+            background-color: #1a1d23;
+            color: #e2e8f0;
+        }
 
+        /* Glassmorphism */
+        .glass {
+            background: rgba(40, 45, 55, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(53, 60, 75, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.1s ease;
+            /* Speed up for tilt effect */
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .glass-card:hover {
+            background: rgba(53, 60, 75, 0.6);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 3D Content Helper */
+        .glass-content {
+            transform: translateZ(20px);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #38bdf8, #1a1d23);
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Portfolio Filter Styles */
+        .portfolio-filter.active {
+            color: #38bdf8;
+            border-bottom-color: #38bdf8;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-accent-500 selection:text-white overflow-x-hidden">
+    <nav class="fixed w-full z-50 top-0 glass transition-all duration-300 border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-extrabold tracking-tighter text-white">OSKAR<span
+                            class="text-accent-400">MARIJUAN</span></span>
                 </div>
 
-                <div class="header-menu right">
-                    <nav id="header-main-menu" class="left">
-                        <ul class="main-menu sm sm-clean">
-                            <li>
-                                <a href="index.html">Home</a>
-                                <!--<ul class="sub-menu">
-                                   <li>
-                                        <a href="index-image.html">Home & Image</a>
-                                    </li>
-                                </ul>-->
-                                </li>
-                                <li>
-                                    <a href="portfolio.html">Portfolio</a>
-                                </li> 
-                                <li>
-                                    <a href="about.html">Biography </a>
-                                    </li>       
-                                <li>
-                                <a href="contact.html">Contact</a>
-                                </li>
-                        </ul>
-                    </nav>
-                    
-                    						
-                </div>
-                <div class="clear"></div>
-            </div>
-
-            <div id="content" class="site-content">
-                <article>
-                    <div class="content-1330 center-relative">
-                        <div class="page-desc">
-                            <b>Oskar Marijuan</b> is a Basque artist born in <b>Bilbao</b> area in the 1973’s.  At a early age he starts practicing drawing and distinguishes himself thanks to his bright, rebellious and creative mind.
-                         </div>
-                        <div class="clear"></div>
-                        <p>&nbsp;</p>
-                        <div class="content-1530 center-relative block">
-                            <img src="demo-images/sun_portfolio_image14.jpg" alt="">
-                        </div>
-
-
-
-                        
-                        <div class="clear"></div>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <div class="one_half">
-                            <p>
-                                <strong>The Story</strong>
-                                <br>
-                                In fact, he was forced by his father to study Graphic Arts.
-                                He went to work on it without having finished the professional training cycle.
-                                Displaying a strong interest and skills in graphic design and photography. 
-                                In what has become a calm and peaceful space, he organizes himself an unusual and secluded universe where he acquires photographs, drawings, paintings, collages and other artistic creations.</p>
-                        </div>
-                        <div class="one_half last">
-                            <p>
-                                <strong>Career</strong>
-                                <br>
-                                After having lived in Bilbao, Tenerife, London, Madrid and finally in Munich, sometimes without being able to enjoy the passion for painting for reasons of space or work that as a Webmaster he has been developing in his life.
-                                In what has become a calm and peaceful space, he organizes himself an unusual and secluded universe where he acquires photographs, drawings, paintings and other artistic creations.
-                                  </p>
-                            <p>&nbsp;</p>                            
-                            <p>&nbsp;</p> 
-                            <p>&nbsp;</p>                      
-                        </div>
-                        <!--<div class="clear"></div>-->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8" id="nav-links">
+                        <a href="#about"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-accent-400">Perfil</a>
+                        <a href="#skills"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-accent-400">Skills</a>
+                        <a href="#experience"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-accent-400">Experiencia</a>
+                        <a href="#portfolio"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-accent-400">Portfolio</a>
+                        <a href="#contact"
+                            class="bg-accent-600 hover:bg-accent-500 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-accent-900/20 transform hover:scale-105 active:scale-95">Contacto</a>
                     </div>
-                </article>
-            </div>
-
-            <!--Footer-->
-
-            <footer class="footer">
-                <div class="content-1330 center-relative">			
-                    <ul>
-                        <li class="left-footer-content">
-                            © 2021 <i class="fa fa-heart"></i>by <a href="https://marijuanez.web.app/">Marijuanez</a>.            
-                        </li>
-                        <li class="center-footer-content">                
-                            <a href="index.html">
-                                <img src="images/sunDefaultLogoFooter.png" alt="Sun-">
-                            </a>                
-                        </li>
-                        <li class="right-footer-contnet">
-                            <a href="https://marijuanez.github.io/profile/">Github</a>
-                            <a href="https://twitter.com/oskarm37286484">Twitter</a>
-                            <a href="https://www.linkedin.com/in/oscarmarijuan/">Linkedin</a>
-                            <a href="https://dribbble.com/marijuan">Dribbble</a>
-                            <a href="https://www.instagram.com/oskarmarijuan/">Instagram</a>            
-                        </li>
-                        <li class="left-footer-content mobile">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://marijuanez.web.app/" target="_blank">Marijuanez</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </li>
-                    </ul>
                 </div>
-            </footer>
 
-            <!-- End .body-border -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-anthracite-900 border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" onclick="toggleMenu()"
+                    class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Perfil</a>
+                <a href="#skills" onclick="toggleMenu()"
+                    class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" onclick="toggleMenu()"
+                    class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Experiencia</a>
+                <a href="portfolio.html" onclick="toggleMenu()"
+                    class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#contact" onclick="toggleMenu()"
+                    class="text-accent-400 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Video (User Requested) -->
+        <div
+            class="absolute inset-0 z-0 overflow-hidden flex items-center justify-center pointer-events-none bg-anthracite-950">
+            <div class="relative w-[90%] h-[90%] rounded-[2rem] overflow-hidden shadow-2xl border border-white/5">
+                <video id="hero-video" autoplay muted loop playsinline
+                    class="w-full h-full object-cover opacity-80 mix-blend-overlay">
+                    <source src="images/hero-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 bg-anthracite-950/50"></div> <!-- Overlay for text readability -->
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var video = document.getElementById('hero-video');
+                if (video) {
+                    video.playbackRate = 0.8;
+                }
+            });
+        </script>
+
+        <!-- Tech Grid Background (Video-like feel) -->
+        <div
+            class="absolute inset-0 z-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+        </div>
+
+        <!-- Scanline Overlay -->
+        <div
+            class="absolute inset-0 z-0 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay">
         </div>
 
 
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center h-full">
 
-        <!--Load JavaScript-->
-        <script src="js/jquery.js"></script>			                                       
-        <script src='js/jquery.fitvids.js'></script>
-        <script src='js/jquery.smartmenus.min.js'></script>        
-        <script src='js/imagesloaded.pkgd.js'></script>        
-        <script src='js/isotope.pkgd.js'></script>        
-        <script src='js/jquery.carouFredSel-6.0.0-packed.js'></script>
-        <script src='js/jquery.mousewheel.min.js'></script>
-        <script src='js/jquery.touchSwipe.min.js'></script>
-        <script src='js/jquery.easing.1.3.js'></script>
-        <script src='js/jquery.prettyPhoto.js'></script>        
-        <script src='js/jquery.ba-throttle-debounce.min.js'></script>                
-        <script src='js/jquery.nicescroll.min.js'></script>
-        <script src='js/main.js'></script>
-        </body>
+            <!-- Content: Text -->
+            <div class="max-w-4xl">
+                <div data-aos="fade-down"
+                    class="inline-block mb-4 px-4 py-1 rounded-full border border-gray-700 bg-gray-800/50 text-accent-400 text-xs font-semibold tracking-widest uppercase hover:bg-gray-700 transition-colors cursor-default backdrop-blur-sm">
+                    AI & Design Systems
+                </div>
+
+                <h1 data-aos="fade-up" data-aos-delay="100"
+                    class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight select-none">
+                    <span class="text-white">Digital</span>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Evolution</span><br />
+                    <span class="text-4xl md:text-6xl text-gray-400 font-bold">Digital Designer IA</span>
+                </h1>
+
+                <p data-aos="fade-up" data-aos-delay="200"
+                    class="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-8">
+                    La claridad que buscas, entregada con elegancia y funcionalidad.
+                </p>
+
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="portfolio.html"
+                        class="px-8 py-4 bg-accent-600 hover:bg-accent-500 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent-500/20 hover:-translate-y-1">
+                        Ver Portfolio <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:-translate-y-1">
+                        Contactar
+                    </a>
+
+                    <!-- CV Download Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="px-8 py-4 bg-anthracite-800 border border-gray-700 hover:border-accent-500 text-gray-300 hover:text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1">
+                            <i data-lucide="download" class="w-5 h-5"></i> CV
+                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-40 py-2 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-bottom translate-y-2 group-hover:translate-y-0">
+                            <span
+                                class="block px-4 py-2 text-xs text-gray-500 font-semibold uppercase tracking-wider text-center border-b border-gray-800 mb-1">
+                                Idioma
+                            </span>
+                            <a href="documents/cv-es.pdf" target="_blank"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-accent-500/20 transition-colors text-center flex items-center justify-center gap-2">
+                                🇪🇸 Español
+                            </a>
+                            <a href="documents/cv-en.pdf" target="_blank"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-accent-500/20 transition-colors text-center flex items-center justify-center gap-2">
+                                🇺🇸 English
+                            </a>
+                            <a href="documents/cv-de.pdf" target="_blank"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-accent-500/20 transition-colors text-center flex items-center justify-center gap-2">
+                                🇩🇪 Deutsch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-anthracite-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                        Sobre Mí
+                    </h2>
+                    <div class="w-20 h-1 bg-accent-500 mb-8 rounded-full"></div>
+
+                    <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                        <p>
+                            Con <strong class="text-white">casi tres décadas de experiencia profesional</strong>, he
+                            desarrollado una trayectoria sólida y versátil que abarca diseño gráfico, desarrollo
+                            Frontend y <strong class="text-white">liderazgo en la integración de flujos de trabajo de
+                                IA</strong>. Mi carrera comenzó en el mundo del diseño editorial (offline), lo que me
+                            dio una base inquebrantable en composición, tipografía y color, antes de saltar al mundo
+                            digital en el año 2000.
+                        </p>
+                        <p>
+                            He trabajado en hubs tecnológicos clave como <strong class="text-white">Londres, Múnich y
+                                Madrid</strong>, adaptándome a culturas y metodologías diversas. Esta experiencia
+                            internacional me ha permitido perfeccionar una visión holística: no solo diseño interfaces,
+                            sino que construyo <strong class="text-white">sistemas escalables</strong> que unen a los
+                            equipos de diseño y desarrollo.
+                        </p>
+                        <h3 class="text-xl font-bold text-white mt-8 mb-2">Filosofía de Liderazgo</h3>
+                        <p>
+                            Como Lead, mi objetivo es mentorizar y empoderar. Creo firmemente en la <strong
+                                class="text-white">automatización inteligente (DesignOps)</strong> para eliminar tareas
+                            repetitivas, permitiendo que el talento humano se centre en la creatividad y la estrategia.
+                            La integración de modelos de IA no es el futuro, es el presente que ya estoy implementando
+                            para optimizar tiempos y resultados.
+                        </p>
+                        <p>
+                            Mi expertise abarca desde la arquitectura de la información y prototipado avanzado en Figma,
+                            hasta la implementación final en código (HTML/CSS/JS), asegurando que la visión creativa se
+                            traduzca píxel a píxel en el producto final.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <span
+                            class="px-4 py-2 bg-anthracite-800 rounded-md text-sm text-gray-300 border border-gray-700 hover:border-accent-400 hover:text-white transition-colors cursor-default">Liderazgo
+                            de Diseño</span>
+                        <span
+                            class="px-4 py-2 bg-anthracite-800 rounded-md text-sm text-gray-300 border border-gray-700 hover:border-accent-400 hover:text-white transition-colors cursor-default">Estrategia
+                            de IA</span>
+                        <span
+                            class="px-4 py-2 bg-anthracite-800 rounded-md text-sm text-gray-300 border border-gray-700 hover:border-accent-400 hover:text-white transition-colors cursor-default">DesignOps
+                            & Automatización</span>
+                        <span
+                            class="px-4 py-2 bg-anthracite-800 rounded-md text-sm text-gray-300 border border-gray-700 hover:border-accent-400 hover:text-white transition-colors cursor-default">Frontend
+                            Integrado</span>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="relative group">
+                    <!-- Profile Image -->
+                    <div class="mb-8 relative z-10">
+                        <div
+                            class="relative w-full h-[500px] rounded-2xl overflow-hidden border border-gray-700 shadow-2xl group-hover:border-accent-500/50 transition-colors duration-500">
+                            <img src="images/oskar-profile.png" alt="Oskar Marijuan"
+                                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-anthracite-900 via-transparent to-transparent opacity-60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-accent-500/20 rounded-2xl blur-2xl -z-10 group-hover:bg-accent-500/30 transition-all duration-500">
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl border border-gray-700">
+                        <div class="glass-content">
+                            <h3 class="text-xl font-bold text-white mb-6">
+                                Detalles Personales
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <div>
+                                        <span class="block text-sm text-gray-500">Ubicación</span>
+                                        <span class="text-white">Gräfstr. 28, 81241 Múnich, Alemania</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="mail" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <div>
+                                        <span class="block text-sm text-gray-500">Email</span>
+                                        <a href="mailto:oskar.marijuan@gmail.com"
+                                            class="text-white hover:text-accent-400 transition-colors">oskar.marijuan@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="phone" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <div>
+                                        <span class="block text-sm text-gray-500">Teléfono</span>
+                                        <span class="text-white">+49 1577 1938849</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="languages" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <div>
+                                        <span class="block text-sm text-gray-500">Idiomas</span>
+                                        <span class="text-white">Castellano (Nativo), Inglés, Alemán, Euskera</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-anthracite-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+                    Habilidades Clave y Herramientas AI
+                </h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">
+                    Perfil híbrido que une Diseño y Código. Especialista en traducir sistemas de diseño complejos en
+                    frontends responsivos utilizando <strong class="text-white">HTML5, CSS3/SASS</strong> y frameworks
+                    modernos.
+                    Experto en aprovechar herramientas <strong class="text-white">Cloud y de Automatización</strong>
+                    para optimizar flujos de trabajo creativos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Left Column: Skill Bars -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-accent-400"></i>
+                        Niveles de Competencia
+                    </h3>
+
+                    <!-- HTML/CSS -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">Arquitectura Frontend (HTML5/CSS3/SASS)</span>
+                            <span class="text-accent-400 font-bold">85%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="85%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Adobe Creative -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">Adobe Creative Suite (XD/PS/AI/AE)</span>
+                            <span class="text-accent-400 font-bold">75%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="75%"></div>
+                        </div>
+                    </div>
+
+                    <!-- CMS -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">Gestión de Contenidos (CMS/WordPress)</span>
+                            <span class="text-accent-400 font-bold">60%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="60%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Data Formats -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">Estructura de Datos (XML/JSON)</span>
+                            <span class="text-accent-400 font-bold">50%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="50%"></div>
+                        </div>
+                    </div>
+
+                    <!-- JS/React -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">JavaScript Ecosystem (React/Node)</span>
+                            <span class="text-accent-400 font-bold">40%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="40%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud/Automation -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium">Cloud & Automation (Azure/Power Platform)</span>
+                            <span class="text-accent-400 font-bold">40%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="40%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Tech Stack -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i data-lucide="cpu" class="w-6 h-6 text-accent-400"></i>
+                        Stack Tecnológico Detallado
+                    </h3>
+
+                    <!-- Categorized Tags -->
+                    <div class="space-y-6">
+
+                        <!-- Design & Creative -->
+                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="pen-tool" class="w-4 h-4"></i> Diseño & Creatividad
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">Adobe XD</span>
+                                <span class="badge-skill">Photoshop</span>
+                                <span class="badge-skill">Illustrator</span>
+                                <span class="badge-skill">After Effects</span>
+                                <span class="badge-skill">InDesign</span>
+                                <span class="badge-skill">Figma</span>
+                                <span class="badge-skill">Proto.IO</span>
+                            </div>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="layout" class="w-4 h-4"></i> Frontend Core
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">HTML5</span>
+                                <span class="badge-skill">CSS3</span>
+                                <span class="badge-skill">SASS</span>
+                                <span class="badge-skill">Flexbox</span>
+                                <span class="badge-skill">Grid</span>
+                                <span class="badge-skill">Bootstrap</span>
+                                <span class="badge-skill">Material Kit 2</span>
+                                <span class="badge-skill">Responsive Design</span>
+                            </div>
+                        </div>
+
+                        <!-- Logic & Backend -->
+                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="code" class="w-4 h-4"></i> Lógica & Backend
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">JavaScript</span>
+                                <span class="badge-skill">React</span>
+                                <span class="badge-skill">Redux</span>
+                                <span class="badge-skill">Node.js</span>
+                                <span class="badge-skill">Express</span>
+                                <span class="badge-skill">jQuery</span>
+                                <span class="badge-skill">REST API</span>
+                                <span class="badge-skill">AJAX/WebSockets</span>
+                            </div>
+                        </div>
+
+                        <!-- Cloud, Data & Ops -->
+                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="cloud-cog" class="w-4 h-4"></i> Cloud, Data & Ops
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">Firebase</span>
+                                <span class="badge-skill">Power Platform (BI/Auto)</span>
+                                <span class="badge-skill">Azure</span>
+                                <span class="badge-skill">Git</span>
+                                <span class="badge-skill">GitHub</span>
+                                <span class="badge-skill">JSON/XML</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-anthracite-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 text-center" data-aos="fade-up">
+                Trayectoria Profesional
+            </h2>
+
+            <div class="relative">
+                <div class="timeline-line hidden md:block"></div>
+
+                <div class="space-y-12 relative">
+                    <!-- Newsenses / SPIE -->
+                    <div class="md:flex items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-white">Newsenses / SPIE</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Desarrollador Front-end & Diseñador Digital
+                            </p>
+                            <p class="text-gray-400 text-sm">Munich (DE) | 2022 - 2024</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-accent-500 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 shadow-[0_0_15px_rgba(14,165,233,0.5)]">
+                        </div>
+                        <div
+                            class="md:w-5/12 pl-8 md:pl-12 border-l-2 border-accent-500/30 md:border-none pb-8 md:pb-0">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">Newsenses / SPIE</h3>
+                                <p class="text-accent-400 text-sm">2022 - 2024</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Lideré diseño y desarrollo de webs para <strong>SPIE ROBUR</strong>,
+                                            garantizando UI/UX modernos y responsive.</li>
+                                        <li>Creé sistemas de diseño, wireframes y prototipos para consistencia visual.
+                                        </li>
+                                        <li>Gestioné campañas de email marketing: plantillas dinámicas, segmentación y
+                                            tracking.</li>
+                                        <li>Supervisé migraciones de sistemas críticos asegurando integridad de datos.
+                                        </li>
+                                        <li>Implementé analítica avanzada (GA4) para decisiones basadas en datos.</li>
+                                        <li>Optimicé flujos creativos con <strong>herramientas de IA</strong>,
+                                            reduciendo tiempos de producción.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fossil Group -->
+                    <div class="md:flex flex-row-reverse items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-left pl-8">
+                            <h3 class="text-2xl font-bold text-white">Fossil Group EMEA</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Diseñador Gráfico Digital</p>
+                            <p class="text-gray-400 text-sm">Bavaria (DE) | 2021</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 group-hover:bg-accent-500 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="md:w-5/12 pr-12 pl-8 md:pl-0 border-l-2 border-gray-700 md:border-none pb-8 md:pb-0 text-right-md">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">Fossil Group EMEA</h3>
+                                <p class="text-accent-400 text-sm">2021</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Diseño y desarrollo de newsletters y microsites.</li>
+                                        <li>Adaptación de medios publicitarios online (Social Media, Display).</li>
+                                        <li>Creación de secuencias de animación y ubicaciones de contenido enriquecido.
+                                        </li>
+                                        <li>Preparación de datos de campañas globales para EMEA.</li>
+                                        <li>Administración de estructura de datos y servidores del Servicio Creativo.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Freelance -->
+                    <div class="md:flex items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-white">Freelance</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Desarrollador Front-end</p>
+                            <p class="text-gray-400 text-sm">2018 - 2020</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 group-hover:bg-accent-500 transition-colors duration-300">
+                        </div>
+                        <div class="md:w-5/12 pl-8 md:pl-12 border-l-2 border-gray-700 md:border-none pb-8 md:pb-0">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">Freelance</h3>
+                                <p class="text-accent-400 text-sm">2018 - 2020</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Desarrollo, mejora y mantenimiento web.</li>
+                                        <li>Amplio uso de JavaScript front-end y APIs de navegador.</li>
+                                        <li>Experiencia significativa con frameworks y librerías modernas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RS Components London -->
+                    <div class="md:flex flex-row-reverse items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-left pl-8">
+                            <h3 class="text-2xl font-bold text-white">RS Components (London)</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Desarrollador Front-end</p>
+                            <p class="text-gray-400 text-sm">Londres (UK) | 2014 - 2016</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 group-hover:bg-accent-500 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="md:w-5/12 pr-12 pl-8 md:pl-0 border-l-2 border-gray-700 md:border-none pb-8 md:pb-0 text-right-md">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">RS Components (London)</h3>
+                                <p class="text-accent-400 text-sm">2014 - 2016</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Optimización de CMS y usabilidad de usuario.</li>
+                                        <li>A/B Testing de Homepage con resultados positivos.</li>
+                                        <li>Desarrollo de publicidad local para Iberia (Landing pages, Email
+                                            masivo/segmentado).</li>
+                                        <li>Gestión multitarea bajo presión en entorno internacional.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RS Components Madrid -->
+                    <div class="md:flex items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-white">RS Components (Madrid)</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Diseñador Web</p>
+                            <p class="text-gray-400 text-sm">Madrid (ES) | 2007 - 2014</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 group-hover:bg-accent-500 transition-colors duration-300">
+                        </div>
+                        <div class="md:w-5/12 pl-8 md:pl-12 border-l-2 border-gray-700 md:border-none pb-8 md:pb-0">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">RS Components (Madrid)</h3>
+                                <p class="text-accent-400 text-sm">2007 - 2014</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Campañas de marketing de proveedores y gestión de flujo de trabajo global.
+                                        </li>
+                                        <li>Desarrollo de publicidad local (Landings, Email marketing con BD).</li>
+                                        <li>Banners de merchandising de Google.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Computer to Plate -->
+                    <div class="md:flex flex-row-reverse items-center justify-between group" data-aos="fade-up">
+                        <div class="hidden md:block w-5/12 text-left pl-8">
+                            <h3 class="text-2xl font-bold text-white">Computer to Plate</h3>
+                            <p class="text-accent-400 font-semibold mb-2">Diseñador Gráfico & Web</p>
+                            <p class="text-gray-400 text-sm">Bilbao (ES) | 2003 - 2006</p>
+                        </div>
+                        <div
+                            class="absolute left-0 md:left-1/2 w-4 h-4 bg-gray-600 rounded-full transform -translate-x-1.5 md:-translate-x-1/2 border-4 border-anthracite-900 z-10 group-hover:bg-accent-500 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="md:w-5/12 pr-12 pl-8 md:pl-0 border-l-2 border-gray-700 md:border-none pb-8 md:pb-0 text-right-md">
+                            <div class="md:hidden mb-2">
+                                <h3 class="text-xl font-bold text-white">Computer to Plate</h3>
+                                <p class="text-accent-400 text-sm">2003 - 2006</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="glass-content">
+                                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                                        <li>Implementación de flujo de trabajo global.</li>
+                                        <li>Desarrollo de programas de marketing (Logos, folletos, infografías).</li>
+                                        <li>Creación y mantenimiento web, gestión de dominios y hosting.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-anthracite-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-accent-400 font-semibold tracking-wider uppercase text-sm">Mi Trabajo</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-8">
+                    Portfolio Global
+                </h2>
+                <!-- Filters -->
+                <div class="flex flex-wrap justify-center gap-4 border-b border-gray-800 pb-4">
+                    <button
+                        class="portfolio-filter active px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('all', this)">Todos</button>
+                    <button
+                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('web', this)">Web & Landings</button>
+                    <button
+                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('email', this)">Email</button>
+                    <button
+                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('assets', this)">Activos & Diseño</button>
+                    <button
+                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('wireframes', this)">Wireframes</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+
+                <!-- ROBUR Video (Top Item) -->
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/robur_video.mp4" class="glightbox" data-title="ROBUR Video"
+                            data-description="Video corporativo ROBUR">
+                            <img src="images/portfolio/robur_spie.png" alt="ROBUR Video"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="play-circle"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">ROBUR Video</h3>
+                        <p class="text-sm text-accent-400">Corporate Video</p>
+                    </div>
+                </div>
+                <!-- Web Items -->
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/RS_1.png" class="glightbox" data-title="RS Components Web"
+                            data-description="Desarrollo web y optimización UX para RS Components">
+                            <img src="images/portfolio/RS_1.png" alt="RS Components"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">RS Components</h3>
+                                <p class="text-sm text-accent-400">Web Development</p>
+                            </div>
+                            <a href="https://es.rs-online.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/rs_landing.png" class="glightbox" data-title="RS Landing Page"
+                            data-description="Diseño de Landing Page para campañas de conversión">
+                            <img src="images/portfolio/rs_landing.png" alt="RS Landing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">RS Landing Page</h3>
+                                <p class="text-sm text-accent-400">Campaign Landing</p>
+                            </div>
+                            <a href="https://uk.rs-online.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/fossil.png" class="glightbox" data-title="Fossil Group"
+                            data-description="Diseño digital y newsletters para Fossil Group">
+                            <img src="images/portfolio/fossil.png" alt="Fossil"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Fossil Group</h3>
+                                <p class="text-sm text-accent-400">Newsletter & Web</p>
+                            </div>
+                            <a href="https://www.fossilgroup.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/armani.png" class="glightbox" data-title="Armani Exchange"
+                            data-description="Activos de campaña para Armani Exchange">
+                            <img src="images/portfolio/armani.png" alt="Armani"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Armani Exchange</h3>
+                                <p class="text-sm text-accent-400">Campaign Assets</p>
+                            </div>
+                            <a href="https://www.armaniexchange.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/skagen.png" class="glightbox" data-title="Skagen Denmark"
+                            data-description="Diseño de Microsite para Skagen">
+                            <img src="images/portfolio/skagen.png" alt="Skagen"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Skagen Denmark</h3>
+                                <p class="text-sm text-accent-400">Microsite Design</p>
+                            </div>
+                            <a href="https://www.skagen.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/cervantes.png" class="glightbox" data-title="Instituto Cervantes"
+                            data-description="Diseño Web Corporativo">
+                            <img src="images/portfolio/cervantes.png" alt="Cervantes"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Instituto Cervantes</h3>
+                                <p class="text-sm text-accent-400">Web Design</p>
+                            </div>
+                            <a href="https://www.cervantes.es/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/muntxos.png" class="glightbox" data-title="Muntxos"
+                            data-description="Proyecto Wordpress Integral">
+                            <img src="images/portfolio/muntxos.png" alt="Muntxos"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Muntxos</h3>
+                                <p class="text-sm text-accent-400">Wordpress Project</p>
+                            </div>
+                            <button disabled class="p-2 bg-anthracite-900 rounded-lg text-gray-600 cursor-not-allowed"
+                                title="Offline">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW ITEMS -->
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/ferreiro.png" class="glightbox" data-title="Joyeria Ferreiros"
+                            data-description="Diseño Web Corporativo">
+                            <img src="images/portfolio/ferreiro.png" alt="Joyeria Ferreiros"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Joyeria Ferreiros</h3>
+                                <p class="text-sm text-accent-400">Web Design</p>
+                            </div>
+                            <a href="https://joyeriaferreiros.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/fm.png" class="glightbox" data-title="FM Control"
+                            data-description="Web Corporativa">
+                            <img src="images/portfolio/fm.png" alt="FM Control"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">FM Control</h3>
+                                <p class="text-sm text-accent-400">Web Corporativa</p>
+                            </div>
+                            <a href="https://fmcontrol.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/peter.png" class="glightbox" data-title="Peter Kuett"
+                            data-description="Website Personal">
+                            <img src="images/portfolio/peter.png" alt="Peter Kuett"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Peter Kuett</h3>
+                                <p class="text-sm text-accent-400">Personal Website</p>
+                            </div>
+                            <a href="https://www.peter-kuett.org/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/marijuanez_wp.png" class="glightbox" data-title="Oskar Marijuan"
+                            data-description="Portfolio Legacy">
+                            <img src="images/portfolio/marijuanez_wp.png" alt="Oskar Marijuan"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Oskar Marijuan</h3>
+                                <p class="text-sm text-accent-400">Legacy Portfolio</p>
+                            </div>
+                            <a href="https://oskar-marijuan.web.app/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/gulp.png" class="glightbox" data-title="Gulp Project"
+                            data-description="SalesForce Project">
+                            <img src="images/portfolio/gulp.png" alt="Gulp Project"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Gulp Project</h3>
+                                <p class="text-sm text-accent-400">SalesForce Project</p>
+                            </div>
+                            <button disabled class="p-2 bg-anthracite-900 rounded-lg text-gray-600 cursor-not-allowed"
+                                title="No link available">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/sgi.png" class="glightbox" data-title="SGI"
+                            data-description="Web Corporativa SGI">
+                            <img src="images/portfolio/sgi.png" alt="SGI"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">SGI</h3>
+                        <p class="text-sm text-accent-400">Corporate Web</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item wireframes glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/peak.png" class="glightbox" data-title="Peak Performance"
+                            data-description="E-commerce y UI para Peak Performance">
+                            <img src="images/portfolio/peak.png" alt="Peak"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Peak Performance</h3>
+                                <p class="text-sm text-accent-400">E-commerce</p>
+                            </div>
+                            <a href="https://www.peakperformance.com/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item wireframes glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/cost.png" class="glightbox" data-title="Cost Controller"
+                            data-description="Dashboard de Costes UI - Wireframe">
+                            <img src="images/portfolio/cost.png" alt="Cost"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Cost Controller</h3>
+                        <p class="text-sm text-accent-400">Dashboard Wireframe</p>
+                    </div>
+                </div>
+
+                <!-- Email Items -->
+                <div class="portfolio-item email glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/RS_email.png" class="glightbox" data-title="Email Campaigns"
+                            data-description="Campañas automatizadas de Email Marketing">
+                            <img src="images/portfolio/RS_email.png" alt="RS Email"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Email Campaigns</h3>
+                        <p class="text-sm text-accent-400">Automated Newsletter</p>
+                    </div>
+                </div>
+
+                <!-- Assets / Design -->
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/883X885_master.png" class="glightbox" data-title="Master Design Asset"
+                            data-description="Sistema de diseño maestro">
+                            <img src="images/portfolio/883X885_master.png" alt="Master Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Master Design Asset</h3>
+                        <p class="text-sm text-accent-400">Design System</p>
+                    </div>
+                </div>
+
+
+
+                <div class="portfolio-item wireframes glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/marijanez_mac.png" class="glightbox" data-title="Device Mockups"
+                            data-description="Presentación en dispositivos">
+                            <img src="images/portfolio/marijanez_mac.png" alt="Mockups"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Device Mockups</h3>
+                        <p class="text-sm text-accent-400">Presentation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item web glass-card rounded-xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/purchasing.png" class="glightbox" data-title="Purchasing System"
+                            data-description="Diseño UI de Sistema de Compras">
+                            <img src="images/portfolio/purchasing.png" alt="Purchasing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Purchasing System</h3>
+                        <p class="text-sm text-accent-400">UI Wireframe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-anthracite-900 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="zoom-in">
+            <div class="inline-block p-4 rounded-full bg-anthracite-800 mb-4 animate-[bounce_2s_infinite]">
+                <i data-lucide="graduation-cap" class="w-10 h-10 text-accent-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Educación</h3>
+            <p class="text-white font-semibold text-lg">
+                Artes Gráficas y Fotomecánica (1988 - 1994)
+            </p>
+            <p class="text-gray-400">
+                Instituto Politécnico Emilio Campuzano, Bilbao
+            </p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-anthracite-900 border-y border-gray-800 relative overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-accent-500/5 blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-purple-500/5 blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent-400 font-semibold tracking-wider uppercase text-sm">Referencias</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mt-2">
+                    Lo que dicen de mí
+                </h2>
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper testimonial-slider pb-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-1.jpg" alt="Carlos Marrodan"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Carlos Marrodan</h4>
+                                    <p class="text-accent-400 text-sm">CMO</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "During the years I've been working with Oscar, both locally and internationally, he has
+                                always shown a high willingness to understand campaign needs... Focus on customer needs
+                                & vision, proactive and hardworking person always ready to face new projects."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-2.jpg" alt="Christian Twelftree"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Christian Twelftree</h4>
+                                    <p class="text-accent-400 text-sm">Webmaster Manager</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "Oscar soon became a favourate and requested partner for marketing teams becuase of his
+                                hard work, dedication and going the extra mile for his clients. Tasks can be safely left
+                                in his reliable hands and Oscars' enthusiastic approach would benefit any team."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-3.jpg" alt="Carey Boyes"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Carey Boyes</h4>
+                                    <p class="text-accent-400 text-sm">Digital Marketing Manager</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "I really enjoyed working with Oscar, he was friendly and solved issues quickly. I could
+                                always ask for his assistance and he worked hard to ensure that he did a good job. He
+                                had a lot of good ideas and it was a pleasure to work with him."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-4.jpg" alt="Liza Hall"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Liza Hall</h4>
+                                    <p class="text-accent-400 text-sm">E-commerce Manager</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "Oscar was always willing to help and support with my design requirements - mainly last
+                                minute!! To keep up with customer demands and was always willing and positive at all
+                                times - if a job needed doing Oscar was there!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-5.jpg" alt="Guillermo Lopez"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Guillermo Lopez</h4>
+                                    <p class="text-accent-400 text-sm">Engineer Manager</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "I've had the opportunity to work with Oscar several years... He has strong skills to
+                                deliver high quality projects. Good team player, it was always a pleasure to work with
+                                him. I would recommend Oscar to any business that needs an experienced web designer."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide max-w-md">
+                        <div
+                            class="glass-card p-8 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
+                            <i data-lucide="quote" class="w-10 h-10 text-accent-500/20 absolute top-6 right-6"></i>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
+                                    <img src="images/portfolio/testimonials-6.jpg" alt="Illias Tsatalmpasidis"
+                                        class="w-full h-full object-cover opacity-90">
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Illias Tsatalmpasidis</h4>
+                                    <p class="text-accent-400 text-sm">Head of Campaign</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 italic leading-relaxed flex-grow">
+                                "Oscar is a very kind person, he was a web designer for all the local and global
+                                marketing teams... He has experience working with tight schedules, good on learning new
+                                skills and helped our digital team when needed support."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-anthracite-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        ¿Hablamos?
+                    </h2>
+                    <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                        Estoy disponible para responder cualquier pregunta. Ponte en
+                        contacto conmigo para discutir tu próximo proyecto.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:pl-6 transition-all">
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-500/10 flex items-center justify-center text-accent-400">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wide">
+                                    Email
+                                </div>
+                                <a href="mailto:oskar.marijuan@gmail.com"
+                                    class="font-medium text-white hover:text-accent-400 transition-colors">oskar.marijuan@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:pl-6 transition-all">
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-500/10 flex items-center justify-center text-accent-400">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wide">
+                                    Teléfono
+                                </div>
+                                <span class="font-medium text-white">+49 1577 1938849</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4 hover:pl-6 transition-all">
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-500/10 flex items-center justify-center text-accent-400">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wide">
+                                    LinkedIn
+                                </div>
+                                <a href="https://linkedin.com/in/oscarmarijuan"
+                                    class="font-medium text-white hover:text-accent-400 transition-colors">/in/oscarmarijuan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 md:p-10 rounded-2xl border border-gray-700 shadow-2xl" data-aos="fade-left">
+                    <form onsubmit="event.preventDefault(); alert('Mensaje enviado (Simulación)');" class="space-y-6">
+                        <h3 class="text-2xl font-bold text-white mb-4">Enviar Mensaje</h3>
+
+                        <div class="space-y-2 group">
+                            <label
+                                class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors">Nombre</label>
+                            <input type="text" placeholder="Tu Nombre"
+                                class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors" />
+                        </div>
+
+                        <div class="space-y-2 group">
+                            <label
+                                class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors">Email</label>
+                            <input type="email" placeholder="email@ejemplo.com"
+                                class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors" />
+                        </div>
+
+                        <div class="space-y-2 group">
+                            <label
+                                class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors">Mensaje</label>
+                            <textarea rows="4" placeholder="¿En qué puedo ayudarte?"
+                                class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-accent-600 hover:bg-accent-500 text-white font-bold rounded-lg transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-95">
+                            <i data-lucide="send" class="w-5 h-5"></i> Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-anthracite-950 border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <span class="text-xl font-extrabold tracking-tighter text-white">OSKAR<span
+                        class="text-accent-400">MARIJUAN</span></span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">
+                Designed in California made by Oskar Marijuan
+            </p>
+            <p class="text-gray-600 text-xs">
+                &copy; 2025 Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener("scroll", () => {
+            const nav = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                nav.classList.add("bg-anthracite-900/95", "shadow-lg", "backdrop-blur-md");
+                nav.classList.remove("glass", "border-white/5");
+                nav.classList.add("border-gray-800");
+            } else {
+                nav.classList.remove("bg-anthracite-900/95", "shadow-lg", "backdrop-blur-md", "border-gray-800");
+                nav.classList.add("glass", "border-white/5");
+            }
+        });
+
+        // 3D Tilt Effect
+        const cards = document.querySelectorAll('.glass-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -5; // Max rotation deg
+                const rotateY = ((x - centerX) / centerX) * 5;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Skill Bar Animation
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector('.skill-bar');
+                    const targetWidth = progressBar.getAttribute('data-width');
+                    progressBar.style.width = targetWidth;
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-bar-container').forEach(el => {
+            skillObserver.observe(el);
+        });
+
+        // Initialize Lightbox
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+
+        // Global Portfolio Filter Function
+        window.filterPortfolio = function (filterValue, btnElement) {
+            console.log('Filtering by: ' + filterValue);
+
+            // Update active state
+            if (btnElement) {
+                const btns = document.querySelectorAll('.portfolio-filter');
+                btns.forEach(b => b.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+
+            const items = document.querySelectorAll('.portfolio-item');
+
+            items.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                    item.style.display = 'block';
+                    item.style.opacity = '1';
+                    item.style.transform = 'none';
+                } else {
+                    item.classList.add('hidden');
+                    item.style.display = 'none';
+                }
+            });
+
+            // Refresh AOS
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 200);
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.testimonial-slider', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        });
+    </script>
+</body>
+
 </html>

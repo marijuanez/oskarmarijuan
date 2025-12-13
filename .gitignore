@@ -1,0 +1,22 @@
+# Firebase
+.firebase
+firebase.log
+firebase-debug.log
+
+# System
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# Old Builds
+public/
+
+# Large media files (deployed directly to Firebase)
+images/portfolio/robur_video.mp4
+images/hero-video.mp4
