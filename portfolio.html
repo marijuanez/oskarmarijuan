@@ -143,19 +143,19 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                         <button
                             class="nav-filter active text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="all">Todos</button>
+                            data-filter="all" data-i18n="portfolio.filters.all">Todos</button>
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="web">Web & Landings</button>
+                            data-filter="web" data-i18n="portfolio.filters.web">Web & Landings</button>
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="email">Email</button>
+                            data-filter="email" data-i18n="portfolio.filters.email">Email</button>
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="assets">Activos & Diseño</button>
+                            data-filter="assets" data-i18n="portfolio.filters.assets">Activos & Diseño</button>
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="wireframes">Wireframes</button>
+                            data-filter="wireframes" data-i18n="portfolio.filters.wireframes">Wireframes</button>
                     </div>
                 </div>
 
@@ -191,7 +191,7 @@
                     <div class="h-6 w-px bg-gray-700"></div>
                     <a href="index.html"
                         class="text-gray-400 hover:text-white text-sm font-medium transition-colors flex items-center gap-1">
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="backToProfile">Back to
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="nav.back">Back to
                             Profile</span>
                     </a>
                 </div>
@@ -210,21 +210,24 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="all" onclick="toggleMenu()">Todos</button>
+                    data-filter="all" onclick="toggleMenu()" data-i18n="portfolio.filters.all">Todos</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="web" onclick="toggleMenu()">Web & Landings</button>
+                    data-filter="web" onclick="toggleMenu()" data-i18n="portfolio.filters.web">Web & Landings</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="email" onclick="toggleMenu()">Email</button>
+                    data-filter="email" onclick="toggleMenu()" data-i18n="portfolio.filters.email">Email</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="assets" onclick="toggleMenu()">Activos & Diseño</button>
+                    data-filter="assets" onclick="toggleMenu()" data-i18n="portfolio.filters.assets">Activos &
+                    Diseño</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="wireframes" onclick="toggleMenu()">Wireframes</button>
+                    data-filter="wireframes" onclick="toggleMenu()"
+                    data-i18n="portfolio.filters.wireframes">Wireframes</button>
                 <div class="border-t border-gray-700 mt-2 pt-2">
-                    <a href="index.html" class="block px-3 py-2 text-accent-400 font-bold">Volver al Perfil</a>
+                    <a href="index.html" class="block px-3 py-2 text-accent-400 font-bold" data-i18n="nav.back">Volver
+                        al Perfil</a>
                 </div>
             </div>
         </div>
@@ -234,7 +237,8 @@
     <section class="pt-32 pb-8 bg-anthracite-950 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('images/hero-bg.png')] bg-cover bg-center opacity-10"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-3xl md:text-5xl font-black text-white mb-4" data-aos="fade-down">
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4" data-aos="fade-down"
+                data-i18n="portfolio.title">
                 Portfolio <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>
             </h1>
@@ -720,7 +724,7 @@
                 Designed in California made by Oskar Marijuan
             </p>
             <p class="text-gray-600 text-xs">
-                &copy; 2025 Todos los derechos reservados.
+                &copy; 2025 <span data-i18n="footer.rights">Todos los derechos reservados.</span>
             </p>
         </div>
     </footer>
@@ -794,32 +798,84 @@
         const translations = {
             en: {
                 nav: {
-                    backToProfile: 'Back to Profile'
+                    back: 'Back to Profile'
+                },
+                portfolio: {
+                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                    filters: {
+                        all: 'All',
+                        web: 'Web & Landings',
+                        email: 'Email',
+                        assets: 'Assets & Design',
+                        wireframes: 'Wireframes'
+                    }
+                },
+                footer: {
+                    rights: 'All rights reserved.'
                 }
             },
             de: {
                 nav: {
-                    backToProfile: 'Zurück zum Profil'
+                    back: 'Zurück zum Profil'
+                },
+                portfolio: {
+                    title: '<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Globales</span> Portfolio',
+                    filters: {
+                        all: 'Alle',
+                        web: 'Web & Landings',
+                        email: 'E-Mail',
+                        assets: 'Assets & Design',
+                        wireframes: 'Wireframes'
+                    }
+                },
+                footer: {
+                    rights: 'Alle Rechte vorbehalten.'
                 }
             },
             es: {
                 nav: {
-                    backToProfile: 'Volver al Perfil'
+                    back: 'Volver al Perfil'
+                },
+                portfolio: {
+                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                    filters: {
+                        all: 'Todos',
+                        web: 'Web & Landings',
+                        email: 'Email',
+                        assets: 'Activos & Diseño',
+                        wireframes: 'Wireframes'
+                    }
+                },
+                footer: {
+                    rights: 'Todos los derechos reservados.'
                 }
             },
             fr: {
                 nav: {
-                    backToProfile: 'Retour au Profil'
+                    back: 'Retour au Profil'
+                },
+                portfolio: {
+                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                    filters: {
+                        all: 'Tous',
+                        web: 'Web & Landings',
+                        email: 'Email',
+                        assets: 'Ressources & Design',
+                        wireframes: 'Maquettes'
+                    }
+                },
+                footer: {
+                    rights: 'Tous droits réservés.'
                 }
             }
         };
 
-        // Language flags mapping
+        // Language flag classes mapping
         const languageFlags = {
-            en: '🇬🇧',
-            de: '🇩🇪',
-            es: '🇪🇸',
-            fr: '🇫🇷'
+            en: { flag: 'fi-gb', code: 'EN' },
+            de: { flag: 'fi-de', code: 'DE' },
+            es: { flag: 'fi-es', code: 'ES' },
+            fr: { flag: 'fi-fr', code: 'FR' }
         };
 
         // Function to change language
@@ -827,12 +883,18 @@
             // Save to localStorage
             localStorage.setItem('preferredLanguage', lang);
 
-            // Update current language display
+            // Update current language display with flag icon
             const currentFlag = document.getElementById('current-flag');
             const currentLang = document.getElementById('current-lang');
 
-            if (currentFlag) currentFlag.textContent = languageFlags[lang];
-            if (currentLang) currentLang.textContent = lang.toUpperCase();
+            if (currentFlag && languageFlags[lang]) {
+                // Update flag icon
+                currentFlag.className = `fi ${languageFlags[lang].flag} fis w-6`;
+            }
+
+            if (currentLang && languageFlags[lang]) {
+                currentLang.textContent = languageFlags[lang].code;
+            }
 
             // Update all elements with data-i18n attribute
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -845,20 +907,19 @@
                     if (translation && translation[k]) {
                         translation = translation[k];
                     } else {
-                        translation = element.textContent; // Fallback to current text
+                        translation = null;
                         break;
                     }
                 }
 
                 if (typeof translation === 'string') {
-                    element.textContent = translation;
+                    // Use innerHTML to support standard HTML tags in translations (like <strong>)
+                    element.innerHTML = translation;
                 }
             });
 
             // Update HTML lang attribute
             document.documentElement.lang = lang;
-
-            console.log(`Language changed to: ${lang}`);
         }
 
         // Initialize language on page load
@@ -868,6 +929,7 @@
             changeLanguage(savedLang);
         });
     </script>
+
 </body>
 
 </html>
