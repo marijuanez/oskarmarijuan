@@ -159,11 +159,40 @@
                     </div>
                 </div>
 
-                <!-- Right Actions -->
-                <div class="hidden md:block">
+                <!-- Language Selector -->
+                <div class="hidden md:flex items-center gap-4">
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors">
+                            <span id="current-flag" class="text-lg">🇬🇧</span>
+                            <span id="current-lang" class="text-sm font-medium">EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-40 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+                            <button onclick="changeLanguage('en')"
+                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
+                                <span class="text-lg">🇬🇧</span> English
+                            </button>
+                            <button onclick="changeLanguage('de')"
+                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
+                                <span class="text-lg">🇩🇪</span> Deutsch
+                            </button>
+                            <button onclick="changeLanguage('es')"
+                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
+                                <span class="text-lg">🇪🇸</span> Español
+                            </button>
+                            <button onclick="changeLanguage('fr')"
+                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
+                                <span class="text-lg">🇫🇷</span> Français
+                            </button>
+                        </div>
+                    </div>
+                    <div class="h-6 w-px bg-gray-700"></div>
                     <a href="index.html"
                         class="text-gray-400 hover:text-white text-sm font-medium transition-colors flex items-center gap-1">
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Perfil
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="backToProfile">Back to
+                            Profile</span>
                     </a>
                 </div>
 
@@ -756,6 +785,87 @@
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
             });
+        });
+    </script>
+
+    <!-- Internationalization Script -->
+    <script>
+        // Translation data for 4 languages
+        const translations = {
+            en: {
+                nav: {
+                    backToProfile: 'Back to Profile'
+                }
+            },
+            de: {
+                nav: {
+                    backToProfile: 'Zurück zum Profil'
+                }
+            },
+            es: {
+                nav: {
+                    backToProfile: 'Volver al Perfil'
+                }
+            },
+            fr: {
+                nav: {
+                    backToProfile: 'Retour au Profil'
+                }
+            }
+        };
+
+        // Language flags mapping
+        const languageFlags = {
+            en: '🇬🇧',
+            de: '🇩🇪',
+            es: '🇪🇸',
+            fr: '🇫🇷'
+        };
+
+        // Function to change language
+        function changeLanguage(lang) {
+            // Save to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Update current language display
+            const currentFlag = document.getElementById('current-flag');
+            const currentLang = document.getElementById('current-lang');
+
+            if (currentFlag) currentFlag.textContent = languageFlags[lang];
+            if (currentLang) currentLang.textContent = lang.toUpperCase();
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let translation = translations[lang];
+
+                // Navigate through the translation object
+                for (let k of keys) {
+                    if (translation && translation[k]) {
+                        translation = translation[k];
+                    } else {
+                        translation = element.textContent; // Fallback to current text
+                        break;
+                    }
+                }
+
+                if (typeof translation === 'string') {
+                    element.textContent = translation;
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            console.log(`Language changed to: ${lang}`);
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check for saved language preference, default to English
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            changeLanguage(savedLang);
         });
     </script>
 </body>
