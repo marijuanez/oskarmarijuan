@@ -4,6 +4,8 @@ This project is configured to deploy to **Firebase Hosting** using **GitHub Acti
 
 ## Firebase Configuration
 * **Project ID**: `oskarmarijuan-73678`
+* **Site ID**: `oskarmarijuan`
+* **Production URL**: https://oskarmarijuan.web.app
 * **Source Directory**: Root (`.`) - The files you edit in MAMP are the ones deployed.
 * **Ignored Files**: PHP files, git configuration, and the old `public` folder are excluded from upload.
 
