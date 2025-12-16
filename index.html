@@ -75,6 +75,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
+        /* Prevent horizontal scroll on mobile */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        body {
+            background-color: #1a1d23;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensure all containers respect viewport width */
+        section,
+        div {
+            max-width: 100%;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
@@ -92,11 +119,6 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: #54637f;
-        }
-
-        body {
-            background-color: #1a1d23;
-            color: #e2e8f0;
         }
 
         /* Glassmorphism */
