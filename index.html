@@ -220,27 +220,27 @@
                         <div class="relative group">
                             <button
                                 class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                                <span id="current-flag" class="text-lg">🇬🇧</span>
-                                <span id="current-lang" class="text-sm font-medium">EN</span>
+                                <span id="current-flag"
+                                    class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-xs font-bold text-white">EN</span>
                                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
                             </button>
                             <div
-                                class="absolute right-0 mt-2 w-40 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+                                class="absolute right-0 mt-2 w-44 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
                                 <button onclick="changeLanguage('en')"
                                     class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                    <span class="text-lg">🇬🇧</span> English
+                                    <span class="w-5 h-5 rounded-full bg-blue-500 flex-shrink-0"></span> English
                                 </button>
                                 <button onclick="changeLanguage('de')"
                                     class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                    <span class="text-lg">🇩🇪</span> Deutsch
+                                    <span class="w-5 h-5 rounded-full bg-yellow-500 flex-shrink-0"></span> Deutsch
                                 </button>
                                 <button onclick="changeLanguage('es')"
                                     class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                    <span class="text-lg">🇪🇸</span> Español
+                                    <span class="w-5 h-5 rounded-full bg-red-500 flex-shrink-0"></span> Español
                                 </button>
                                 <button onclick="changeLanguage('fr')"
                                     class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                    <span class="text-lg">🇫🇷</span> Français
+                                    <span class="w-5 h-5 rounded-full bg-indigo-500 flex-shrink-0"></span> Français
                                 </button>
                             </div>
                         </div>
@@ -277,20 +277,20 @@
                     </div>
                     <div class="flex gap-2 px-3 py-2">
                         <button onclick="changeLanguage('en'); toggleMenu();"
-                            class="flex-1 px-3 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-sm flex items-center justify-center gap-2">
-                            🇬🇧 EN
+                            class="flex-1 px-2 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-xs flex flex-col items-center justify-center gap-1">
+                            <span class="w-4 h-4 rounded-full bg-blue-500"></span> EN
                         </button>
                         <button onclick="changeLanguage('de'); toggleMenu();"
-                            class="flex-1 px-3 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-sm flex items-center justify-center gap-2">
-                            🇩🇪 DE
+                            class="flex-1 px-2 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-xs flex flex-col items-center justify-center gap-1">
+                            <span class="w-4 h-4 rounded-full bg-yellow-500"></span> DE
                         </button>
                         <button onclick="changeLanguage('es'); toggleMenu();"
-                            class="flex-1 px-3 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-sm flex items-center justify-center gap-2">
-                            🇪🇸 ES
+                            class="flex-1 px-2 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-xs flex flex-col items-center justify-center gap-1">
+                            <span class="w-4 h-4 rounded-full bg-red-500"></span> ES
                         </button>
                         <button onclick="changeLanguage('fr'); toggleMenu();"
-                            class="flex-1 px-3 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-sm flex items-center justify-center gap-2">
-                            🇫🇷 FR
+                            class="flex-1 px-2 py-2 bg-anthracite-800 rounded-lg text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors text-xs flex flex-col items-center justify-center gap-1">
+                            <span class="w-4 h-4 rounded-full bg-indigo-500"></span> FR
                         </button>
                     </div>
                 </div>
@@ -1948,12 +1948,12 @@
             }
         };
 
-        // Language flags mapping
-        const languageFlags = {
-            en: '🇬🇧',
-            de: '🇩🇪',
-            es: '🇪🇸',
-            fr: '🇫🇷'
+        // Language indicator mapping (colored circles with language codes)
+        const languageIndicators = {
+            en: { color: 'bg-blue-500', code: 'EN' },
+            de: { color: 'bg-yellow-500', code: 'DE' },
+            es: { color: 'bg-red-500', code: 'ES' },
+            fr: { color: 'bg-indigo-500', code: 'FR' }
         };
 
         // Function to change language
@@ -1961,12 +1961,14 @@
             // Save to localStorage
             localStorage.setItem('preferredLanguage', lang);
 
-            // Update current language display
+            // Update current language display with colored circle
             const currentFlag = document.getElementById('current-flag');
-            const currentLang = document.getElementById('current-lang');
 
-            if (currentFlag) currentFlag.textContent = languageFlags[lang];
-            if (currentLang) currentLang.textContent = lang.toUpperCase();
+            if (currentFlag && languageIndicators[lang]) {
+                // Remove all color classes
+                currentFlag.className = 'w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ' + languageIndicators[lang].color;
+                currentFlag.textContent = languageIndicators[lang].code;
+            }
 
             // Update all elements with data-i18n attribute
             document.querySelectorAll('[data-i18n]').forEach(element => {
