@@ -3332,6 +3332,12 @@
             // Check for saved language preference, default to English
             const savedLang = localStorage.getItem('preferredLanguage') || 'en';
             changeLanguage(savedLang);
+
+            // Initialize Portfolio Filter (Default to Web)
+            const webBtn = document.querySelector('.portfolio-filter[data-i18n="portfolio.filters.web"]');
+            if (webBtn) {
+                webBtn.click();
+            }
         });
     </script>
 </body>
