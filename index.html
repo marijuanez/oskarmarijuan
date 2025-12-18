@@ -362,8 +362,16 @@
                     </span>
                 </h1>
 
+                <!-- Mobile Short Description (Visible only largely on mobile) -->
                 <p data-aos="fade-up" data-aos-delay="200"
-                    class="max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-8" data-i18n="hero.description">
+                    class="md:hidden max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-8">
+                    Front-end · Email · AI-Enhanced
+                </p>
+
+                <!-- Desktop Detailed Description (Hidden on mobile) -->
+                <p data-aos="fade-up" data-aos-delay="200"
+                    class="hidden md:block max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed mb-8"
+                    data-i18n="hero.description">
                     Desarrollo front-end y email HTML orientado a estándares, rendimiento, accesibilidad y control total
                     del render en web y correo.
                 </p>
@@ -523,7 +531,7 @@
                                     <div>
                                         <span class="block text-sm text-gray-500"
                                             data-i18n="about.details.phone">Teléfono</span>
-                                        <span class="text-white">+49 1577 1938849</span>
+                                        <span class="text-white">+49 178 6270828</span>
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-4">
@@ -549,7 +557,13 @@
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-4" data-i18n="skills.title">
                     Habilidades Clave y Herramientas AI
                 </h2>
-                <p class="text-gray-400 max-w-3xl mx-auto" data-i18n="skills.description">
+                <!-- Mobile Short Description (Visible only mainly on mobile) -->
+                <p class="md:hidden text-gray-400 max-w-3xl mx-auto mb-8">
+                    Hybrid Design + Code. Front-end, Email and AI-assisted workflows.
+                </p>
+
+                <!-- Desktop Detailed Description (Hidden on mobile) -->
+                <p class="hidden md:block text-gray-400 max-w-3xl mx-auto" data-i18n="skills.description">
                     Perfil híbrido que une Diseño y Código. Especialista en traducir sistemas de diseño complejos en
                     frontends responsivos utilizando <strong class="text-white">HTML5, CSS3/SASS</strong> y frameworks
                     modernos.
@@ -566,11 +580,11 @@
                         <span data-i18n="skills.levels">Niveles de Competencia</span>
                     </h3>
 
-                    <!-- HTML/CSS -->
+                    <!-- 1. Frontend (Visible Mobile & Desktop) -->
                     <div class="skill-bar-container">
                         <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.frontend">Arquitectura
-                                Frontend (HTML5/CSS3/SASS)</span>
+                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.frontend">Frontend
+                                Architecture (HTML5 / CSS3 / SASS)</span>
                             <span class="text-accent-400 font-bold">85%</span>
                         </div>
                         <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
@@ -579,11 +593,24 @@
                         </div>
                     </div>
 
-                    <!-- Adobe Creative -->
+                    <!-- 2. Email (Visible Mobile & Desktop) -->
                     <div class="skill-bar-container">
                         <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.adobe">Adobe Creative
-                                Suite (XD/PS/AI/AE)</span>
+                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.email">Email
+                                Development & Deliverability</span>
+                            <span class="text-accent-400 font-bold">70%</span>
+                        </div>
+                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-width="70%"></div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Design Systems (Visible Mobile & Desktop) -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.design_systems">Design
+                                Systems & UI Tools</span>
                             <span class="text-accent-400 font-bold">75%</span>
                         </div>
                         <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
@@ -591,55 +618,73 @@
                                 data-width="75%"></div>
                         </div>
                     </div>
-
-                    <!-- CMS -->
+                    <!-- 4. Cloud (Visible Mobile & Desktop) -->
                     <div class="skill-bar-container">
                         <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.cms">Gestión de
-                                Contenidos (CMS/WordPress)</span>
-                            <span class="text-accent-400 font-bold">60%</span>
+                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.cloud">Cloud &
+                                Automation</span>
+                            <span class="text-accent-400 font-bold">45%</span>
                         </div>
                         <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
                             <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
-                                data-width="60%"></div>
+                                data-width="45%"></div>
                         </div>
                     </div>
 
-                    <!-- Data Formats -->
-                    <div class="skill-bar-container">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.data">Estructura de
-                                Datos (XML/JSON)</span>
-                            <span class="text-accent-400 font-bold">50%</span>
+                    <!-- HIDDEN ON MOBILE: CMS, Data, JS, Analytics -->
+                    <div class="hidden md:block space-y-8">
+                        <!-- CMS -->
+                        <div class="skill-bar-container">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.cms">Content
+                                    Management</span>
+                                <span class="text-accent-400 font-bold">60%</span>
+                            </div>
+                            <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                    data-width="60%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
-                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
-                                data-width="50%"></div>
-                        </div>
-                    </div>
 
-                    <!-- JS/React -->
-                    <div class="skill-bar-container">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.js">JavaScript
-                                Ecosystem (React/Node)</span>
-                            <span class="text-accent-400 font-bold">40%</span>
+                        <!-- Data -->
+                        <div class="skill-bar-container">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.data">Data
+                                    Structures
+                                    & APIs</span>
+                                <span class="text-accent-400 font-bold">55%</span>
+                            </div>
+                            <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                    data-width="55%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
-                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
-                                data-width="40%"></div>
-                        </div>
-                    </div>
 
-                    <!-- Cloud/Automation -->
-                    <div class="skill-bar-container">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300 font-medium">Cloud & Automation (Azure/Power Platform)</span>
-                            <span class="text-accent-400 font-bold">40%</span>
+                        <!-- JS -->
+                        <div class="skill-bar-container">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium" data-i18n="skills.levels_list.js">JavaScript
+                                    Ecosystem</span>
+                                <span class="text-accent-400 font-bold">45%</span>
+                            </div>
+                            <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                    data-width="45%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
-                            <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
-                                data-width="40%"></div>
+
+                        <!-- Analytics -->
+                        <div class="skill-bar-container">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium"
+                                    data-i18n="skills.levels_list.analytics">Analytics &
+                                    Tagging</span>
+                                <span class="text-accent-400 font-bold">50%</span>
+                            </div>
+                            <div class="w-full bg-anthracite-800 rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar bg-accent-500 h-2 rounded-full w-0 transition-all duration-1000 ease-out"
+                                    data-width="50%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -651,11 +696,24 @@
                         <span data-i18n="skills.stack">Stack Tecnológico Detallado</span>
                     </h3>
 
-                    <!-- Categorized Tags -->
+                    <!-- Categorized Cards (Desktop) / Chips (Mobile) -->
                     <div class="space-y-6">
 
                         <!-- Design & Creative -->
-                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                        <!-- Mobile Chip View -->
+                        <div class="md:hidden">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="pen-tool" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.design">Diseño & Creatividad</span>
+                            </h4>
+                            <div class="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+                                <span class="badge-skill whitespace-nowrap">Figma</span>
+                                <span class="badge-skill whitespace-nowrap">Adobe Suite</span>
+                            </div>
+                        </div>
+                        <!-- Desktop Card View -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                 <i data-lucide="pen-tool" class="w-4 h-4"></i> <span
@@ -668,12 +726,27 @@
                                 <span class="badge-skill">After Effects</span>
                                 <span class="badge-skill">InDesign</span>
                                 <span class="badge-skill">Figma</span>
-                                <span class="badge-skill">Proto.IO</span>
+                                <span class="badge-skill">Proto.io</span>
                             </div>
                         </div>
 
                         <!-- Frontend -->
-                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                        <!-- Mobile Chip View -->
+                        <div class="md:hidden">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="layout" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.frontend">Frontend Core</span>
+                            </h4>
+                            <div class="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+                                <span class="badge-skill whitespace-nowrap">HTML5</span>
+                                <span class="badge-skill whitespace-nowrap">CSS3</span>
+                                <span class="badge-skill whitespace-nowrap">SASS</span>
+                                <span class="badge-skill whitespace-nowrap">Responsive</span>
+                            </div>
+                        </div>
+                        <!-- Desktop Card View -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                 <i data-lucide="layout" class="w-4 h-4"></i> <span
@@ -685,14 +758,45 @@
                                 <span class="badge-skill">SASS</span>
                                 <span class="badge-skill">Flexbox</span>
                                 <span class="badge-skill">Grid</span>
-                                <span class="badge-skill">Bootstrap</span>
-                                <span class="badge-skill">Material Kit 2</span>
                                 <span class="badge-skill">Responsive Design</span>
+                                <span class="badge-skill">Bootstrap</span>
+                                <span class="badge-skill">Material Kit</span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <!-- Mobile Chip View -->
+                        <div class="md:hidden">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="mail" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.email">Email & Marketing Ops</span>
+                            </h4>
+                            <div class="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+                                <span class="badge-skill whitespace-nowrap">Email HTML</span>
+                                <span class="badge-skill whitespace-nowrap">Responsys</span>
+                                <span class="badge-skill whitespace-nowrap">Deliverability</span>
+                            </div>
+                        </div>
+                        <!-- Desktop Card View -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="mail" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.email">Email & Marketing Ops</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">Email HTML / CSS</span>
+                                <span class="badge-skill">Cross-client rendering</span>
+                                <span class="badge-skill">Oracle Responsys</span>
+                                <span class="badge-skill">ESPs & Automation</span>
+                                <span class="badge-skill">Deliverability (SPF/DKIM/DMARC)</span>
                             </div>
                         </div>
 
                         <!-- Logic & Backend -->
-                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                        <!-- Desktop Card View (HIDDEN ON MOBILE) -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                 <i data-lucide="code" class="w-4 h-4"></i> <span
@@ -705,13 +809,27 @@
                                 <span class="badge-skill">Node.js</span>
                                 <span class="badge-skill">Express</span>
                                 <span class="badge-skill">jQuery</span>
-                                <span class="badge-skill">REST API</span>
-                                <span class="badge-skill">AJAX/WebSockets</span>
+                                <span class="badge-skill">REST APIs</span>
+                                <span class="badge-skill">AJAX / WebSockets</span>
                             </div>
                         </div>
 
                         <!-- Cloud, Data & Ops -->
-                        <div class="glass-card p-5 rounded-xl border border-gray-800/50">
+                        <!-- Mobile Chip View -->
+                        <div class="md:hidden">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="cloud-cog" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.cloud">Cloud, Data & Ops</span>
+                            </h4>
+                            <div class="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+                                <span class="badge-skill whitespace-nowrap">Firebase</span>
+                                <span class="badge-skill whitespace-nowrap">Azure</span>
+                                <span class="badge-skill whitespace-nowrap">Git</span>
+                            </div>
+                        </div>
+                        <!-- Desktop Card View -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
                                 <i data-lucide="cloud-cog" class="w-4 h-4"></i> <span
@@ -719,12 +837,75 @@
                             </h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="badge-skill">Firebase</span>
-                                <span class="badge-skill">Power Platform (BI/Auto)</span>
                                 <span class="badge-skill">Azure</span>
+                                <span class="badge-skill">Power Platform</span>
                                 <span class="badge-skill">Git</span>
                                 <span class="badge-skill">GitHub</span>
-                                <span class="badge-skill">JSON/XML</span>
+                                <span class="badge-skill">CI/CD Basics</span>
+                                <span class="badge-skill">JSON / XML</span>
                             </div>
+                        </div>
+
+                        <!-- Analytics & Data Models -->
+                        <!-- Desktop Card View (HIDDEN ON MOBILE) - Mobile shows inline text later -->
+                        <div class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="bar-chart-2" class="w-4 h-4"></i> <span
+                                    data-i18n="skills.categories.analytics">Analytics & Data Models</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">Google Tag Manager</span>
+                                <span class="badge-skill">GA4</span>
+                                <span class="badge-skill">Event Tracking</span>
+                                <span class="badge-skill">MySQL</span>
+                                <span class="badge-skill">Firestore (NoSQL)</span>
+                            </div>
+                        </div>
+
+                        <!-- AI & Automation -->
+                        <!-- Mobile Chip View -->
+                        <div class="md:hidden">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <i data-lucide="bot" class="w-4 h-4"></i> <span data-i18n="skills.categories.ai">AI &
+                                    Automation</span>
+                            </h4>
+                            <div class="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
+                                <span class="badge-skill whitespace-nowrap">AI-assisted workflows</span>
+                            </div>
+                        </div>
+                        <!-- Desktop Card View -->
+                        <div
+                            class="hidden md:block glass-card p-5 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900 to-indigo-900/30">
+                            <h4
+                                class="text-accent-400 font-bold text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i data-lucide="bot" class="w-4 h-4"></i> <span data-i18n="skills.categories.ai">AI &
+                                    Automation</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge-skill">AI-assisted UI</span>
+                                <span class="badge-skill">Code generation</span>
+                                <span class="badge-skill">Design iteration</span>
+                                <span class="badge-skill">Automation scripts</span>
+                                <span class="badge-skill">GitHub Copilot</span>
+                                <span class="badge-skill">ChatGPT</span>
+                                <span class="badge-skill">Adobe Firefly</span>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Inline Analytics -->
+                        <div class="md:hidden mt-4 pt-4 border-t border-gray-800">
+                            <h4 class="text-xs text-gray-500 uppercase tracking-widest mb-1">Analytics & Data</h4>
+                            <p class="text-sm text-gray-400">GTM · SQL · NoSQL</p>
+                        </div>
+
+                        <!-- Microcopy -->
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <p class="text-xs text-gray-500 italic text-center" data-i18n="skills.microcopy">
+                                AI is integrated as a productivity layer across design, development, testing and
+                                optimization workflows.
+                            </p>
                         </div>
 
                     </div>
@@ -980,9 +1161,6 @@
                 <div class="flex flex-wrap justify-center gap-4 border-b border-gray-800 pb-4">
                     <button
                         class="portfolio-filter active px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
-                        onclick="filterPortfolio('all', this)" data-i18n="portfolio.filters.all">Todos</button>
-                    <button
-                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
                         onclick="filterPortfolio('web', this)" data-i18n="portfolio.filters.web">Web & Landings</button>
                     <button
                         class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
@@ -995,6 +1173,10 @@
                         class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
                         onclick="filterPortfolio('wireframes', this)"
                         data-i18n="portfolio.filters.wireframes">Wireframes</button>
+                    <button
+                        class="portfolio-filter px-4 py-2 text-sm font-bold text-gray-400 hover:text-white transition-colors border-b-2 border-transparent"
+                        onclick="filterPortfolio('offline', this)" data-i18n="portfolio.filters.offline">Offline
+                        Assets</button>
                 </div>
             </div>
 
@@ -1413,6 +1595,365 @@
                         <p class="text-sm text-accent-400">Microsite personalizado</p>
                     </div>
                 </div>
+
+                <!-- Offline Assets -->
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_2.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_2.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_4.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_4.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_5.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_5.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_7.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_7.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_9.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_9.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_11.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_11.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_12.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_12.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- ... Adding rest via loop in reality, but for brevity doing chunks if needed or just all ... -->
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_13.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_13.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_14.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_14.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_15.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_15.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-100 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_17.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_17.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_18.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_18.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_19.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_19.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_20.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_20.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_21.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_21.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_22.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_22.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_23.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_23.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_24.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_24.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_25.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_25.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_26.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_26.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_27.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_27.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_29.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_29.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_31.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_31.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_32.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_32.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_33.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_33.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
     </section>
 
@@ -1641,7 +2182,7 @@
                                 <div class="text-sm text-gray-500 uppercase tracking-wide" data-i18n="contact.phone">
                                     Teléfono
                                 </div>
-                                <span class="font-medium text-white">+49 1577 1938849</span>
+                                <span class="font-medium text-white">+49 178 6270828</span>
                             </div>
                         </div>
 
@@ -2028,22 +2569,29 @@
                 },
                 skills: {
                     title: 'Key Skills & AI Tools',
-                    description: 'Hybrid profile uniting Design and Code. Specialist in translating complex design systems into responsive frontends using <strong class="text-white">HTML5, CSS3/SASS</strong> and modern frameworks. Expert in leveraging <strong class="text-white">Cloud & Automation</strong> tools to optimize creative workflows.',
+                    description: 'Hybrid profile bridging Design and Code. Specialist in translating complex design systems into responsive frontends and scalable email solutions using <strong class="text-white">HTML5, CSS3/SASS</strong> and modern frameworks. Experienced in <strong class="text-white">Cloud, Automation and AI-enhanced workflows</strong> to optimize delivery, testing and analytics.',
                     levels: 'Proficiency Levels',
                     levels_list: {
-                        frontend: 'Frontend Architecture (HTML5/CSS3/SASS)',
-                        adobe: 'Adobe Creative Suite (XD/PS/AI/AE)',
-                        cms: 'Content Management (CMS/WordPress)',
-                        data: 'Data Structures (XML/JSON)',
-                        js: 'JavaScript Ecosystem (React/Node)'
+                        frontend: 'Frontend Architecture (HTML5 / CSS3 / SASS)',
+                        email: 'Email Development & Deliverability (HTML / ESPs)',
+                        design_systems: 'Design Systems & UI Tools (Figma / Adobe)',
+                        cms: 'Content Management (CMS / WordPress)',
+                        data: 'Data Structures & APIs (JSON / XML / REST)',
+                        js: 'JavaScript Ecosystem (React / Node.js)',
+                        cloud: 'Cloud & Automation (Azure / Power Platform)',
+                        analytics: 'Analytics & Tagging (GTM / Web Analytics)'
                     },
                     stack: 'Detailed Tech Stack',
                     categories: {
                         design: 'Design & Creativity',
                         frontend: 'Frontend Core',
+                        email: 'Email & Marketing Ops',
                         logic: 'Logic & Backend',
-                        cloud: 'Cloud, Data & Ops'
-                    }
+                        cloud: 'Cloud, Data & Ops',
+                        analytics: 'Analytics & Data Models',
+                        ai: 'AI & Automation Workflows'
+                    },
+                    microcopy: 'AI is integrated as a productivity layer across design, development, testing and optimization workflows.'
                 },
                 experience_section: {
                     title: 'Professional Trajectory'
@@ -2111,7 +2659,8 @@
                         web: 'Web & Landings',
                         email: 'Email',
                         assets: 'Assets & Design',
-                        wireframes: 'Wireframes'
+                        wireframes: 'Wireframes',
+                        offline: 'Offline Assets'
                     }
                 },
                 testimonials: {
@@ -2200,22 +2749,29 @@
                 },
                 skills: {
                     title: 'Schlüsselkompetenzen & KI-Tools',
-                    description: 'Hybrides Profil, das Design und Code verbindet. Spezialist für die Übersetzung komplexer Designsysteme in responsive Frontends mit <strong class="text-white">HTML5, CSS3/SASS</strong> und modernen Frameworks.',
+                    description: 'Hybrides Profil, das Design und Code verbindet. Spezialist für die Übersetzung komplexer Designsysteme in responsive Frontends und skalierbare E-Mail-Lösungen mit <strong class="text-white">HTML5, CSS3/SASS</strong> und modernen Frameworks. Erfahren in <strong class="text-white">Cloud, Automatisierung und KI-unterstützten Workflows</strong> zur Optimierung von Bereitstellung, Tests und Analysen.',
                     levels: 'Kompetenzniveaus',
                     levels_list: {
-                        frontend: 'Frontend-Architektur (HTML5/CSS3/SASS)',
-                        adobe: 'Adobe Creative Suite (XD/PS/AI/AE)',
-                        cms: 'Content Management (CMS/WordPress)',
-                        data: 'Datenstrukturen (XML/JSON)',
-                        js: 'JavaScript-Ökosystem (React/Node)'
+                        frontend: 'Frontend-Architektur (HTML5 / CSS3 / SASS)',
+                        email: 'E-Mail-Entwicklung & Zustellbarkeit (HTML / ESPs)',
+                        design_systems: 'Designsysteme & UI-Tools (Figma / Adobe)',
+                        cms: 'Content Management (CMS / WordPress)',
+                        data: 'Datenstrukturen & APIs (JSON / XML / REST)',
+                        js: 'JavaScript-Ökosystem (React / Node.js)',
+                        cloud: 'Cloud & Automatisierung (Azure / Power Platform)',
+                        analytics: 'Analytics & Tagging (GTM / Web Analytics)'
                     },
                     stack: 'Detaillierter Tech-Stack',
                     categories: {
                         design: 'Design & Kreativität',
                         frontend: 'Frontend Core',
+                        email: 'E-Mail & Marketing Ops',
                         logic: 'Logik & Backend',
-                        cloud: 'Cloud, Data & Ops'
-                    }
+                        cloud: 'Cloud, Data & Ops',
+                        analytics: 'Analytics & Datenmodelle',
+                        ai: 'KI & Automatisierungsworkflows'
+                    },
+                    microcopy: 'KI ist als Produktivitätsebene in Design-, Entwicklungs-, Test- und Optimierungsworkflows integriert.'
                 },
                 experience_section: {
                     title: 'Beruflicher Werdegang'
@@ -2283,7 +2839,8 @@
                         web: 'Web & Landings',
                         email: 'E-Mail',
                         assets: 'Assets & Design',
-                        wireframes: 'Wireframes'
+                        wireframes: 'Wireframes',
+                        offline: 'Offline Assets'
                     }
                 },
                 testimonials: {
@@ -2372,22 +2929,29 @@
                 },
                 skills: {
                     title: 'Habilidades Clave y Herramientas AI',
-                    description: 'Perfil híbrido que une Diseño y Código. Especialista en traducir sistemas de diseño complejos en frontends responsivos utilizando <strong class="text-white">HTML5, CSS3/SASS</strong> y frameworks modernos. Experto en aprovechar herramientas <strong class="text-white">Cloud y de Automatización</strong> para optimizar flujos de trabajo creativos.',
+                    description: 'Perfil híbrido que une Diseño y Código. Especialista en traducir sistemas de diseño complejos en frontends responsivos y soluciones de correo electrónico escalables utilizando <strong class="text-white">HTML5, CSS3/SASS</strong> y frameworks modernos. Experimentado en <strong class="text-white">Cloud, Automatización y flujos de trabajo potenciados por IA</strong> para optimizar la entrega, las pruebas y los análisis.',
                     levels: 'Niveles de Competencia',
                     levels_list: {
-                        frontend: 'Arquitectura Frontend (HTML5/CSS3/SASS)',
-                        adobe: 'Adobe Creative Suite (XD/PS/AI/AE)',
-                        cms: 'Gestión de Contenidos (CMS/WordPress)',
-                        data: 'Estructura de Datos (XML/JSON)',
-                        js: 'Ecosistema JavaScript (React/Node)'
+                        frontend: 'Arquitectura Frontend (HTML5 / CSS3 / SASS)',
+                        email: 'Desarrollo de Email & Entregabilidad (HTML / ESPs)',
+                        design_systems: 'Sistemas de Diseño & UI Tools (Figma / Adobe)',
+                        cms: 'Gestión de Contenidos (CMS / WordPress)',
+                        data: 'Estructuras de Datos & APIs (JSON / XML / REST)',
+                        js: 'Ecosistema JavaScript (React / Node.js)',
+                        cloud: 'Cloud & Automatización (Azure / Power Platform)',
+                        analytics: 'Analítica & Etiquetado (GTM / Web Analytics)'
                     },
                     stack: 'Stack Tecnológico Detallado',
                     categories: {
                         design: 'Diseño & Creatividad',
                         frontend: 'Frontend Core',
+                        email: 'Email & Marketing Ops',
                         logic: 'Lógica & Backend',
-                        cloud: 'Cloud, Data & Ops'
-                    }
+                        cloud: 'Cloud, Data & Ops',
+                        analytics: 'Analítica & Modelos de Datos',
+                        ai: 'IA & Flujos de Automatización'
+                    },
+                    microcopy: 'La IA está integrada como una capa de productividad en los flujos de diseño, desarrollo, pruebas y optimización.'
                 },
                 experience_section: {
                     title: 'Trayectoria Profesional'
@@ -2455,7 +3019,8 @@
                         web: 'Web & Landings',
                         email: 'Email',
                         assets: 'Activos & Diseño',
-                        wireframes: 'Wireframes'
+                        wireframes: 'Wireframes',
+                        offline: 'Offline Assets'
                     }
                 },
                 testimonials: {
@@ -2544,22 +3109,29 @@
                 },
                 skills: {
                     title: 'Compétences Clés & Outils IA',
-                    description: 'Profil hybride alliant Design et Code. Spécialiste de la traduction de systèmes de design complexes en frontends réactifs utilisant <strong class="text-white">HTML5, CSS3/SASS</strong>.',
+                    description: 'Profil hybride alliant Design et Code. Spécialiste de la traduction de systèmes de design complexes en frontends réactifs et solutions d\'e-mail évolutives utilisant <strong class="text-white">HTML5, CSS3/SASS</strong> et des frameworks modernes. Expérimenté dans le <strong class="text-white">Cloud, l\'Automatisation et les flux de travail assistés par IA</strong> pour optimiser la livraison, les tests et l\'analyse.',
                     levels: 'Niveaux de Compétence',
                     levels_list: {
-                        frontend: 'Architecture Frontend (HTML5/CSS3/SASS)',
-                        adobe: 'Suite Adobe Creative (XD/PS/AI/AE)',
-                        cms: 'Gestion de Contenu (CMS/WordPress)',
-                        data: 'Structures de Données (XML/JSON)',
-                        js: 'Écosystème JavaScript (React/Node)'
+                        frontend: 'Architecture Frontend (HTML5 / CSS3 / SASS)',
+                        email: 'Développement Email & Délivrabilité (HTML / ESPs)',
+                        design_systems: 'Systèmes de Design & Outils UI (Figma / Adobe)',
+                        cms: 'Gestion de Contenu (CMS / WordPress)',
+                        data: 'Structures de Données & API (JSON / XML / REST)',
+                        js: 'Écosystème JavaScript (React / Node.js)',
+                        cloud: 'Cloud & Automatisation (Azure / Power Platform)',
+                        analytics: 'Analytique & Tagging (GTM / Web Analytics)'
                     },
                     stack: 'Stack Technologique Détaillé',
                     categories: {
                         design: 'Design & Créativité',
                         frontend: 'Cœur Frontend',
+                        email: 'Email & Opérations Marketing',
                         logic: 'Logique & Backend',
-                        cloud: 'Cloud, Données & Ops'
-                    }
+                        cloud: 'Cloud, Données & Ops',
+                        analytics: 'Analytique & Modèles de Données',
+                        ai: 'IA & Flux d\'Automatisation'
+                    },
+                    microcopy: 'L\'IA est intégrée comme couche de productivité dans les flux de conception, développement, test et optimisation.'
                 },
                 experience_section: {
                     title: 'Parcours Professionnel'
@@ -2627,7 +3199,8 @@
                         web: 'Web & Landings',
                         email: 'Email',
                         assets: 'Ressources & Design',
-                        wireframes: 'Maquettes'
+                        wireframes: 'Maquettes',
+                        offline: 'Offline Assets'
                     }
                 },
                 testimonials: {

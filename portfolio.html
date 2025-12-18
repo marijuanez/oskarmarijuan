@@ -143,9 +143,6 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                         <button
                             class="nav-filter active text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="all" data-i18n="portfolio.filters.all">Todos</button>
-                        <button
-                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
                             data-filter="web" data-i18n="portfolio.filters.web">Web & Landings</button>
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
@@ -156,6 +153,9 @@
                         <button
                             class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
                             data-filter="wireframes" data-i18n="portfolio.filters.wireframes">Wireframes</button>
+                        <button
+                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
+                            data-filter="offline" data-i18n="portfolio.filters.offline">Offline Assets</button>
                     </div>
                 </div>
 
@@ -210,9 +210,6 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="all" onclick="toggleMenu()" data-i18n="portfolio.filters.all">Todos</button>
-                <button
-                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
                     data-filter="web" onclick="toggleMenu()" data-i18n="portfolio.filters.web">Web & Landings</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
@@ -225,6 +222,10 @@
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
                     data-filter="wireframes" onclick="toggleMenu()"
                     data-i18n="portfolio.filters.wireframes">Wireframes</button>
+                <button
+                    class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
+                    data-filter="offline" onclick="toggleMenu()" data-i18n="portfolio.filters.offline">Offline
+                    Assets</button>
                 <div class="border-t border-gray-700 mt-2 pt-2">
                     <a href="index.html" class="block px-3 py-2 text-accent-400 font-bold" data-i18n="nav.back">Volver
                         al Perfil</a>
@@ -667,226 +668,585 @@
                         <p class="text-sm text-accent-400">Microsite personalizado</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-anthracite-950 border-t border-gray-800 pt-12 pb-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center items-center gap-2 mb-4">
-                <span class="text-xl font-extrabold tracking-tighter text-white">OSKAR<span
-                        class="text-accent-400">MARIJUAN</span></span>
-            </div>
-            <p class="text-gray-500 text-sm mb-4">
-                Designed in California made by Oskar Marijuan
-            </p>
-            <p class="text-gray-600 text-xs">
-                &copy; 2025 <span data-i18n="footer.rights">Todos los derechos reservados.</span>
-            </p>
-        </div>
-    </footer>
+                <!-- Offline Assets -->
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_2.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_2.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-    <script>
-        lucide.createIcons();
-        AOS.init({ duration: 800, once: true, offset: 50 });
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_4.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_4.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_5.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_5.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_7.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_7.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-        // Initialize Lightbox
-        const lightbox = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-            loop: true,
-            autoplayVideos: true
-        });
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_9.png" class="glightbox" data-title="Offline Design"
+                            data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_9.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-        // Filter Logic
-        const filterBtns = document.querySelectorAll('.nav-filter');
-        const items = document.querySelectorAll('.portfolio-item');
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_11.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_11.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_12.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_12.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- ... Adding rest via loop in reality, but for brevity doing chunks if needed or just all ... -->
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_13.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_13.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_14.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_14.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_15.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_15.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-        function filterItems(filterValue) {
-            items.forEach(item => {
-                if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                    item.classList.remove('hidden');
-                    item.classList.add('block');
-                } else {
-                    item.classList.remove('block');
-                    item.classList.add('hidden');
-                }
-            });
-            // Re-layout Layout if using Masonry? (Not using masonry here, CSS Grid deals with hidden items well, but we should animate)
-        }
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_17.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_17.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_18.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_18.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_19.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_19.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_20.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_20.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_21.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_21.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_22.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_22.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_23.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_23.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_24.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_24.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_25.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_25.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_26.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_26.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_27.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_27.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_29.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_29.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                const filterValue = btn.getAttribute('data-filter');
-                filterItems(filterValue);
-            });
-        });
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_31.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_31.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_32.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_32.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden relative">
+                        <a href="images/portfolio/port_offline/port_33.png" class="glightbox"
+                            data-title="Offline Design" data-description="Print & Branding">
+                            <img src="images/portfolio/port_offline/port_33.png" alt="Offline Design"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-        function toggleMenu() {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
-        }
+                <!-- Footer -->
+                <footer class="bg-anthracite-950 border-t border-gray-800 pt-12 pb-8">
+                    <div class="max-w-7xl mx-auto px-4 text-center">
+                        <div class="flex justify-center items-center gap-2 mb-4">
+                            <span class="text-xl font-extrabold tracking-tighter text-white">OSKAR<span
+                                    class="text-accent-400">MARIJUAN</span></span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">
+                            Designed in California made by Oskar Marijuan
+                        </p>
+                        <p class="text-gray-600 text-xs">
+                            &copy; 2025 <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+                        </p>
+                    </div>
+                </footer>
 
-        // 3D Tilt Effect
-        const cards = document.querySelectorAll('.glass-card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -5;
-                const rotateY = ((x - centerX) / centerX) * 5;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-            });
-        });
-    </script>
+                <script>
+                    lucide.createIcons();
+                    AOS.init({ duration: 800, once: true, offset: 50 });
 
-    <!-- Internationalization Script -->
-    <script>
-        // Translation data for 4 languages
-        const translations = {
-            en: {
-                nav: {
-                    back: 'Back to Profile'
-                },
-                portfolio: {
-                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
-                    filters: {
-                        all: 'All',
-                        web: 'Web & Landings',
-                        email: 'Email',
-                        assets: 'Assets & Design',
-                        wireframes: 'Wireframes'
+                    // Initialize Lightbox
+                    const lightbox = GLightbox({
+                        selector: '.glightbox',
+                        touchNavigation: true,
+                        loop: true,
+                        autoplayVideos: true
+                    });
+
+                    // Filter Logic
+                    const filterBtns = document.querySelectorAll('.nav-filter');
+                    const items = document.querySelectorAll('.portfolio-item');
+
+                    function filterItems(filterValue) {
+                        items.forEach(item => {
+                            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                                item.classList.remove('hidden');
+                                item.classList.add('block');
+                            } else {
+                                item.classList.remove('block');
+                                item.classList.add('hidden');
+                            }
+                        });
+                        // Re-layout Layout if using Masonry? (Not using masonry here, CSS Grid deals with hidden items well, but we should animate)
                     }
-                },
-                footer: {
-                    rights: 'All rights reserved.'
-                }
-            },
-            de: {
-                nav: {
-                    back: 'Zurück zum Profil'
-                },
-                portfolio: {
-                    title: '<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Globales</span> Portfolio',
-                    filters: {
-                        all: 'Alle',
-                        web: 'Web & Landings',
-                        email: 'E-Mail',
-                        assets: 'Assets & Design',
-                        wireframes: 'Wireframes'
+
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+
+                            const filterValue = btn.getAttribute('data-filter');
+                            filterItems(filterValue);
+                        });
+                    });
+
+                    function toggleMenu() {
+                        const menu = document.getElementById("mobile-menu");
+                        menu.classList.toggle("hidden");
                     }
-                },
-                footer: {
-                    rights: 'Alle Rechte vorbehalten.'
-                }
-            },
-            es: {
-                nav: {
-                    back: 'Volver al Perfil'
-                },
-                portfolio: {
-                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
-                    filters: {
-                        all: 'Todos',
-                        web: 'Web & Landings',
-                        email: 'Email',
-                        assets: 'Activos & Diseño',
-                        wireframes: 'Wireframes'
+
+                    // 3D Tilt Effect
+                    const cards = document.querySelectorAll('.glass-card');
+                    cards.forEach(card => {
+                        card.addEventListener('mousemove', (e) => {
+                            const rect = card.getBoundingClientRect();
+                            const x = e.clientX - rect.left;
+                            const y = e.clientY - rect.top;
+                            const centerX = rect.width / 2;
+                            const centerY = rect.height / 2;
+                            const rotateX = ((y - centerY) / centerY) * -5;
+                            const rotateY = ((x - centerX) / centerX) * 5;
+                            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                        });
+                        card.addEventListener('mouseleave', () => {
+                            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+                        });
+                    });
+                </script>
+
+                <!-- Internationalization Script -->
+                <script>
+                    const translations = {
+                        en: {
+                            nav: {
+                                back: 'Back to Profile'
+                            },
+                            portfolio: {
+                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                filters: {
+                                    web: 'Web & Landings',
+                                    email: 'Email',
+                                    assets: 'Assets & Design',
+                                    wireframes: 'Wireframes',
+                                    offline: 'Offline Assets'
+                                }
+                            },
+                            footer: {
+                                rights: 'All rights reserved.'
+                            }
+                        },
+                        de: {
+                            nav: {
+                                back: 'Zurück zum Profil'
+                            },
+                            portfolio: {
+                                title: '<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Globales</span> Portfolio',
+                                filters: {
+                                    web: 'Web & Landings',
+                                    email: 'E-Mail',
+                                    assets: 'Assets & Design',
+                                    wireframes: 'Wireframes',
+                                    offline: 'Offline Assets'
+                                }
+                            },
+                            footer: {
+                                rights: 'Alle Rechte vorbehalten.'
+                            }
+                        },
+                        es: {
+                            nav: {
+                                back: 'Volver al Perfil'
+                            },
+                            portfolio: {
+                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                filters: {
+                                    web: 'Web & Landings',
+                                    email: 'Email',
+                                    assets: 'Activos & Diseño',
+                                    wireframes: 'Wireframes',
+                                    offline: 'Offline Assets'
+                                }
+                            },
+                            footer: {
+                                rights: 'Todos los derechos reservados.'
+                            }
+                        },
+                        fr: {
+                            nav: {
+                                back: 'Retour au Profil'
+                            },
+                            portfolio: {
+                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                filters: {
+                                    web: 'Web & Landings',
+                                    email: 'Email',
+                                    assets: 'Ressources & Design',
+                                    wireframes: 'Maquettes',
+                                    offline: 'Offline Assets'
+                                }
+                            },
+                            footer: {
+                                rights: 'Tous droits réservés.'
+                            }
+                        }
+                    };
+
+                    // Language flag classes mapping
+                    const languageFlags = {
+                        en: { flag: 'fi-gb', code: 'EN' },
+                        de: { flag: 'fi-de', code: 'DE' },
+                        es: { flag: 'fi-es', code: 'ES' },
+                        fr: { flag: 'fi-fr', code: 'FR' }
+                    };
+
+                    // Function to change language
+                    function changeLanguage(lang) {
+                        // Save to localStorage
+                        localStorage.setItem('preferredLanguage', lang);
+
+                        // Update current language display with flag icon
+                        const currentFlag = document.getElementById('current-flag');
+                        const currentLang = document.getElementById('current-lang');
+
+                        if (currentFlag && languageFlags[lang]) {
+                            // Update flag icon
+                            currentFlag.className = `fi ${languageFlags[lang].flag} fis w-6`;
+                        }
+
+                        if (currentLang && languageFlags[lang]) {
+                            currentLang.textContent = languageFlags[lang].code;
+                        }
+
+                        // Update all elements with data-i18n attribute
+                        document.querySelectorAll('[data-i18n]').forEach(element => {
+                            const key = element.getAttribute('data-i18n');
+                            const keys = key.split('.');
+                            let translation = translations[lang];
+
+                            // Navigate through the translation object
+                            for (let k of keys) {
+                                if (translation && translation[k]) {
+                                    translation = translation[k];
+                                } else {
+                                    translation = null;
+                                    break;
+                                }
+                            }
+
+                            if (typeof translation === 'string') {
+                                // Use innerHTML to support standard HTML tags in translations (like <strong>)
+                                element.innerHTML = translation;
+                            }
+                        });
+
+                        // Update HTML lang attribute
+                        document.documentElement.lang = lang;
                     }
-                },
-                footer: {
-                    rights: 'Todos los derechos reservados.'
-                }
-            },
-            fr: {
-                nav: {
-                    back: 'Retour au Profil'
-                },
-                portfolio: {
-                    title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
-                    filters: {
-                        all: 'Tous',
-                        web: 'Web & Landings',
-                        email: 'Email',
-                        assets: 'Ressources & Design',
-                        wireframes: 'Maquettes'
-                    }
-                },
-                footer: {
-                    rights: 'Tous droits réservés.'
-                }
-            }
-        };
 
-        // Language flag classes mapping
-        const languageFlags = {
-            en: { flag: 'fi-gb', code: 'EN' },
-            de: { flag: 'fi-de', code: 'DE' },
-            es: { flag: 'fi-es', code: 'ES' },
-            fr: { flag: 'fi-fr', code: 'FR' }
-        };
+                    // Initialize language on page load
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Check for saved language preference, default to English
+                        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+                        changeLanguage(savedLang);
 
-        // Function to change language
-        function changeLanguage(lang) {
-            // Save to localStorage
-            localStorage.setItem('preferredLanguage', lang);
-
-            // Update current language display with flag icon
-            const currentFlag = document.getElementById('current-flag');
-            const currentLang = document.getElementById('current-lang');
-
-            if (currentFlag && languageFlags[lang]) {
-                // Update flag icon
-                currentFlag.className = `fi ${languageFlags[lang].flag} fis w-6`;
-            }
-
-            if (currentLang && languageFlags[lang]) {
-                currentLang.textContent = languageFlags[lang].code;
-            }
-
-            // Update all elements with data-i18n attribute
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                const keys = key.split('.');
-                let translation = translations[lang];
-
-                // Navigate through the translation object
-                for (let k of keys) {
-                    if (translation && translation[k]) {
-                        translation = translation[k];
-                    } else {
-                        translation = null;
-                        break;
-                    }
-                }
-
-                if (typeof translation === 'string') {
-                    // Use innerHTML to support standard HTML tags in translations (like <strong>)
-                    element.innerHTML = translation;
-                }
-            });
-
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-        }
-
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            // Check for saved language preference, default to English
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            changeLanguage(savedLang);
-        });
-    </script>
+                        // Trigger Web filter by default (since 'all' is removed)
+                        const webBtn = document.querySelector('.nav-filter[data-filter="web"]');
+                        if (webBtn) webBtn.click();
+                    });
+                </script>
 
 </body>
 
