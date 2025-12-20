@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "oscarmarijuan",
+    "site": "oskarmarijuan",
     "public": ".",
     "ignore": [
       "firebase.json",
