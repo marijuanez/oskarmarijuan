@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "oskarmarijuan-73678"
-  }
+    "default": "oskarmarijuan-73678",
+    "portfolio": "oskar-marijuan",
+    "oskarmarijuan": "oskarmarijuan1973"
+  },
+  "targets": {},
+  "etags": {}
 }
