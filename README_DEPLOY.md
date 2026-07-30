@@ -3,9 +3,9 @@
 This project is configured to deploy to **Firebase Hosting** using **GitHub Actions**.
 
 ## Firebase Configuration
-* **Project ID**: `oskarmarijuan-de624`
-* **Site ID**: `oscarmarijuan`
-* **Production URL**: https://oscarmarijuan.web.app
+* **Project ID**: `oskar-marijuan`
+* **Site ID**: `oskar-marijuan`
+* **Production URL**: https://oskar-marijuan.web.app
 * **Source Directory**: Root (`.`) - The files you edit in MAMP are the ones deployed.
 * **Ignored Files**: PHP files, git configuration, and the old `public` folder are excluded from upload.
 
@@ -16,7 +16,7 @@ The deployment workflow is located in `.github/workflows/firebase-hosting.yml`.
 To enable automatic deployment, you must set the following **Secrets** in your GitHub Repository Settings -> Secrets and variables -> Actions:
 
 1.  **FIREBASE_PROJECT_ID**:
-    *   Value: `oskarmarijuan-73678`
+    *   Value: `oskar-marijuan`
 
 2.  **FIREBASE_TOKEN**:
     *   Value: Your Firebase CI token.

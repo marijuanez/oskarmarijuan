@@ -1,13 +1,16 @@
 {
   "hosting": {
     "site": "oskar-marijuan",
-    "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.php",
+      "public/**",
+      "README.md",
+      ".gitignore",
+      "package*.json"
     ]
   }
 }
