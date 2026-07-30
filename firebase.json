@@ -4,13 +4,29 @@
     "public": ".",
     "ignore": [
       "firebase.json",
+      ".git/**",
       "**/.*",
       "**/node_modules/**",
       "**/*.php",
       "public/**",
       "README.md",
+      "README_DEPLOY.md",
       ".gitignore",
-      "package*.json"
+      "package*.json",
+      "php/**",
+      "demo-images/**",
+      "firebase-debug.log",
+      "portfolioX.html",
+      "portfolio_legacy.html",
+      "index-blog.html",
+      "index-image.html",
+      "index-slider.html",
+      "index-video.html",
+      "single.html",
+      "single-portfolio.html",
+      "about.html",
+      "blog.html",
+      "contact-map.html"
     ]
   }
 }
