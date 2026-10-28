@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 40 162 112" width="256" height="256">
+  <defs>
+    <linearGradient id="om-o" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf7f0"/>
+      <stop offset="100%" stop-color="#d6d2c4"/>
+    </linearGradient>
+    <linearGradient id="om-m" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d6d2c4"/>
+      <stop offset="100%" stop-color="#b4b0a3"/>
+    </linearGradient>
+    <mask id="cutout-o">
+      <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+      <circle cx="56.8" cy="96.0" r="42.6" fill="#000000"/>
+    </mask>
+  </defs>
+  <!-- O Monogram Ring -->
+  <path fill="url(#om-o)" fill-rule="evenodd" stroke="#1b1b1b" stroke-width="1.35" stroke-linejoin="round"
+        d="M 56.8 57.2
+           A 38.8 38.8 0 1 0 56.8 134.8
+           A 38.8 38.8 0 1 0 56.8 57.2 Z
+           M 56.8 74.2
+           A 21.8 21.8 0 1 1 56.8 117.8
+           A 21.8 21.8 0 1 1 56.8 74.2 Z"/>
+  <!-- M Monogram Interlocked with O -->
+  <g mask="url(#cutout-o)">
+    <polygon fill="url(#om-m)" stroke="#1b1b1b" stroke-width="1.35" stroke-linejoin="round"
+             points="87.5,58.6 105.8,58.6 130.0,111.5 154.2,58.6 171.5,58.6 171.5,133.8 157.2,133.8 157.2,86.5 135.6,133.8 124.4,133.8 102.8,86.5 102.8,133.8 87.5,133.8"/>
+    <circle cx="56.8" cy="96.0" r="42.6" fill="none" stroke="#1b1b1b" stroke-width="2.7"/>
+  </g>
+</svg>

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Oskar Marijuan</title>
     <meta name="description" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3" />
+    <link rel="icon" type="image/png" href="images/favicon.png?v=3" />
+    <link rel="apple-touch-icon" href="images/favicon.png?v=3" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -20,6 +21,8 @@
     <!-- Lightbox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Flag Icons Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
 
     <script>
         tailwind.config = {
@@ -29,24 +32,43 @@
                         sans: ['"Plus Jakarta Sans"', "sans-serif"],
                     },
                     colors: {
+                        white: "#faf7f0",
                         anthracite: {
-                            50: "#f6f7f9",
-                            100: "#eceef2",
-                            200: "#dce1e9",
-                            300: "#c4cddb",
-                            400: "#a6b3c9",
-                            500: "#8696b3",
-                            600: "#687999",
-                            700: "#54637f",
-                            800: "#465166",
-                            850: "#353c4b",
-                            900: "#282d37",
-                            950: "#1a1d23",
+                            50: "#faf7f0",
+                            100: "#f2efe6",
+                            200: "#e6e2d6",
+                            300: "#d6d2c4",
+                            400: "#b0ada3",
+                            500: "#8a8a8a",
+                            600: "#6a6a6a",
+                            700: "#4a4a4a",
+                            800: "#363636",
+                            850: "#2b2b2b",
+                            900: "#222222",
+                            950: "#1b1b1b",
+                        },
+                        gray: {
+                            50: "#faf7f0",
+                            100: "#f2efe6",
+                            200: "#e6e2d6",
+                            300: "#d6d2c4",
+                            400: "#a8a59b",
+                            500: "#8a8a8a",
+                            600: "#686868",
+                            700: "#4a4a4a",
+                            800: "#303030",
+                            900: "#1b1b1b",
                         },
                         accent: {
-                            400: "#38bdf8",
-                            500: "#0ea5e9",
-                            600: "#0284c7",
+                            300: "#faf7f0",
+                            400: "#d6d2c4",
+                            500: "#c2bdb0",
+                            600: "#d6d2c4",
+                        },
+                        purple: {
+                            300: "#faf7f0",
+                            400: "#d6d2c4",
+                            500: "#b5afa0",
                         },
                     },
                 },
@@ -67,8 +89,8 @@
         }
 
         body {
-            background-color: #1a1d23;
-            color: #e2e8f0;
+            background-color: #1b1b1b;
+            color: #faf7f0;
             overflow-x: hidden;
             width: 100%;
             position: relative;
@@ -76,9 +98,8 @@
             padding: 0;
         }
 
-        /* Ensure all containers respect viewport width */
-        section,
-        div {
+        /* Ensure all sections respect viewport width without constraining absolute dropdown divs */
+        section {
             max-width: 100%;
         }
 
@@ -87,43 +108,95 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #1a1d23;
+            background: #1b1b1b;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #465166;
+            background: #4a4a4a;
             border-radius: 5px;
-            border: 2px solid #1a1d23;
+            border: 2px solid #1b1b1b;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #54637f;
+            background: #8a8a8a;
         }
 
         .glass {
-            background: rgba(40, 45, 55, 0.7);
+            background: rgba(27, 27, 27, 0.82);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(214, 210, 196, 0.08);
         }
 
         .glass-card {
-            background: rgba(53, 60, 75, 0.4);
+            position: relative;
+            overflow: hidden;
+            background: rgba(74, 74, 74, 0.24);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(214, 210, 196, 0.09);
+            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            will-change: transform;
+        }
+
+        /* Interactive Cursor-Tracking Radial Spotlight */
+        .glass-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(214, 210, 196, 0.17), transparent 65%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Diagonal Editorial Sheen Sweep */
+        .glass-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(115deg, transparent 20%, rgba(250, 247, 240, 0.09) 50%, transparent 80%);
+            transform: skewX(-20deg);
+            transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
+            z-index: 2;
         }
 
         .glass-card:hover {
-            background: rgba(53, 60, 75, 0.6);
-            border-color: rgba(56, 189, 248, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+            background: rgba(74, 74, 74, 0.38);
+            border-color: rgba(214, 210, 196, 0.48);
+            transform: translateY(-7px) scale(1.02);
+            box-shadow: 0 18px 42px -12px rgba(0, 0, 0, 0.75), 0 0 24px -6px rgba(214, 210, 196, 0.18);
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        .glass-card:hover::after {
+            left: 140%;
         }
 
         .nav-filter.active {
-            color: #38bdf8;
-            border-bottom-color: #38bdf8;
+            color: #faf7f0;
+            border-bottom-color: #d6d2c4;
+            background-color: rgba(214, 210, 196, 0.14);
+        }
+
+        ::selection {
+            background-color: #d6d2c4 !important;
+            color: #1b1b1b !important;
+        }
+
+        .bg-accent-600,
+        .hover\:bg-accent-600:hover {
+            background-color: #d6d2c4 !important;
+            color: #1b1b1b !important;
         }
     </style>
 </head>
@@ -139,65 +212,74 @@
                 </div>
 
                 <!-- Desktop Menu Filters -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
+                <div class="hidden xl:block">
+                    <div class="ml-6 flex items-center space-x-4">
                         <button
-                            class="nav-filter active text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="web" data-i18n="portfolio.filters.web">Web & Landings</button>
+                            class="nav-filter active text-gray-300 hover:text-white px-2.5 py-2 text-sm font-bold transition-colors border-b-2 border-transparent whitespace-nowrap"
+                            data-filter="web" data-i18n="portfolio.filters.web">Web, Apps &amp; Landings</button>
                         <button
-                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="email" data-i18n="portfolio.filters.email">Email</button>
+                            class="nav-filter text-gray-300 hover:text-white px-2.5 py-2 text-sm font-bold transition-colors border-b-2 border-transparent whitespace-nowrap"
+                            data-filter="email" data-i18n="portfolio.filters.email">CRM &amp; Email HTML</button>
                         <button
-                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="assets" data-i18n="portfolio.filters.assets">Activos & Diseño</button>
+                            class="nav-filter text-gray-300 hover:text-white px-2.5 py-2 text-sm font-bold transition-colors border-b-2 border-transparent whitespace-nowrap"
+                            data-filter="assets" data-i18n="portfolio.filters.assets">Design Systems &amp; Motion</button>
                         <button
-                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="wireframes" data-i18n="portfolio.filters.wireframes">Wireframes</button>
+                            class="nav-filter text-gray-300 hover:text-white px-2.5 py-2 text-sm font-bold transition-colors border-b-2 border-transparent whitespace-nowrap"
+                            data-filter="wireframes" data-i18n="portfolio.filters.wireframes">UX &amp; Prototipos</button>
                         <button
-                            class="nav-filter text-gray-300 hover:text-white px-3 py-2 text-sm font-bold transition-colors border-b-2 border-transparent"
-                            data-filter="offline" data-i18n="portfolio.filters.offline">Offline Assets</button>
+                            class="nav-filter text-gray-300 hover:text-white px-2.5 py-2 text-sm font-bold transition-colors border-b-2 border-transparent whitespace-nowrap"
+                            data-filter="offline" data-i18n="portfolio.filters.offline">Brand &amp; Visual Design</button>
                     </div>
                 </div>
 
-                <!-- Language Selector -->
-                <div class="hidden md:flex items-center gap-4">
+                <!-- Language Selector + Back to Profile -->
+                <div class="hidden md:flex items-center gap-3 shrink-0">
                     <div class="relative group">
                         <button
-                            class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                            <span id="current-flag" class="text-lg">🇬🇧</span>
-                            <span id="current-lang" class="text-sm font-medium">EN</span>
-                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors whitespace-nowrap">
+                            <span id="current-flag" class="fi fi-es fis w-6 rounded-sm shrink-0"></span>
+                            <span id="current-lang" class="text-sm font-medium">ES</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 shrink-0"></i>
                         </button>
-                        <div
-                            class="absolute right-0 mt-2 w-40 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50">
+                        <div style="min-width: 175px; width: max-content;"
+                            class="absolute right-0 mt-2 w-44 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50 py-1">
                             <button onclick="changeLanguage('en')"
-                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                <span class="text-lg">🇬🇧</span> English
+                                class="lang-option w-full px-4 py-2.5 text-left text-sm font-medium text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3 whitespace-nowrap">
+                                <span class="fi fi-gb fis w-5 rounded-sm shrink-0"></span>
+                                <span>English</span>
                             </button>
                             <button onclick="changeLanguage('de')"
-                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                <span class="text-lg">🇩🇪</span> Deutsch
+                                class="lang-option w-full px-4 py-2.5 text-left text-sm font-medium text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3 whitespace-nowrap">
+                                <span class="fi fi-de fis w-5 rounded-sm shrink-0"></span>
+                                <span>Deutsch</span>
                             </button>
                             <button onclick="changeLanguage('es')"
-                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                <span class="text-lg">🇪🇸</span> Español
+                                class="lang-option w-full px-4 py-2.5 text-left text-sm font-medium text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3 whitespace-nowrap">
+                                <span class="fi fi-es fis w-5 rounded-sm shrink-0"></span>
+                                <span>Español</span>
                             </button>
                             <button onclick="changeLanguage('fr')"
-                                class="lang-option w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3">
-                                <span class="text-lg">🇫🇷</span> Français
+                                class="lang-option w-full px-4 py-2.5 text-left text-sm font-medium text-gray-300 hover:bg-accent-500/20 hover:text-white transition-colors flex items-center gap-3 whitespace-nowrap">
+                                <span class="fi fi-fr fis w-5 rounded-sm shrink-0"></span>
+                                <span>Français</span>
                             </button>
                         </div>
                     </div>
                     <div class="h-6 w-px bg-gray-700"></div>
-                    <a href="index.html"
-                        class="text-gray-400 hover:text-white text-sm font-medium transition-colors flex items-center gap-1">
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="nav.back">Back to
-                            Profile</span>
+                    <a href="index.html#portfolio"
+                        class="text-gray-300 hover:text-white bg-anthracite-800/80 hover:bg-anthracite-800 border border-gray-700/80 px-3.5 py-1.5 rounded-lg text-xs xl:text-sm font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0">
+                        <i data-lucide="arrow-left" class="w-4 h-4 text-accent-400 shrink-0"></i>
+                        <span data-i18n="nav.back">Volver al Perfil</span>
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
+                <!-- Mobile Back + Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <a href="index.html#portfolio"
+                        class="text-accent-400 hover:text-white bg-anthracite-800/90 border border-gray-700 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 whitespace-nowrap shrink-0">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5 shrink-0"></i>
+                        <span data-i18n="nav.back">Volver al Perfil</span>
+                    </a>
                     <button onclick="toggleMenu()" class="text-gray-300 hover:text-white p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
@@ -210,24 +292,28 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="web" onclick="toggleMenu()" data-i18n="portfolio.filters.web">Web & Landings</button>
+                    data-filter="web" onclick="toggleMenu()" data-i18n="portfolio.filters.web">Web, Apps &amp; Landings</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="email" onclick="toggleMenu()" data-i18n="portfolio.filters.email">Email</button>
+                    data-filter="email" onclick="toggleMenu()" data-i18n="portfolio.filters.email">CRM &amp; Email HTML</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="assets" onclick="toggleMenu()" data-i18n="portfolio.filters.assets">Activos &
-                    Diseño</button>
+                    data-filter="assets" onclick="toggleMenu()" data-i18n="portfolio.filters.assets">Design Systems &amp; Motion</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
                     data-filter="wireframes" onclick="toggleMenu()"
-                    data-i18n="portfolio.filters.wireframes">Wireframes</button>
+                    data-i18n="portfolio.filters.wireframes">UX &amp; Prototipos</button>
                 <button
                     class="nav-filter block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
-                    data-filter="offline" onclick="toggleMenu()" data-i18n="portfolio.filters.offline">Offline
-                    Assets</button>
+                    data-filter="offline" onclick="toggleMenu()" data-i18n="portfolio.filters.offline">Brand &amp; Visual Design</button>
+                <div class="border-t border-gray-700 mt-2 pt-3 px-3 flex items-center gap-3">
+                    <button onclick="changeLanguage('es'); toggleMenu()" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-anthracite-800 text-xs font-bold text-white"><span class="fi fi-es fis w-4 rounded-sm"></span> ES</button>
+                    <button onclick="changeLanguage('en'); toggleMenu()" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-anthracite-800 text-xs font-bold text-white"><span class="fi fi-gb fis w-4 rounded-sm"></span> EN</button>
+                    <button onclick="changeLanguage('de'); toggleMenu()" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-anthracite-800 text-xs font-bold text-white"><span class="fi fi-de fis w-4 rounded-sm"></span> DE</button>
+                    <button onclick="changeLanguage('fr'); toggleMenu()" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-anthracite-800 text-xs font-bold text-white"><span class="fi fi-fr fis w-4 rounded-sm"></span> FR</button>
+                </div>
                 <div class="border-t border-gray-700 mt-2 pt-2">
-                    <a href="index.html" class="block px-3 py-2 text-accent-400 font-bold" data-i18n="nav.back">Volver
+                    <a href="index.html#portfolio" class="block px-3 py-2 text-accent-400 font-bold" data-i18n="nav.back">Volver
                         al Perfil</a>
                 </div>
             </div>
@@ -235,41 +321,164 @@
     </nav>
 
     <!-- Hero Compact -->
-    <section class="pt-32 pb-8 bg-anthracite-950 relative overflow-hidden">
+    <section class="pt-24 pb-3 bg-anthracite-950 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('images/hero-bg.png')] bg-cover bg-center opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-3xl md:text-5xl font-black text-white mb-4" data-aos="fade-down"
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-accent-400 font-semibold tracking-wider uppercase text-xs sm:text-sm block mb-1"
+                data-i18n="portfolio.subtitle">Casos de Éxito</span>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4" data-aos="fade-down"
                 data-i18n="portfolio.title">
-                Portfolio <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>
+                Portfolio de <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Proyectos</span>
             </h1>
+
+            <!-- Quick Filter Pills inside Subpage (< 1280px) -->
+            <div class="xl:hidden grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-2 pt-1 border-b border-gray-800 pb-3">
+                <button
+                    class="nav-filter active px-3 py-2 rounded-lg text-xs font-bold text-gray-300 bg-anthracite-900 border border-gray-800"
+                    data-filter="web" data-i18n="portfolio.filters.web">Web, Apps &amp; Landings</button>
+                <button
+                    class="nav-filter px-3 py-2 rounded-lg text-xs font-bold text-gray-300 bg-anthracite-900 border border-gray-800"
+                    data-filter="email" data-i18n="portfolio.filters.email">CRM &amp; Email HTML</button>
+                <button
+                    class="nav-filter px-3 py-2 rounded-lg text-xs font-bold text-gray-300 bg-anthracite-900 border border-gray-800"
+                    data-filter="assets" data-i18n="portfolio.filters.assets">Design Systems &amp; Motion</button>
+                <button
+                    class="nav-filter px-3 py-2 rounded-lg text-xs font-bold text-gray-300 bg-anthracite-900 border border-gray-800"
+                    data-filter="wireframes" data-i18n="portfolio.filters.wireframes">UX &amp; Prototipos</button>
+                <button
+                    class="nav-filter col-span-2 px-3 py-2 rounded-lg text-xs font-bold text-gray-300 bg-anthracite-900 border border-gray-800"
+                    data-filter="offline" data-i18n="portfolio.filters.offline">Brand &amp; Visual Design</button>
+            </div>
         </div>
     </section>
 
     <!-- Gallery Grid -->
-    <section class="py-8 bg-anthracite-950 min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+    <section class="py-6 bg-anthracite-950 min-h-screen">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="portfolio-grid">
 
-                <!-- MUNCHOS (Top Item) -->
+                <!-- MUNCHOS 1: Full-Stack Web & Multi-Device Responsive Platform (Web) -->
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
-                        <a href="images/portfolio/munchos.png" class="glightbox" data-title="MUNCHOS"
-                            data-description="Web Corporativa y E-commerce">
-                            <img src="images/portfolio/munchos.png" alt="MUNCHOS"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="h-52 overflow-hidden relative">
+                        <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-web"
+                            data-title="MUNCHOS Digital Platform — Responsive Architecture (iPhone · iPad · Mac)"
+                            data-description="Arquitectura Full-Stack Responsive (React 18, Vite, Tailwind CSS, Firebase) con soporte multilingüe (ES/DE/EN), Gourmet Shop y motor de reservas.">
+                            <img src="images/portfolio/munchos_responsive.png" alt="MUNCHOS Digital Platform Responsive"
+                                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-anthracite-950/85 backdrop-blur-md border border-accent-500/40 text-accent-400 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                                <span>Multi-Device · 5 Vistas</span>
+                            </div>
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <i data-lucide="zoom-in"
                                     class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
                             </div>
                         </a>
+                        <div class="hidden">
+                            <a href="images/portfolio/munchos_desktop.png" class="glightbox" data-gallery="munchos-web"
+                                data-title="MUNCHOS — Desktop Hero &amp; Navigation (MacBook Air)"
+                                data-description="Cabecera con navegación modular (Menus &amp; Selection, Experience, Reviews, Gourmet Shop), selector de idioma ES/DE/EN, banner dinámico de promociones y CTAs de conversión."></a>
+                            <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-web"
+                                data-title="MUNCHOS — Panel Interactivo de Categorías &amp; Sticky Booking Bar"
+                                data-description="Configurador interactivo por categorías (Pinchos, Tortillas, Grill &amp; Plancha, Pizzas, Sushi Fusion, Paellas), tarjeta de detalle dinámica y barra inferior persistente de reserva."></a>
+                            <a href="images/portfolio/munchos_tablet.png" class="glightbox" data-gallery="munchos-web"
+                                data-title="MUNCHOS — Adaptive Tablet UI (iPad Air 5 · 820x1180)"
+                                data-description="Diseño adaptativo para tablet con cabecera compacta, selector i18n visible y promoción interactiva."></a>
+                            <a href="images/portfolio/munchos_mobile.png" class="glightbox" data-gallery="munchos-web"
+                                data-title="MUNCHOS — Mobile-First UI (iPhone 14 Pro Max · 430x932)"
+                                data-description="Experiencia Mobile-First optimizada para reserva rápida y consulta de menús/precios en un clic."></a>
+                        </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <h3 class="text-xl font-bold text-white">MUNCHOS</h3>
-                                <p class="text-sm text-accent-400" data-i18n="portfolio.items.munchos.subtitle">Web Corporativa y E-commerce</p>
+                                <h3 class="text-xl font-bold text-white" data-i18n="portfolio.items.munchos.title">MUNCHOS Digital Platform</h3>
+                                <p class="text-sm text-accent-400" data-i18n="portfolio.items.munchos.subtitle">Plataforma D2C/B2B Responsive (React 18 · Vite · Firebase)</p>
+                            </div>
+                            <a href="https://munchos.web.app/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MUNCHOS 2: Interactive Panel, Menu Configurator & UX Flows (Web + Wireframes/UX) -->
+                <div class="portfolio-item web wireframes glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-52 overflow-hidden relative">
+                        <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-ux"
+                            data-title="MUNCHOS — Panel Interactivo de Categorías &amp; UX de Conversión"
+                            data-description="Arquitectura UX del panel selector de 6 categorías con renderizado dinámico de productos, etiquetas de valor (48h Sourdough, Donostia Gildas, AOVE) y barra sticky de conversión.">
+                            <img src="images/portfolio/munchos_panel.png" alt="MUNCHOS Interactive Panel & Configurator"
+                                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-anthracite-950/85 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
+                                <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+                                <span>Panel UI &amp; UX Flow</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                        <div class="hidden">
+                            <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-ux"
+                                data-title="MUNCHOS — Breakpoints &amp; Responsive System"
+                                data-description="Comparativa de breakpoints Mobile (430px), Tablet (820px) y Desktop (1559px)."></a>
+                            <a href="images/portfolio/munchos_mobile.png" class="glightbox" data-gallery="munchos-ux"
+                                data-title="MUNCHOS — Mobile Conversion UX"
+                                data-description="Jerarquía visual y acciones principales al alcance del pulgar en iPhone 14 Pro Max."></a>
+                            <a href="images/portfolio/munchos_tablet.png" class="glightbox" data-gallery="munchos-ux"
+                                data-title="MUNCHOS — Tablet UX Layout"
+                                data-description="Escalado fluido de tipografía, banners promocionales y navegación en iPad Air 5."></a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white" data-i18n="portfolio.items.munchos_panel.title">MUNCHOS — Panel UI &amp; Configurador</h3>
+                                <p class="text-sm text-accent-400" data-i18n="portfolio.items.munchos_panel.subtitle">Arquitectura UX, Selector Dinámico &amp; CRO</p>
+                            </div>
+                            <a href="https://munchos.web.app/" target="_blank"
+                                class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
+                                title="Visitar Web">
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MUNCHOS 3: Design System & Multi-Device UI Components (Assets / Design Systems) -->
+                <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-52 overflow-hidden relative">
+                        <a href="images/portfolio/munchos_desktop.png" class="glightbox" data-gallery="munchos-ds"
+                            data-title="MUNCHOS — Design System &amp; Componentes UI"
+                            data-description="Sistema de diseño Dark-Luxury en Figma y Tailwind CSS: tokens de color, tipografía display, tarjetas promocionales interactivas y componentes multilingües (ES/DE/EN).">
+                            <img src="images/portfolio/munchos_desktop.png" alt="MUNCHOS Design System"
+                                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i data-lucide="zoom-in"
+                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                            </div>
+                        </a>
+                        <div class="hidden">
+                            <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-ds"
+                                data-title="MUNCHOS — Componentes del Panel de Menús"
+                                data-description="Tabs interactivos, badges de atributos y barra flotante de reserva."></a>
+                            <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-ds"
+                                data-title="MUNCHOS — Consistencia Multi-Dispositivo"
+                                data-description="Design System aplicado consistentemente en iOS, iPadOS y Desktop."></a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-white" data-i18n="portfolio.items.munchos_ds.title">MUNCHOS — Design System &amp; UI</h3>
+                                <p class="text-sm text-accent-400" data-i18n="portfolio.items.munchos_ds.subtitle">Componentes UI, Tokens &amp; Localización (DE/ES/EN)</p>
                             </div>
                             <a href="https://munchos.web.app/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
@@ -282,7 +491,7 @@
 
                 <!-- ROBUR Video (Top Item) -->
                 <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/robur_video.mp4" class="glightbox" data-title="ROBUR Video"
                             data-description="Video corporativo ROBUR">
                             <img src="images/portfolio/robur_spie.png" alt="ROBUR Video"
@@ -294,7 +503,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <h3 class="text-xl font-bold text-white mb-2">Robur Video Corporativo</h3>
                         <p class="text-sm text-accent-400">AE, AP y varios scripts</p>
                     </div>
@@ -302,7 +511,7 @@
 
                 <!-- Web Items -->
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/RS_1.png" class="glightbox" data-title="RS Components Web"
                             data-description="Desarrollo web y optimización UX para RS Components">
                             <img src="images/portfolio/RS_1.png" alt="RS Components"
@@ -314,7 +523,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">RS Components</h3>
@@ -334,7 +543,7 @@
 
 
                 <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/armani.png" class="glightbox" data-title="Armani Exchange"
                             data-description="Activos de campaña para Armani Exchange">
                             <img src="images/portfolio/armani.png" alt="Armani"
@@ -346,7 +555,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Armani Exchange</h3>
@@ -362,7 +571,7 @@
                 </div>
 
                 <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/fossil_newsletter_1.jpg" class="glightbox" data-title="Fossil Assets"
                             data-description="Variedad de Newsletter - EMEA" data-gallery="fossil-p">
                             <img src="images/portfolio/fossil_newsletter_1.jpg" alt="Fossil Assets"
@@ -374,7 +583,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Fossil Assets</h3>
@@ -391,7 +600,7 @@
                 </div>
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/cervantes.png" class="glightbox" data-title="Cervantes"
                             data-description="Diseño Web Corporativo">
                             <img src="images/portfolio/cervantes.png" alt="Cervantes"
@@ -403,7 +612,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Complejo Cervantes</h3>
@@ -422,7 +631,7 @@
                 <!-- NEW ITEMS -->
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/ferreiro.png" class="glightbox" data-title="Joyeria Ferreiros"
                             data-description="Diseño Web Corporativo">
                             <img src="images/portfolio/ferreiro.png" alt="Joyeria Ferreiros"
@@ -434,7 +643,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Joyeria Ferreiros</h3>
@@ -450,7 +659,7 @@
                 </div>
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/fm.png" class="glightbox" data-title="FM Control"
                             data-description="Web Corporativa">
                             <img src="images/portfolio/fm.png" alt="FM Control"
@@ -462,7 +671,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">FM Control</h3>
@@ -478,7 +687,7 @@
                 </div>
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/peter.png" class="glightbox" data-title="Peter Kuett"
                             data-description="Website Personal">
                             <img src="images/portfolio/peter.png" alt="Peter Kuett"
@@ -490,7 +699,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Peter Kuett</h3>
@@ -506,7 +715,7 @@
                 </div>
 
                 <div class="portfolio-item email glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/RS_email.png" class="glightbox" data-title="Email Campaigns"
                             data-description="Campañas automatizadas de Email Marketing">
                             <img src="images/portfolio/RS_email.png" alt="RS Email"
@@ -518,14 +727,14 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <h3 class="text-xl font-bold text-white mb-2">Email Campaigns</h3>
                         <p class="text-sm text-accent-400">Automated Newsletter</p>
                     </div>
                 </div>
 
                 <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/gulp.png" class="glightbox" data-title="Gulp Project"
                             data-description="SalesForce Project">
                             <img src="images/portfolio/gulp.png" alt="Gulp Project"
@@ -537,7 +746,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Gulp Project</h3>
@@ -552,7 +761,7 @@
                 </div>
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/sgi.png" class="glightbox" data-title="SGI"
                             data-description="Web Corporativa SGI">
                             <img src="images/portfolio/sgi.png" alt="SGI"
@@ -564,7 +773,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">SGI</h3>
@@ -580,7 +789,7 @@
                 </div>
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/peak.png" class="glightbox" data-title="Peak Performance"
                             data-description="E-commerce y UI para Peak Performance">
                             <img src="images/portfolio/peak.png" alt="Peak"
@@ -592,7 +801,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Peak Resort</h3>
@@ -608,7 +817,7 @@
                 </div>
 
                 <div class="portfolio-item wireframes glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/costperapp_handy.mp4" class="glightbox" data-title="Cost Controller"
                             data-description="Prototype">
                             <img src="images/portfolio/cost.png" alt="Cost"
@@ -620,7 +829,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <h3 class="text-xl font-bold text-white mb-2">Cost Controller</h3>
                         <p class="text-sm text-accent-400">Prototype</p>
                     </div>
@@ -631,7 +840,7 @@
 
                 <!-- Assets / Design -->
                 <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/assets_new.png" class="glightbox" data-title="Master Design Asset"
                             data-description="Sistema de diseño maestro">
                             <img src="images/portfolio/assets_new.png" alt="Master Design"
@@ -643,7 +852,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <h3 class="text-xl font-bold text-white mb-2">Master Design Asset</h3>
                         <p class="text-sm text-accent-400">Design System</p>
                     </div>
@@ -654,7 +863,7 @@
 
 
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/purchasing.png" class="glightbox" data-title="Purchasing System"
                             data-description="Diseño UI de Sistema de Compras">
                             <img src="images/portfolio/purchasing.png" alt="Purchasing"
@@ -666,7 +875,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-6">
+                    <div class="p-4">
                         <h3 class="text-xl font-bold text-white mb-2">Purchasing Manager e-Procurement</h3>
                         <p class="text-sm text-accent-400">Microsite personalizado</p>
                     </div>
@@ -674,7 +883,7 @@
 
                 <!-- Offline Assets -->
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_2.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_2.png" alt="Offline Design"
@@ -689,7 +898,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_4.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_4.png" alt="Offline Design"
@@ -703,7 +912,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_5.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_5.png" alt="Offline Design"
@@ -717,7 +926,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_7.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_7.png" alt="Offline Design"
@@ -732,7 +941,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_9.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_9.png" alt="Offline Design"
@@ -747,7 +956,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_11.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_11.png" alt="Offline Design"
@@ -761,7 +970,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_12.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_12.png" alt="Offline Design"
@@ -776,7 +985,7 @@
                 </div>
                 <!-- ... Adding rest via loop in reality, but for brevity doing chunks if needed or just all ... -->
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_13.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_13.png" alt="Offline Design"
@@ -790,7 +999,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_14.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_14.png" alt="Offline Design"
@@ -804,7 +1013,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_15.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_15.png" alt="Offline Design"
@@ -819,7 +1028,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_17.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_17.png" alt="Offline Design"
@@ -833,7 +1042,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_18.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_18.png" alt="Offline Design"
@@ -847,7 +1056,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_19.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_19.png" alt="Offline Design"
@@ -861,7 +1070,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_20.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_20.png" alt="Offline Design"
@@ -875,7 +1084,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_21.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_21.png" alt="Offline Design"
@@ -889,7 +1098,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_22.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_22.png" alt="Offline Design"
@@ -903,7 +1112,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_23.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_23.png" alt="Offline Design"
@@ -917,7 +1126,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_24.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_24.png" alt="Offline Design"
@@ -931,7 +1140,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_25.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_25.png" alt="Offline Design"
@@ -945,7 +1154,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_26.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_26.png" alt="Offline Design"
@@ -959,7 +1168,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_27.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_27.png" alt="Offline Design"
@@ -974,7 +1183,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_29.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_29.png" alt="Offline Design"
@@ -989,7 +1198,7 @@
                 </div>
 
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_31.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_31.png" alt="Offline Design"
@@ -1003,7 +1212,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_32.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_32.png" alt="Offline Design"
@@ -1017,7 +1226,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item offline glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
-                    <div class="h-64 overflow-hidden relative">
+                    <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_33.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
                             <img src="images/portfolio/port_offline/port_33.png" alt="Offline Design"
@@ -1078,10 +1287,14 @@
 
                     filterBtns.forEach(btn => {
                         btn.addEventListener('click', () => {
-                            filterBtns.forEach(b => b.classList.remove('active'));
-                            btn.classList.add('active');
-
                             const filterValue = btn.getAttribute('data-filter');
+                            filterBtns.forEach(b => {
+                                if (b.getAttribute('data-filter') === filterValue) {
+                                    b.classList.add('active');
+                                } else {
+                                    b.classList.remove('active');
+                                }
+                            });
                             filterItems(filterValue);
                         });
                     });
@@ -1091,21 +1304,23 @@
                         menu.classList.toggle("hidden");
                     }
 
-                    // 3D Tilt Effect
+                    // Kinetic 3D Tilt + Cursor-Tracking Spotlight Effect
                     const cards = document.querySelectorAll('.glass-card');
                     cards.forEach(card => {
                         card.addEventListener('mousemove', (e) => {
                             const rect = card.getBoundingClientRect();
                             const x = e.clientX - rect.left;
                             const y = e.clientY - rect.top;
+                            card.style.setProperty('--mouse-x', `${x}px`);
+                            card.style.setProperty('--mouse-y', `${y}px`);
                             const centerX = rect.width / 2;
                             const centerY = rect.height / 2;
-                            const rotateX = ((y - centerY) / centerY) * -5;
-                            const rotateY = ((x - centerX) / centerX) * 5;
-                            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                            const rotateX = ((y - centerY) / centerY) * -8;
+                            const rotateY = ((x - centerX) / centerX) * 8;
+                            card.style.transform = `perspective(850px) translateY(-7px) scale(1.02) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
                         });
                         card.addEventListener('mouseleave', () => {
-                            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+                            card.style.transform = 'perspective(850px) translateY(0px) scale(1) rotateX(0deg) rotateY(0deg)';
                         });
                     });
                 </script>
@@ -1118,17 +1333,27 @@
                                 back: 'Back to Profile'
                             },
                             portfolio: {
-                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                subtitle: 'Case Studies',
+                                title: 'Project <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Portfolio</span>',
                                 filters: {
-                                    web: 'Web & Landings',
-                                    email: 'Email',
-                                    assets: 'Assets & Design',
-                                    wireframes: 'Wireframes',
-                                    offline: 'Offline Assets'
+                                    web: 'Web, Apps &amp; Landings',
+                                    email: 'CRM &amp; Email HTML',
+                                    assets: 'Design Systems &amp; Motion',
+                                    wireframes: 'UX &amp; Prototypes',
+                                    offline: 'Brand &amp; Visual Design'
                                 },
                                 items: {
                                     munchos: {
-                                        subtitle: 'Corporate Web & E-commerce'
+                                        title: 'MUNCHOS Digital Platform',
+                                        subtitle: '<span class="block">Responsive D2C/B2B Platform</span><span class="block text-xs text-gray-400 mt-0.5">(React 18 · Vite · Firebase)</span>'
+                                    },
+                                    munchos_panel: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Panel UI &amp; Configurator</span>',
+                                        subtitle: '<span class="block">UX Architecture, Dynamic Selector</span><span class="block text-xs text-gray-400 mt-0.5">&amp; CRO Optimization</span>'
+                                    },
+                                    munchos_ds: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Design System &amp; UI</span>',
+                                        subtitle: '<span class="block">UI Components, Design Tokens</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Localization (DE/ES/EN)</span>'
                                     }
                                 }
                             },
@@ -1141,17 +1366,27 @@
                                 back: 'Zurück zum Profil'
                             },
                             portfolio: {
-                                title: '<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Globales</span> Portfolio',
+                                subtitle: 'Erfolgsprojekte',
+                                title: 'Projekt-<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Portfolio</span>',
                                 filters: {
-                                    web: 'Web & Landings',
-                                    email: 'E-Mail',
-                                    assets: 'Assets & Design',
-                                    wireframes: 'Wireframes',
-                                    offline: 'Offline Assets'
+                                    web: 'Web, Apps &amp; Landings',
+                                    email: 'CRM &amp; E-Mail-HTML',
+                                    assets: 'Design Systems &amp; Motion',
+                                    wireframes: 'UX &amp; Prototypen',
+                                    offline: 'Brand &amp; Visual Design'
                                 },
                                 items: {
                                     munchos: {
-                                        subtitle: 'Unternehmenswebseite & E-Commerce'
+                                        title: 'MUNCHOS Digital Platform',
+                                        subtitle: '<span class="block">Responsive D2C/B2B-Plattform</span><span class="block text-xs text-gray-400 mt-0.5">(React 18 · Vite · Firebase)</span>'
+                                    },
+                                    munchos_panel: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Panel UI &amp; Konfigurator</span>',
+                                        subtitle: '<span class="block">UX-Architektur, Dynamischer Selektor</span><span class="block text-xs text-gray-400 mt-0.5">&amp; CRO-Optimierung</span>'
+                                    },
+                                    munchos_ds: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Design System &amp; UI</span>',
+                                        subtitle: '<span class="block">UI-Komponenten, Design Tokens</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Lokalisierung (DE/ES/EN)</span>'
                                     }
                                 }
                             },
@@ -1164,17 +1399,27 @@
                                 back: 'Volver al Perfil'
                             },
                             portfolio: {
-                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                subtitle: 'Casos de Éxito',
+                                title: 'Portfolio de <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Proyectos</span>',
                                 filters: {
-                                    web: 'Web & Landings',
-                                    email: 'Email',
-                                    assets: 'Activos & Diseño',
-                                    wireframes: 'Wireframes',
-                                    offline: 'Offline Assets'
+                                    web: 'Web, Apps &amp; Landings',
+                                    email: 'CRM &amp; Email HTML',
+                                    assets: 'Design Systems &amp; Motion',
+                                    wireframes: 'UX &amp; Prototipos',
+                                    offline: 'Brand &amp; Visual Design'
                                 },
                                 items: {
                                     munchos: {
-                                        subtitle: 'Web Corporativa y E-commerce'
+                                        title: 'MUNCHOS Digital Platform',
+                                        subtitle: '<span class="block">Plataforma D2C/B2B Responsive</span><span class="block text-xs text-gray-400 mt-0.5">(React 18 · Vite · Firebase)</span>'
+                                    },
+                                    munchos_panel: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Panel UI &amp; Configurador</span>',
+                                        subtitle: '<span class="block">Arquitectura UX, Selector Dinámico</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Optimización CRO</span>'
+                                    },
+                                    munchos_ds: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Design System &amp; UI</span>',
+                                        subtitle: '<span class="block">Componentes UI, Design Tokens</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Localización (DE/ES/EN)</span>'
                                     }
                                 }
                             },
@@ -1187,17 +1432,27 @@
                                 back: 'Retour au Profil'
                             },
                             portfolio: {
-                                title: 'Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Global</span>',
+                                subtitle: 'Études de Cas',
+                                title: 'Portfolio de <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-purple-500">Projets</span>',
                                 filters: {
-                                    web: 'Web & Landings',
-                                    email: 'Email',
-                                    assets: 'Ressources & Design',
-                                    wireframes: 'Maquettes',
-                                    offline: 'Offline Assets'
+                                    web: 'Web, Apps &amp; Landings',
+                                    email: 'CRM &amp; Email HTML',
+                                    assets: 'Design Systems &amp; Motion',
+                                    wireframes: 'UX &amp; Prototypes',
+                                    offline: 'Brand &amp; Visual Design'
                                 },
                                 items: {
                                     munchos: {
-                                        subtitle: 'Site Corporate & E-commerce'
+                                        title: 'MUNCHOS Digital Platform',
+                                        subtitle: '<span class="block">Plateforme D2C/B2B Responsive</span><span class="block text-xs text-gray-400 mt-0.5">(React 18 · Vite · Firebase)</span>'
+                                    },
+                                    munchos_panel: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Panel UI &amp; Configurateur</span>',
+                                        subtitle: '<span class="block">Architecture UX, Sélecteur Dynamique</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Optimisation CRO</span>'
+                                    },
+                                    munchos_ds: {
+                                        title: 'MUNCHOS — <span class="whitespace-nowrap">Design System &amp; UI</span>',
+                                        subtitle: '<span class="block">Composants UI, Design Tokens</span><span class="block text-xs text-gray-400 mt-0.5">&amp; Localisation (DE/ES/EN)</span>'
                                     }
                                 }
                             },
@@ -1218,7 +1473,7 @@
                     // Function to change language
                     function changeLanguage(lang) {
                         // Save to localStorage
-                        localStorage.setItem('preferredLanguage', lang);
+                        localStorage.setItem('preferredLanguage_v2', lang);
 
                         // Update current language display with flag icon
                         const currentFlag = document.getElementById('current-flag');
@@ -1226,7 +1481,8 @@
 
                         if (currentFlag && languageFlags[lang]) {
                             // Update flag icon
-                            currentFlag.className = `fi ${languageFlags[lang].flag} fis w-6`;
+                            currentFlag.textContent = '';
+                            currentFlag.className = `fi ${languageFlags[lang].flag} fis w-6 rounded-sm`;
                         }
 
                         if (currentLang && languageFlags[lang]) {
@@ -1261,13 +1517,15 @@
 
                     // Initialize language on page load
                     document.addEventListener('DOMContentLoaded', function () {
-                        // Check for saved language preference, default to English
-                        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+                        // Check for saved language preference, default to Spanish (es)
+                        const savedLang = localStorage.getItem('preferredLanguage_v2') || 'es';
                         changeLanguage(savedLang);
 
-                        // Trigger Web filter by default (since 'all' is removed)
-                        const webBtn = document.querySelector('.nav-filter[data-filter="web"]');
-                        if (webBtn) webBtn.click();
+                        // Support ?filter=web|email|assets|wireframes|offline from URL query string
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const initialFilter = urlParams.get('filter') || 'web';
+                        const targetBtn = document.querySelector(`.nav-filter[data-filter="${initialFilter}"]`) || document.querySelector('.nav-filter[data-filter="web"]');
+                        if (targetBtn) targetBtn.click();
                     });
                 </script>
 
