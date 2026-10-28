@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "oskar-marijuan"
+    "default": "oskarmarijuan1973",
+    "oskarmarijuan1973": "oskarmarijuan1973",
+    "oskar-marijuan": "oskar-marijuan"
   }
 }
