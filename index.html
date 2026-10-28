@@ -10,95 +10,58 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=3" />
     <link rel="apple-touch-icon" href="images/favicon.png?v=3" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Flag Icons Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', "sans-serif"],
-                    },
-                    colors: {
-                        white: "#faf7f0",
-                        anthracite: {
-                            50: "#faf7f0",  // Warm Ivory (#faf7f0)
-                            100: "#f2efe6",
-                            200: "#e6e2d6",
-                            300: "#d6d2c4", // Warm Stone (#d6d2c4)
-                            400: "#b0ada3",
-                            500: "#8a8a8a", // Neutral Gray (#8a8a8a)
-                            600: "#6a6a6a",
-                            700: "#4a4a4a", // Charcoal (#4a4a4a)
-                            800: "#363636", // Lighter Anthracite
-                            850: "#2b2b2b", // Base Card
-                            900: "#222222", // Base Background
-                            950: "#1b1b1b", // Deepest Carbon (#1b1b1b)
-                        },
-                        gray: {
-                            50: "#faf7f0",
-                            100: "#f2efe6",
-                            200: "#e6e2d6",
-                            300: "#d6d2c4", // Warm Stone (#d6d2c4)
-                            400: "#a8a59b", // Warm body text
-                            500: "#8a8a8a", // Medium Gray (#8a8a8a)
-                            600: "#686868",
-                            700: "#4a4a4a", // Charcoal (#4a4a4a)
-                            800: "#303030",
-                            900: "#1b1b1b",
-                        },
-                        accent: {
-                            300: "#faf7f0", // Warm Ivory (#faf7f0)
-                            400: "#d6d2c4", // Warm Stone (#d6d2c4)
-                            500: "#c2bdb0", // Warm Stone Darker
-                            600: "#d6d2c4", // Primary CTA Fill (#d6d2c4)
-                        },
-                        purple: {
-                            300: "#faf7f0",
-                            400: "#d6d2c4",
-                            500: "#b5afa0",
-                        },
-                        indigo: {
-                            900: "#4a4a4a",
-                        },
-                        gold: {
-                            400: "#d6d2c4",
-                            500: "#8a8a8a",
-                        },
-                    },
-                    animation: {
-                        blob: "blob 7s infinite",
-                    },
-                    keyframes: {
-                        blob: {
-                            "0%": {
-                                transform: "translate(0px, 0px) scale(1)",
-                            },
-                            "33%": {
-                                transform: "translate(30px, -50px) scale(1.1)",
-                            },
-                            "66%": {
-                                transform: "translate(-20px, 20px) scale(0.9)",
-                            },
-                            "100%": {
-                                transform: "translate(0px, 0px) scale(1)",
-                            },
-                        },
-                    },
-                },
-            },
-        };
-    </script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Oskar Marijuan",
+    "jobTitle": "Senior UI/UX Designer, Frontend Lead & MarTech Specialist",
+    "url": "https://oskar-marijuan.web.app/",
+    "email": "mailto:oskar.marijuan@gmail.com",
+    "telephone": "+491786270828",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Munich",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/oskarmarijuan",
+      "https://munchos.web.app/"
+    ],
+    "knowsAbout": [
+      "UI/UX Design", "Figma Design Systems", "React 18", "Tailwind CSS",
+      "Salesforce Marketing Cloud (SFMC)", "Email HTML", "CRO", "Google Analytics 4", "AI Workflows"
+    ]
+  }
+}
+</script>
+    <style id="tailwind-precompiled">*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e6e2d6}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-full{bottom:100%}.left-0{left:0px}.left-1\/2{left:50%}.left-3{left:0.75rem}.right-0{right:0px}.right-5{right:1.25rem}.top-0{top:0px}.top-3{top:0.75rem}.top-5{top:1.25rem}.-z-10{z-index:-10}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.mx-3{margin-left:0.75rem;margin-right:0.75rem}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-10{margin-left:2.5rem}.ml-6{margin-left:1.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-1\.5{margin-top:0.375rem}.mt-2{margin-top:0.5rem}.mt-2\.5{margin-top:0.625rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-52{height:13rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[390px\]{height:390px}.h-\[90\%\]{height:90%}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-1\/3{width:33.333333%}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-56{width:14rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[48\%\]{width:48%}.w-\[90\%\]{width:90%}.w-full{width:100%}.w-px{width:1px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[88rem\]{max-width:88rem}.max-w-md{max-width:28rem}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.origin-bottom{transform-origin:bottom}.-translate-x-1\.5{--tw-translate-x:-0.375rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.resize-none{resize:none}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-row-reverse{flex-direction:row-reverse}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-1\.5{column-gap:0.375rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-accent-500\/30{border-color:rgb(194 189 176 / 0.3)}.border-accent-500\/40{border-color:rgb(194 189 176 / 0.4)}.border-anthracite-900{--tw-border-opacity:1;border-color:rgb(34 34 34 / var(--tw-border-opacity, 1))}.border-gray-600{--tw-border-opacity:1;border-color:rgb(138 138 138 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(74 74 74 / var(--tw-border-opacity, 1))}.border-gray-700\/60{border-color:rgb(74 74 74 / 0.6)}.border-gray-700\/70{border-color:rgb(74 74 74 / 0.7)}.border-gray-700\/80{border-color:rgb(74 74 74 / 0.8)}.border-gray-800{--tw-border-opacity:1;border-color:rgb(48 48 48 / var(--tw-border-opacity, 1))}.border-gray-800\/50{border-color:rgb(48 48 48 / 0.5)}.border-gray-800\/60{border-color:rgb(48 48 48 / 0.6)}.border-gray-800\/80{border-color:rgb(48 48 48 / 0.8)}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.border-purple-500\/30{border-color:rgb(181 175 160 / 0.3)}.border-purple-500\/40{border-color:rgb(181 175 160 / 0.4)}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-white\/10{border-color:rgb(250 247 240 / 0.1)}.border-white\/5{border-color:rgb(250 247 240 / 0.05)}.bg-accent-400{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.bg-accent-500{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.bg-accent-500\/10{background-color:rgb(194 189 176 / 0.1)}.bg-accent-500\/15{background-color:rgb(194 189 176 / 0.15)}.bg-accent-500\/20{background-color:rgb(194 189 176 / 0.2)}.bg-accent-500\/5{background-color:rgb(194 189 176 / 0.05)}.bg-accent-500\/80{background-color:rgb(194 189 176 / 0.8)}.bg-accent-600{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.bg-anthracite-800{--tw-bg-opacity:1;background-color:rgb(54 54 54 / var(--tw-bg-opacity, 1))}.bg-anthracite-800\/50{background-color:rgb(54 54 54 / 0.5)}.bg-anthracite-800\/80{background-color:rgb(54 54 54 / 0.8)}.bg-anthracite-800\/90{background-color:rgb(54 54 54 / 0.9)}.bg-anthracite-900{--tw-bg-opacity:1;background-color:rgb(34 34 34 / var(--tw-bg-opacity, 1))}.bg-anthracite-900\/90{background-color:rgb(34 34 34 / 0.9)}.bg-anthracite-900\/95{background-color:rgb(34 34 34 / 0.95)}.bg-anthracite-950{--tw-bg-opacity:1;background-color:rgb(27 27 27 / var(--tw-bg-opacity, 1))}.bg-anthracite-950\/50{background-color:rgb(27 27 27 / 0.5)}.bg-anthracite-950\/85{background-color:rgb(27 27 27 / 0.85)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(138 138 138 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(74 74 74 / var(--tw-bg-opacity, 1))}.bg-gray-800\/50{background-color:rgb(48 48 48 / 0.5)}.bg-green-500\/20{background-color:rgb(34 197 94 / 0.2)}.bg-purple-500\/15{background-color:rgb(181 175 160 / 0.15)}.bg-purple-500\/20{background-color:rgb(181 175 160 / 0.2)}.bg-purple-500\/5{background-color:rgb(181 175 160 / 0.05)}.bg-red-500\/20{background-color:rgb(239 68 68 / 0.2)}.bg-white\/5{background-color:rgb(250 247 240 / 0.05)}.bg-\[linear-gradient\(rgba\(255\2c 255\2c 255\2c 0\.03\)_1px\2c transparent_1px\)\2c linear-gradient\(90deg\2c rgba\(255\2c 255\2c 255\2c 0\.03\)_1px\2c transparent_1px\)\]{background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-\[url\(\'https\:\/\/grainy-gradients\.vercel\.app\/noise\.svg\'\)\]{background-image:url('https://grainy-gradients.vercel.app/noise.svg')}.bg-\[url\(\'images\/hero-bg\.png\'\)\]{background-image:url('images/hero-bg.png')}.from-accent-400{--tw-gradient-from:#d6d2c4 var(--tw-gradient-from-position);--tw-gradient-to:rgb(214 210 196 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-anthracite-900{--tw-gradient-from:#222222 var(--tw-gradient-from-position);--tw-gradient-to:rgb(34 34 34 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-black\/80{--tw-gradient-from:rgb(0 0 0 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-700{--tw-gradient-from:#4a4a4a var(--tw-gradient-from-position);--tw-gradient-to:rgb(74 74 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-900{--tw-gradient-from:#1b1b1b var(--tw-gradient-from-position);--tw-gradient-to:rgb(27 27 27 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-anthracite-900{--tw-gradient-to:rgb(34 34 34 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #222222 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-black\/20{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(0 0 0 / 0.2) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-gray-900{--tw-gradient-to:#1b1b1b var(--tw-gradient-to-position)}.to-indigo-900\/30{--tw-gradient-to:rgb(74 74 74 / 0.3) var(--tw-gradient-to-position)}.to-purple-500{--tw-gradient-to:#b5afa0 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-\[size\:4rem_4rem\]{background-size:4rem 4rem}.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.bg-center{background-position:center}.object-cover{object-fit:cover}.object-\[center_45\%\]{object-position:center 45%}.object-top{object-position:top}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:0.25rem}.pb-10{padding-bottom:2.5rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pb-5{padding-bottom:1.25rem}.pb-8{padding-bottom:2rem}.pl-5{padding-left:1.25rem}.pl-7{padding-left:1.75rem}.pl-9{padding-left:2.25rem}.pr-0{padding-right:0px}.pr-5{padding-right:1.25rem}.pt-1{padding-top:0.25rem}.pt-12{padding-top:3rem}.pt-2{padding-top:0.5rem}.pt-2\.5{padding-top:0.625rem}.pt-20{padding-top:5rem}.pt-24{padding-top:6rem}.pt-3{padding-top:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-accent-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-accent-500\/20{color:rgb(194 189 176 / 0.2)}.text-gray-300{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(168 165 155 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(138 138 138 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(138 138 138 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-accent-500\/50{-webkit-text-decoration-color:rgb(194 189 176 / 0.5);text-decoration-color:rgb(194 189 176 / 0.5)}.underline-offset-4{text-underline-offset:4px}.placeholder-gray-600::placeholder{--tw-placeholder-opacity:1;color:rgb(138 138 138 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.opacity-40{opacity:0.4}.opacity-90{opacity:0.9}.opacity-10{opacity:0.1}.mix-blend-overlay{mix-blend-mode:overlay}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(214\2c 210\2c 196\2c 0\.5\)\]{--tw-shadow:0 0 15px rgba(214,210,196,0.5);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-accent-500\/20{--tw-shadow-color:rgb(194 189 176 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-accent-500\/30{--tw-shadow-color:rgb(194 189 176 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.duration-700{transition-duration:700ms}.\[mask-image\:radial-gradient\(ellipse_60\%_50\%_at_50\%_0\%\2c \#000_70\%\2c transparent_100\%\)\]{-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 70%,transparent 100%)}.selection\:bg-accent-500 *::selection{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.selection\:bg-accent-500::selection{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-accent-400:hover{--tw-border-opacity:1;border-color:rgb(214 210 196 / var(--tw-border-opacity, 1))}.hover\:border-accent-500:hover{--tw-border-opacity:1;border-color:rgb(194 189 176 / var(--tw-border-opacity, 1))}.hover\:border-accent-500\/40:hover{border-color:rgb(194 189 176 / 0.4)}.hover\:border-accent-500\/50:hover{border-color:rgb(194 189 176 / 0.5)}.hover\:border-purple-500\/50:hover{border-color:rgb(181 175 160 / 0.5)}.hover\:bg-accent-500:hover{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.hover\:bg-accent-500\/15:hover{background-color:rgb(194 189 176 / 0.15)}.hover\:bg-accent-500\/20:hover{background-color:rgb(194 189 176 / 0.2)}.hover\:bg-accent-600:hover{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.hover\:bg-accent-600\/30:hover{background-color:rgb(214 210 196 / 0.3)}.hover\:bg-anthracite-800:hover{--tw-bg-opacity:1;background-color:rgb(54 54 54 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(74 74 74 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-800\/30:hover{background-color:rgb(48 48 48 / 0.3)}.hover\:bg-white\/10:hover{background-color:rgb(250 247 240 / 0.1)}.hover\:bg-white\/5:hover{background-color:rgb(250 247 240 / 0.05)}.hover\:pl-5:hover{padding-left:1.25rem}.hover\:text-accent-400:hover{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.focus\:border-accent-500:focus{--tw-border-opacity:1;border-color:rgb(194 189 176 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}.group:focus-within .group-focus-within\:text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:-translate-y-1{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group\/thumb:hover .group-hover\/thumb\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:border-accent-500\/50{border-color:rgb(194 189 176 / 0.5)}.group:hover .group-hover\:bg-accent-500{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:bg-accent-500\/30{background-color:rgb(194 189 176 / 0.3)}.group:hover .group-hover\:bg-purple-500{--tw-bg-opacity:1;background-color:rgb(181 175 160 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-accent-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-purple-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:h-\[420px\]{height:420px}.sm\:w-52{width:13rem}.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:flex-wrap{flex-wrap:wrap}.sm\:justify-center{justify-content:center}.sm\:px-0{padding-left:0px;padding-right:0px}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[15px\]{font-size:15px}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:left-1\/2{left:50%}.md\:col-span-12{grid-column:span 12 / span 12}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-\[440px\]{height:440px}.md\:w-\[48\%\]{width:48%}.md\:-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:gap-10{gap:2.5rem}.md\:gap-5{gap:1.25rem}.md\:space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.md\:border-none{border-style:none}.md\:p-8{padding:2rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:py-14{padding-top:3.5rem;padding-bottom:3.5rem}.md\:py-16{padding-top:4rem;padding-bottom:4rem}.md\:py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.md\:pb-0{padding-bottom:0px}.md\:pl-0{padding-left:0px}.md\:pl-5{padding-left:1.25rem}.md\:pr-5{padding-right:1.25rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:block{display:block}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width: 1280px){.xl\:block{display:block}.xl\:hidden{display:none}.xl\:text-sm{font-size:0.875rem;line-height:1.25rem}}
+.fi {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.333333em;
+  line-height: 1em;
+}
+.fi:before { content: "\00a0"; }
+.fi.fis { width: 1em; }
+.fi-es { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23c60b1e' d='M0 0h512v128H0zm0 384h512v128H0z'/%3E%3Cpath fill='%23ffc400' d='M0 128h512v256H0z'/%3E%3C/svg%3E"); }
+.fi-de { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffce00' d='M0 341.3h512V512H0z'/%3E%3Cpath fill='%23000' d='M0 0h512v170.7H0z'/%3E%3Cpath fill='%23d00' d='M0 170.7h512v170.6H0z'/%3E%3C/svg%3E"); }
+.fi-fr { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23002654' d='M0 0h170.7v512H0z'/%3E%3Cpath fill='%23ce1126' d='M341.3 0H512v512H341.3z'/%3E%3C/svg%3E"); }
+.fi-gb { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23012169' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23FFF' d='M512 0v64L322 256l190 187v69h-67L254 324 68 512H0v-68l186-187L0 74V0h62l192 188L440 0z'/%3E%3Cpath fill='%23C8102E' d='m184 324 11 34L42 512H0v-3l184-185zm124-12 54 8 150 147v45L308 312zM512 0 320 196l-4-44L466 0h46zM0 1l193 189-59-8L0 49V1z'/%3E%3Cpath fill='%23FFF' d='M176 0v512h160V0H176zM0 176v160h512V176H0z'/%3E%3Cpath fill='%23C8102E' d='M0 208v96h512v-96H0zM208 0v512h96V0h-96z'/%3E%3C/svg%3E"); }
+.text-gray-500, .text-gray-600 { color: #a09d93 !important; }
+</style>
     <style>
         /* Prevent horizontal scroll on mobile */
         * {
@@ -333,20 +296,20 @@
                             <a href="#portfolio"
                                 class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-accent-400 inline-flex items-center gap-1">
                                 <span data-i18n="nav.portfolio">Portfolio</span>
-                                <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-accent-400"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-down w-3.5 h-3.5 text-accent-400"><path d="m6 9 6 6 6-6"/></svg>
                             </a>
                             <div style="min-width: 260px; width: max-content;"
                                 class="absolute left-0 mt-2 w-64 bg-anthracite-900/95 backdrop-blur-xl border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50 py-2">
                                 <a href="#portfolio"
                                     class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gray-400 hover:text-white hover:bg-white/5 flex items-center justify-between transition-colors">
                                     <span data-i18n="nav.portfolio_summary">Resumen (Single Page)</span>
-                                    <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-down w-3.5 h-3.5"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
                                 </a>
                                 <div class="border-t border-gray-800 my-1"></div>
                                 <a href="portfolio.html"
                                     class="px-4 py-2.5 text-sm font-bold text-accent-400 hover:bg-accent-500/15 hover:text-white flex items-center justify-between transition-colors">
-                                    <span class="flex items-center gap-2"><i data-lucide="layout-grid" class="w-4 h-4"></i> <span data-i18n="nav.portfolio_visual">Galería Visual</span></span>
-                                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                                    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layout-grid w-4 h-4"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg> <span data-i18n="nav.portfolio_visual">Galería Visual</span></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-4 h-4"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                                 </a>
                                 <a href="portfolio.html?filter=web"
                                     class="px-4 py-1.5 pl-9 text-xs text-gray-300 hover:text-accent-400 hover:bg-white/5 block transition-colors"
@@ -367,7 +330,7 @@
                         </div>
                         <a href="portfolio.html"
                             class="text-accent-400 hover:text-white bg-accent-500/10 hover:bg-accent-500/20 border border-accent-500/30 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all inline-flex items-center gap-1.5">
-                            <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layout-grid w-3.5 h-3.5"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
                             <span data-i18n="nav.portfolio_visual">Galería Visual</span>
                         </a>
                         <a href="#contact"
@@ -376,11 +339,11 @@
 
                         <!-- Language Selector -->
                         <div class="relative group">
-                            <button
+                            <button aria-label="Seleccionar idioma"
                                 class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors whitespace-nowrap">
                                 <span id="current-flag" class="fi fi-es fis w-6 rounded-sm shrink-0"></span>
                                 <span id="current-lang" class="text-sm font-medium">ES</span>
-                                <i data-lucide="chevron-down" class="w-4 h-4 shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 shrink-0"><path d="m6 9 6 6 6-6"/></svg>
                             </button>
                             <div style="min-width: 175px; width: max-content;"
                                 class="absolute right-0 mt-2 w-44 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50 py-1">
@@ -411,8 +374,8 @@
 
                 <div class="lg:hidden flex items-center gap-3">
                     <span id="mobile-current-flag-icon" class="fi fi-es fis w-6 rounded-sm"></span>
-                    <button onclick="toggleMenu()" class="text-gray-300 hover:text-white p-2">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    <button onclick="toggleMenu()" aria-label="Abrir menú de navegación" class="text-gray-300 hover:text-white p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                     </button>
                 </div>
             </div>
@@ -437,11 +400,11 @@
                     <a href="portfolio.html"
                         class="flex items-center justify-between text-sm font-bold text-accent-400 hover:text-white mb-2.5">
                         <span class="flex items-center gap-2">
-                            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layout-grid w-4 h-4"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
                             <span data-i18n="nav.portfolio_visual">Galería Visual (Subpágina)</span>
                         </span>
                         <span class="px-2 py-0.5 text-[11px] bg-accent-500/20 text-accent-300 rounded-full flex items-center gap-1">
-                            Ver <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            Ver <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-3 h-3"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </span>
                     </a>
                     <div class="grid grid-cols-2 gap-1.5 pt-2 border-t border-gray-700/70">
@@ -493,25 +456,28 @@
 
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <main id="main-content">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <!-- Background Video (User Requested) -->
         <div
             class="absolute inset-0 z-0 overflow-hidden flex items-center justify-center pointer-events-none bg-anthracite-950">
             <div class="relative w-[90%] h-[90%] rounded-[2rem] overflow-hidden shadow-2xl border border-white/5">
-                <video id="hero-video" autoplay muted loop playsinline
+                <video id="hero-video" muted loop playsinline preload="none" aria-hidden="true"
                     class="w-full h-full object-cover opacity-90 mix-blend-overlay">
-                    <source src="images/hero-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
-                <div class="absolute inset-0 bg-anthracite-950/50"></div> <!-- Overlay for text readability -->
+                <div class="absolute inset-0 bg-anthracite-950/50"></div>
             </div>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var video = document.getElementById('hero-video');
-                if (video) {
-                    video.playbackRate = 0.6;
-                }
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    var video = document.getElementById('hero-video');
+                    if (video && (!navigator.connection || !navigator.connection.saveData)) {
+                        video.src = 'images/hero-video.mp4';
+                        video.playbackRate = 0.6;
+                        video.play().catch(function(){});
+                    }
+                }, 1800);
             });
         </script>
 
@@ -522,7 +488,7 @@
 
         <!-- Scanline Overlay -->
         <div
-            class="absolute inset-0 z-0 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay">
+            class="absolute inset-0 z-0 pointer-events-none  opacity-10 mix-blend-overlay">
         </div>
 
 
@@ -531,13 +497,13 @@
 
             <!-- Content: Text -->
             <div class="max-w-4xl">
-                <div data-aos="fade-down"
+                <div
                     class="inline-block mb-4 px-4 py-1 rounded-full border border-gray-700 bg-gray-800/50 text-accent-400 text-xs font-semibold tracking-widest uppercase hover:bg-gray-700 transition-colors cursor-default backdrop-blur-sm"
                     data-i18n="hero.badge">
                     UI/UX · Frontend · MarTech & AI Workflows
                 </div>
 
-                <h1 data-aos="fade-up" data-aos-delay="100"
+                <h1
                     class="font-black mb-6 tracking-tight leading-tight select-none px-4 sm:px-0">
                     <span class="block text-4xl sm:text-5xl md:text-7xl mb-3" data-i18n="hero.title">
                         <span class="block text-white">Senior UI/UX &amp;</span>
@@ -551,18 +517,17 @@
                 </h1>
 
                 <!-- Desktop Detailed Description (Hidden on mobile) -->
-                <p data-aos="fade-up" data-aos-delay="200"
+                <p
                     class="hidden md:block max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-8"
                     data-i18n="hero.description">
                     +15 años diseñando interfaces escalables (Figma/Design Systems), desarrollando frontends modernos (React, Tailwind, HTML5/CSS3) y optimizando ecosistemas MarTech (Salesforce Marketing Cloud, Email HTML, CRO y GA4) potenciados con IA en entornos internacionales (EMEA · UK · DACH).
                 </p>
 
-                <div data-aos="fade-up" data-aos-delay="300"
+                <div
                     class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto px-4 sm:px-0">
                     <a href="#portfolio"
                         class="w-full sm:w-52 h-14 px-6 bg-accent-600 hover:bg-accent-500 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent-500/20 hover:-translate-y-1 whitespace-nowrap">
-                        <span data-i18n="hero.cta_work">Proyectos</span> <i data-lucide="arrow-down"
-                            class="w-5 h-5 shrink-0"></i>
+                        <span data-i18n="hero.cta_work">Proyectos</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-down w-5 h-5 shrink-0"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
                     </a>
                     <a href="#contact"
                         class="w-full sm:w-52 h-14 px-6 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:-translate-y-1 whitespace-nowrap"
@@ -574,8 +539,8 @@
                     <div class="relative group w-full sm:w-52">
                         <button
                             class="w-full h-14 px-6 bg-anthracite-800 border border-gray-700 hover:border-accent-500 text-gray-300 hover:text-white rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 whitespace-nowrap">
-                            <i data-lucide="download" class="w-5 h-5 shrink-0"></i> <span data-i18n="hero.cv_btn">CV</span>
-                            <i data-lucide="chevron-down" class="w-4 h-4 ml-1 shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-download w-5 h-5 shrink-0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> <span data-i18n="hero.cv_btn">CV</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 ml-1 shrink-0"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                         <!-- Dropdown Menu -->
                         <div style="min-width: 215px; width: max-content;"
@@ -671,7 +636,7 @@
                     <div class="mb-4 relative z-10">
                         <div
                             class="relative w-full h-[390px] sm:h-[420px] md:h-[440px] rounded-2xl overflow-hidden border border-gray-700 shadow-2xl group-hover:border-accent-500/50 transition-colors duration-500">
-                            <img src="images/oskar-profile.png?v=3" alt="Oskar Marijuan"
+                            <img src="images/oskar-profile.jpg?v=4" alt="Oskar Marijuan" width="720" height="581" loading="lazy" decoding="async"
                                 class="w-full h-full object-cover object-[center_45%] hover:scale-105 transition-transform duration-700">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-anthracite-900 via-transparent to-transparent opacity-40">
@@ -689,7 +654,7 @@
                             </h3>
                             <ul class="space-y-3 text-sm">
                                 <li class="flex items-start gap-4">
-                                    <i data-lucide="map-pin" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5 text-accent-400 mt-1"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                                     <div>
                                         <span class="block text-sm text-gray-500"
                                             data-i18n="about.details.location">Ubicación</span>
@@ -697,7 +662,7 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <i data-lucide="mail" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-mail w-5 h-5 text-accent-400 mt-1"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                     <div>
                                         <span class="block text-sm text-gray-500"
                                             data-i18n="about.details.email">Email</span>
@@ -706,7 +671,7 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <i data-lucide="phone" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-phone w-5 h-5 text-accent-400 mt-1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                     <div>
                                         <span class="block text-sm text-gray-500"
                                             data-i18n="about.details.phone">Teléfono</span>
@@ -714,7 +679,7 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start gap-4">
-                                    <i data-lucide="languages" class="w-5 h-5 text-accent-400 mt-1"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-languages w-5 h-5 text-accent-400 mt-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
                                     <div>
                                         <span class="block text-sm text-gray-500"
                                             data-i18n="about.details.languages">Idiomas</span>
@@ -756,7 +721,7 @@
                 <!-- Left Column: Core Pillars (Replacing outdated percentage bars per HR/ATS audit) -->
                 <div class="space-y-3" data-aos="fade-right">
                     <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                        <i data-lucide="layers" class="w-5 h-5 text-accent-400"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layers w-5 h-5 text-accent-400"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
                         <span data-i18n="skills.levels">Áreas de Especialización & Impacto</span>
                     </h3>
 
@@ -764,7 +729,7 @@
                     <div class="glass-card px-5 py-3.5 rounded-xl border border-gray-800/60 hover:border-accent-500/40 transition-all">
                         <div class="flex items-start justify-between mb-1">
                             <h4 class="text-white font-bold text-sm sm:text-base flex items-center gap-2">
-                                <i data-lucide="code-2" class="w-4 h-4 text-accent-400"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-code-2 w-4 h-4 text-accent-400"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
                                 <span data-i18n="skills.pillars.p1.title">UI/UX & Frontend Engineering</span>
                             </h4>
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-accent-500/15 text-accent-400 border border-accent-500/30" data-i18n="skills.pillars.p1.badge">Core Senior</span>
@@ -778,7 +743,7 @@
                     <div class="glass-card px-5 py-3.5 rounded-xl border border-gray-800/60 hover:border-accent-500/40 transition-all">
                         <div class="flex items-start justify-between mb-1">
                             <h4 class="text-white font-bold text-sm sm:text-base flex items-center gap-2">
-                                <i data-lucide="mail-check" class="w-4 h-4 text-accent-400"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-mail-check w-4 h-4 text-accent-400"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m16 19 2 2 4-4"/></svg>
                                 <span data-i18n="skills.pillars.p2.title">MarTech, CRM & Email Development</span>
                             </h4>
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-accent-500/15 text-accent-400 border border-accent-500/30" data-i18n="skills.pillars.p2.badge">Especialista EMEA</span>
@@ -792,7 +757,7 @@
                     <div class="glass-card px-5 py-3.5 rounded-xl border border-gray-800/60 hover:border-accent-500/40 transition-all">
                         <div class="flex items-start justify-between mb-1">
                             <h4 class="text-white font-bold text-sm sm:text-base flex items-center gap-2">
-                                <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-sparkles w-4 h-4 text-purple-400"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
                                 <span data-i18n="skills.pillars.p3.title">AI-Augmented Product & DesignOps</span>
                             </h4>
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30" data-i18n="skills.pillars.p3.badge">Velocidad x5</span>
@@ -806,7 +771,7 @@
                     <div class="glass-card px-5 py-3.5 rounded-xl border border-gray-800/60 hover:border-accent-500/40 transition-all">
                         <div class="flex items-start justify-between mb-1">
                             <h4 class="text-white font-bold text-sm sm:text-base flex items-center gap-2">
-                                <i data-lucide="trending-up" class="w-4 h-4 text-accent-400"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-trending-up w-4 h-4 text-accent-400"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
                                 <span data-i18n="skills.pillars.p4.title">CRO, E-Commerce & Web Analytics</span>
                             </h4>
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-accent-500/15 text-accent-400 border border-accent-500/30" data-i18n="skills.pillars.p4.badge">Data-Driven</span>
@@ -820,7 +785,7 @@
                 <!-- Right Column: Tech Stack -->
                 <div class="space-y-3" data-aos="fade-left">
                     <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                        <i data-lucide="cpu" class="w-5 h-5 text-accent-400"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-cpu w-5 h-5 text-accent-400"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
                         <span data-i18n="skills.stack">Stack Tecnológico Detallado</span>
                     </h3>
 
@@ -831,7 +796,7 @@
                         <div class="glass-card px-5 py-3 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <i data-lucide="pen-tool" class="w-4 h-4"></i> <span
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-pen-tool w-4 h-4"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg> <span
                                     data-i18n="skills.categories.design">UI/UX & Design Systems</span>
                             </h4>
                             <div class="flex flex-wrap gap-1.5">
@@ -849,7 +814,7 @@
                         <div class="glass-card px-5 py-3 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <i data-lucide="layout" class="w-4 h-4"></i> <span
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layout w-4 h-4"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> <span
                                     data-i18n="skills.categories.frontend">Frontend & Web Engineering</span>
                             </h4>
                             <div class="flex flex-wrap gap-1.5">
@@ -869,7 +834,7 @@
                         <div class="glass-card px-5 py-3 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <i data-lucide="mail" class="w-4 h-4"></i> <span
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-mail w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <span
                                     data-i18n="skills.categories.email">MarTech, CRM & Email Ops</span>
                             </h4>
                             <div class="flex flex-wrap gap-1.5">
@@ -887,7 +852,7 @@
                         <div class="glass-card px-5 py-3 rounded-xl border border-gray-800/50">
                             <h4
                                 class="text-accent-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <i data-lucide="bar-chart-2" class="w-4 h-4"></i> <span
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-bar-chart-2 w-4 h-4"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg> <span
                                     data-i18n="skills.categories.analytics">CRO, Analytics & Cloud</span>
                             </h4>
                             <div class="flex flex-wrap gap-1.5">
@@ -906,7 +871,7 @@
                             class="glass-card px-5 py-3 rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900 to-indigo-900/30">
                             <h4
                                 class="text-accent-400 font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <i data-lucide="bot" class="w-4 h-4"></i> <span data-i18n="skills.categories.ai">AI &
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-bot w-4 h-4"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> <span data-i18n="skills.categories.ai">AI &
                                     Automation Workflows</span>
                             </h4>
                             <div class="flex flex-wrap gap-1.5">
@@ -975,7 +940,7 @@
                                     <div class="mt-2.5 pt-2.5 border-t border-gray-800/80">
                                         <div class="flex items-center justify-between gap-2 mb-2">
                                             <div class="text-xs font-semibold uppercase tracking-wider text-accent-400 flex items-center gap-2">
-                                                <i data-lucide="layers" class="w-4 h-4 shrink-0"></i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layers w-4 h-4 shrink-0"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
                                                 <div data-i18n="experience.munitxos.gallery_label" class="flex flex-wrap items-center gap-x-1.5">
                                                     <span class="leading-tight">Capturas de Producto</span>
                                                     <span class="text-[11px] text-gray-400 font-medium">(Front &amp; Panel UI)</span>
@@ -983,32 +948,32 @@
                                             </div>
                                             <a href="https://munchos.web.app/" target="_blank" class="text-xs text-gray-400 hover:text-white flex items-center gap-1 shrink-0 transition-colors">
                                                 <span>munchos.web.app</span>
-                                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-3 h-3"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                                             </a>
                                         </div>
                                         <div class="grid grid-cols-3 gap-2">
-                                            <a href="images/portfolio/munchos_responsive.png" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Arquitectura Responsive Multi-Dispositivo" data-description="Vista simultánea en iPhone 14 Pro Max (430x932), iPad Air 5 (820x1180) y MacBook Air (1559x975) con selector i18n (ES/DE/EN) y CTAs de conversión.">
-                                                <img src="images/portfolio/munchos_responsive.png" alt="Munchos Responsive UI" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
+                                            <a href="images/portfolio/munchos_responsive.jpg" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Arquitectura Responsive Multi-Dispositivo" data-description="Vista simultánea en iPhone 14 Pro Max (430x932), iPad Air 5 (820x1180) y MacBook Air (1559x975) con selector i18n (ES/DE/EN) y CTAs de conversión.">
+                                                <img src="images/portfolio/munchos_responsive_thumb.jpg" alt="Munchos Responsive UI" width="340" height="145" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
                                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-1.5">
                                                     <span class="text-[10px] text-white font-medium leading-tight">Responsive 360°</span>
                                                 </div>
                                             </a>
-                                            <a href="images/portfolio/munchos_panel.png" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Panel Interactivo &amp; Configurador de Categorías" data-description="Panel interactivo de selección (Pinchos, Tortillas, Grill, Pizzas, Sushi Fusion, Paellas), fichas dinámicas con badges de calidad y barra sticky de conversión.">
-                                                <img src="images/portfolio/munchos_panel.png" alt="Munchos Interactive Panel" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
+                                            <a href="images/portfolio/munchos_panel.jpg" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Panel Interactivo &amp; Configurador de Categorías" data-description="Panel interactivo de selección (Pinchos, Tortillas, Grill, Pizzas, Sushi Fusion, Paellas), fichas dinámicas con badges de calidad y barra sticky de conversión.">
+                                                <img src="images/portfolio/munchos_panel_thumb.jpg" alt="Munchos Interactive Panel" width="340" height="195" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
                                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-1.5">
                                                     <span class="text-[10px] text-white font-medium leading-tight">Panel &amp; Config</span>
                                                 </div>
                                             </a>
-                                            <a href="images/portfolio/munchos_desktop.png" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Desktop Hero &amp; E-Commerce UI" data-description="Interfaz Desktop (MacBook Air) con navegación modular, Gourmet Shop, banner dinámico de promociones (1/2 · 2/2) y acceso al motor de reservas.">
-                                                <img src="images/portfolio/munchos_desktop.png" alt="Munchos Desktop Hero" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
+                                            <a href="images/portfolio/munchos_desktop.jpg" class="glightbox group/thumb relative h-14 rounded-lg overflow-hidden border border-gray-700/70 hover:border-accent-400 transition-all" data-gallery="munchos-exp" data-title="MUNCHOS — Desktop Hero &amp; E-Commerce UI" data-description="Interfaz Desktop (MacBook Air) con navegación modular, Gourmet Shop, banner dinámico de promociones (1/2 · 2/2) y acceso al motor de reservas.">
+                                                <img src="images/portfolio/munchos_desktop_thumb.jpg" alt="Munchos Desktop Hero" width="340" height="217" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300">
                                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-between p-1.5">
                                                     <span class="text-[10px] text-white font-medium leading-tight">Desktop &amp; Mobile</span>
                                                     <span class="text-[10px] bg-accent-500/80 text-white px-1 rounded font-bold">+2</span>
                                                 </div>
                                             </a>
                                             <!-- Hidden items in Munchos Experience Gallery -->
-                                            <a href="images/portfolio/munchos_tablet.png" class="glightbox hidden" data-gallery="munchos-exp" data-title="MUNCHOS — Tablet Adaptive UI (iPad Air 5)" data-description="Adaptación para tablet (820x1180) manteniendo selector de idiomas ES/DE/EN, accesos rápidos y módulo promocional."></a>
-                                            <a href="images/portfolio/munchos_mobile.png" class="glightbox hidden" data-gallery="munchos-exp" data-title="MUNCHOS — Mobile-First UI (iPhone 14 Pro Max)" data-description="Experiencia Mobile-First (430x932) optimizada para conversión rápida con CTAs táctiles (Book Catering / View Menus &amp; Prices)."></a>
+                                            <a href="images/portfolio/munchos_tablet.jpg" aria-label="MUNCHOS Tablet UI" class="glightbox hidden" data-gallery="munchos-exp" data-title="MUNCHOS — Tablet Adaptive UI (iPad Air 5)" data-description="Adaptación para tablet (820x1180) manteniendo selector de idiomas ES/DE/EN, accesos rápidos y módulo promocional."></a>
+                                            <a href="images/portfolio/munchos_mobile.jpg" aria-label="MUNCHOS Mobile UI" class="glightbox hidden" data-gallery="munchos-exp" data-title="MUNCHOS — Mobile-First UI (iPhone 14 Pro Max)" data-description="Experiencia Mobile-First (430x932) optimizada para conversión rápida con CTAs táctiles (Book Catering / View Menus &amp; Prices)."></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1232,14 +1197,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-accent-500/15 border border-accent-500/30 flex items-center justify-center text-accent-400 shrink-0 group-hover:bg-accent-500 group-hover:text-white transition-colors">
-                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-globe w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-accent-400 transition-colors leading-snug" data-i18n="portfolio.cards.web.title">Web, Apps &amp; Landings</h3>
                                     <span class="text-xs text-accent-400 font-medium block" data-i18n="portfolio.cards.web.badge">React 18 · Tailwind · Firebase · CRO</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-400 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.web.desc">
                             Desarrollo Full-Stack y Frontend de plataformas D2C/B2B, e-commerce de alto tráfico (+500k SKUs), microsites eProcurement y landing pages orientadas a conversión.
@@ -1247,11 +1212,11 @@
                         <ul class="space-y-1.5 text-xs text-gray-300 border-t border-gray-800/80 pt-2.5">
                             <li class="flex items-center justify-between gap-3">
                                 <span class="font-semibold text-white">MUNCHOS Platform</span>
-                                <a href="https://munchos.web.app/" target="_blank" onclick="event.stopPropagation()" class="text-accent-400 hover:underline flex items-center gap-1 whitespace-nowrap shrink-0">munchos.web.app <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                                <a href="https://munchos.web.app/" target="_blank" onclick="event.stopPropagation()" class="text-accent-400 hover:underline flex items-center gap-1 whitespace-nowrap shrink-0">munchos.web.app <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-3 h-3"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
                             </li>
                             <li class="flex items-center justify-between gap-3">
                                 <span>RS Components (+500k SKUs)</span>
-                                <a href="https://es.rs-online.com/" target="_blank" onclick="event.stopPropagation()" class="text-gray-400 hover:text-accent-400 flex items-center gap-1 whitespace-nowrap shrink-0">rs-online.com <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                                <a href="https://es.rs-online.com/" target="_blank" onclick="event.stopPropagation()" class="text-gray-400 hover:text-accent-400 flex items-center gap-1 whitespace-nowrap shrink-0">rs-online.com <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-3 h-3"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
                             </li>
                             <li class="flex items-center justify-between gap-3">
                                 <span>SPIE ROBUR · Cervantes · SGI</span>
@@ -1268,14 +1233,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-accent-500/15 border border-accent-500/30 flex items-center justify-center text-accent-400 shrink-0 group-hover:bg-accent-500 group-hover:text-white transition-colors">
-                                    <i data-lucide="mail-check" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-mail-check w-4 h-4"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m16 19 2 2 4-4"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-accent-400 transition-colors leading-snug" data-i18n="portfolio.cards.email.title">CRM &amp; Email HTML</h3>
                                     <span class="text-xs text-accent-400 font-medium block" data-i18n="portfolio.cards.email.badge">SFMC · Responsys · Handlebars · Litmus</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-400 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.email.desc">
                             Arquitectura de plantillas modulares HTML/CSS cross-client, automatización CRM multilingüe (EMEA/UK/DACH), feeds dinámicos y control de entregabilidad.
@@ -1304,14 +1269,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">
-                                    <i data-lucide="layers" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layers w-4 h-4"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-purple-300 transition-colors leading-snug" data-i18n="portfolio.cards.assets.title">Design Systems &amp; Motion</h3>
                                     <span class="text-xs text-purple-300 font-medium block" data-i18n="portfolio.cards.assets.badge">Figma · Design Tokens · Motion UI</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-500 group-hover:text-purple-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-gray-500 group-hover:text-purple-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-400 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.assets.desc">
                             Sistemas de diseño escalables, librerías de componentes multi-dispositivo (iOS, iPadOS, Web), vídeo corporativo y activos Rich Media.
@@ -1340,14 +1305,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-accent-500/15 border border-accent-500/30 flex items-center justify-center text-accent-400 shrink-0 group-hover:bg-accent-500 group-hover:text-white transition-colors">
-                                    <i data-lucide="sliders" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-sliders w-4 h-4"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-accent-400 transition-colors leading-snug" data-i18n="portfolio.cards.wireframes.title">UX &amp; Prototipos</h3>
                                     <span class="text-xs text-accent-400 font-medium block" data-i18n="portfolio.cards.wireframes.badge">Configuradores · Wireframes · UX Flows</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-400 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.wireframes.desc">
                             Arquitectura de la información, paneles interactivos de configuración, flujos de reserva/checkout y prototipos funcionales Mobile-First.
@@ -1376,14 +1341,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-accent-500/15 border border-accent-500/30 flex items-center justify-center text-accent-400 shrink-0 group-hover:bg-accent-500 group-hover:text-white transition-colors">
-                                    <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-pen-tool w-4 h-4"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-accent-400 transition-colors leading-snug" data-i18n="portfolio.cards.offline.title">Brand &amp; Visual Design</h3>
                                     <span class="text-xs text-accent-400 font-medium block" data-i18n="portfolio.cards.offline.badge">Branding · Dirección de Arte · Editorial</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-gray-500 group-hover:text-accent-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-400 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.offline.desc">
                             Identidad visual corporativa, packaging, catálogos técnicos y dirección de arte multicanal con estándares internacionales.
@@ -1412,14 +1377,14 @@
                         <div class="flex items-start justify-between gap-3 mb-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-9 h-9 rounded-lg bg-accent-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-accent-500/30 group-hover:scale-105 transition-transform">
-                                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-layout-grid w-4 h-4"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-accent-400 transition-colors leading-snug" data-i18n="portfolio.cards.full.title">Galería Visual Completa</h3>
                                     <span class="text-xs text-accent-300 font-medium block" data-i18n="portfolio.cards.full.badge">Subpágina dedicada · +40 Trabajos</span>
                                 </div>
                             </div>
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-accent-400 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 text-accent-400 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 transition-all shrink-0"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
                         </div>
                         <p class="text-gray-300 text-xs leading-snug mb-2.5" data-i18n="portfolio.cards.full.desc">
                             Haz clic en cualquiera de las tarjetas para inspeccionar las capturas UI, los mockups responsive de MUNCHOS, newsletters en SFMC, vídeos y prototipos a pantalla completa.
@@ -1460,7 +1425,7 @@
                 <div class="md:col-span-12 lg:col-span-8" data-aos="fade-right">
                     <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
                         <div class="p-2 bg-purple-500/20 rounded-lg">
-                            <i data-lucide="sparkles" class="w-5 h-5 text-purple-400"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-sparkles w-5 h-5 text-purple-400"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
                         </div>
                         <span data-i18n="education.continuous">Certificaciones &amp; Especialización Continua</span>
                     </h3>
@@ -1552,7 +1517,7 @@
                 <div class="md:col-span-12 lg:col-span-4" data-aos="fade-left">
                     <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
                         <div class="p-2 bg-accent-500/20 rounded-lg">
-                            <i data-lucide="graduation-cap" class="w-5 h-5 text-accent-400"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-graduation-cap w-5 h-5 text-accent-400"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
                         </div>
                         <span data-i18n="education.formal">Formación Académica</span>
                     </h3>
@@ -1614,15 +1579,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-1.jpg" alt="Carlos Marrodan"
+                                    <img src="images/portfolio/testimonials-1.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Carlos Marrodan"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Carlos Marrodan</h4>
+                                    <h4 class="text-base font-bold text-white">Carlos Marrodan</h3>
                                     <p class="text-accent-400 text-xs">CMO</p>
                                 </div>
                             </div>
@@ -1639,15 +1604,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-2.jpg" alt="Christian Twelftree"
+                                    <img src="images/portfolio/testimonials-2.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Christian Twelftree"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Christian Twelftree</h4>
+                                    <h4 class="text-base font-bold text-white">Christian Twelftree</h3>
                                     <p class="text-accent-400 text-xs">Webmaster Manager</p>
                                 </div>
                             </div>
@@ -1664,15 +1629,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-3.jpg" alt="Carey Boyes"
+                                    <img src="images/portfolio/testimonials-3.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Carey Boyes"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Carey Boyes</h4>
+                                    <h4 class="text-base font-bold text-white">Carey Boyes</h3>
                                     <p class="text-accent-400 text-xs">Digital Marketing Manager</p>
                                 </div>
                             </div>
@@ -1689,15 +1654,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-4.jpg" alt="Liza Hall"
+                                    <img src="images/portfolio/testimonials-4.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Liza Hall"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Liza Hall</h4>
+                                    <h4 class="text-base font-bold text-white">Liza Hall</h3>
                                     <p class="text-accent-400 text-xs">E-commerce Manager</p>
                                 </div>
                             </div>
@@ -1714,15 +1679,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-5.jpg" alt="Guillermo Lopez"
+                                    <img src="images/portfolio/testimonials-5.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Guillermo Lopez"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Guillermo Lopez</h4>
+                                    <h4 class="text-base font-bold text-white">Guillermo Lopez</h3>
                                     <p class="text-accent-400 text-xs">Engineer Manager</p>
                                 </div>
                             </div>
@@ -1739,15 +1704,15 @@
                     <div class="swiper-slide max-w-md">
                         <div
                             class="glass-card p-6 rounded-2xl h-full flex flex-col relative group hover:border-accent-500/50 transition-colors">
-                            <i data-lucide="quote" class="w-8 h-8 text-accent-500/20 absolute top-5 right-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-quote w-8 h-8 text-accent-500/20 absolute top-5 right-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
                             <div class="flex items-center gap-3.5 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border-2 border-accent-500/30 flex items-center justify-center overflow-hidden">
-                                    <img src="images/portfolio/testimonials-6.jpg" alt="Illias Tsatalmpasidis"
+                                    <img src="images/portfolio/testimonials-6.jpg" width="100" height="100" loading="lazy" decoding="async" alt="Illias Tsatalmpasidis"
                                         class="w-full h-full object-cover opacity-90">
                                 </div>
                                 <div>
-                                    <h4 class="text-base font-bold text-white">Illias Tsatalmpasidis</h4>
+                                    <h4 class="text-base font-bold text-white">Illias Tsatalmpasidis</h3>
                                     <p class="text-accent-400 text-xs">Head of Campaign</p>
                                 </div>
                             </div>
@@ -1782,7 +1747,7 @@
                         <div class="glass-card p-3.5 rounded-xl flex items-center gap-4 hover:pl-5 transition-all">
                             <div
                                 class="w-11 h-11 rounded-full bg-accent-500/10 flex items-center justify-center text-accent-400 shrink-0">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-mail w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             </div>
                             <div>
                                 <div class="text-xs text-gray-500 uppercase tracking-wide">
@@ -1796,7 +1761,7 @@
                         <div class="glass-card p-3.5 rounded-xl flex items-center gap-4 hover:pl-5 transition-all">
                             <div
                                 class="w-11 h-11 rounded-full bg-accent-500/10 flex items-center justify-center text-accent-400 shrink-0">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
                                 <div class="text-xs text-gray-500 uppercase tracking-wide" data-i18n="contact.phone">
@@ -1850,7 +1815,7 @@
                         <div id="successMessage"
                             class="hidden p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">
                             <div class="flex items-center gap-2">
-                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-check-circle w-5 h-5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
                                 <span data-i18n="contact.form.success">¡Mensaje enviado correctamente! Te responderé
                                     pronto.</span>
                             </div>
@@ -1860,7 +1825,7 @@
                         <div id="errorMessage"
                             class="hidden p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">
                             <div class="flex items-center gap-2">
-                                <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-alert-circle w-5 h-5"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
                                 <span data-i18n="contact.form.error">Hubo un error. Por favor, intenta de nuevo.</span>
                             </div>
                         </div>
@@ -1868,8 +1833,8 @@
                         <div class="space-y-2 group">
                             <label
                                 class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors"
-                                data-i18n="contact.form.name">Nombre</label>
-                            <input type="text" name="name" placeholder="Tu Nombre" required
+                                for="contact-name" data-i18n="contact.form.name">Nombre</label>
+                            <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Tu Nombre" required
                                 class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors"
                                 data-i18n="contact.form.name_ph" />
                         </div>
@@ -1877,8 +1842,8 @@
                         <div class="space-y-2 group">
                             <label
                                 class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors"
-                                data-i18n="contact.form.email">Email</label>
-                            <input type="email" name="email" placeholder="email@ejemplo.com" required
+                                for="contact-email" data-i18n="contact.form.email">Email</label>
+                            <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="email@ejemplo.com" required
                                 class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors"
                                 data-i18n="contact.form.email_ph" />
                         </div>
@@ -1886,18 +1851,18 @@
                         <div class="space-y-2 group">
                             <label
                                 class="text-sm font-medium text-gray-400 group-focus-within:text-accent-400 transition-colors"
-                                data-i18n="contact.form.message">Mensaje</label>
-                            <textarea rows="4" name="message" placeholder="¿En qué puedo ayudarte?" required
+                                for="contact-message" data-i18n="contact.form.message">Mensaje</label>
+                            <textarea id="contact-message" rows="4" name="message" placeholder="¿En qué puedo ayudarte?" required
                                 class="w-full px-4 py-3 bg-anthracite-900 border border-gray-600 rounded-lg focus:outline-none focus:border-accent-500 text-white placeholder-gray-600 transition-colors resize-none"
                                 data-i18n="contact.form.message_ph"></textarea>
                         </div>
 
                         <!-- Honeypot for spam protection -->
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="checkbox" name="botcheck" aria-label="No marcar esta casilla" tabindex="-1" autocomplete="off" class="hidden" style="display: none;">
 
                         <button type="submit" id="submitBtn"
                             class="w-full py-4 bg-accent-600 hover:bg-accent-500 text-white font-bold rounded-lg transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
-                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-send w-5 h-5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                             <span id="btnText" data-i18n="contact.form.send">Enviar</span>
                         </button>
                     </form>
@@ -1944,9 +1909,7 @@
                                         successMsg.classList.remove('hidden');
                                         contactForm.reset();
                                         // Re-initialize lucide icons for success message
-                                        if (typeof lucide !== 'undefined') {
-                                            lucide.createIcons();
-                                        }
+                                        
                                     } else {
                                         // Show error message with specific details
                                         errorMsg.classList.remove('hidden');
@@ -1956,9 +1919,7 @@
                                             errorSpan.innerHTML = `<strong>Error:</strong> ${detailedError}`;
                                         }
                                         btnText.textContent = t.send; // Reset button text
-                                        if (typeof lucide !== 'undefined') {
-                                            lucide.createIcons();
-                                        }
+                                        
                                     }
                                 } catch (error) {
                                     console.error('Submission Exception:', error);
@@ -1967,9 +1928,7 @@
                                         errorSpan.textContent = `Error: ${error.message}`;
                                     }
                                     btnText.textContent = t.send; // Reset button text
-                                    if (typeof lucide !== 'undefined') {
-                                        lucide.createIcons();
-                                    }
+                                    
                                 } finally {
                                     submitBtn.disabled = false;
                                 }
@@ -1980,6 +1939,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="bg-anthracite-950 border-t border-gray-800 pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 text-center">
@@ -1996,24 +1956,17 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Icons
-        lucide.createIcons();
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-        });
-
         // Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById("mobile-menu");
             menu.classList.toggle("hidden");
         }
 
-        // Navbar Scroll Effect
+        // Navbar Scroll Effect (passive listener for 60fps scrolling)
         window.addEventListener("scroll", () => {
             const nav = document.getElementById("navbar");
             if (window.scrollY > 50) {
@@ -2024,80 +1977,16 @@
                 nav.classList.remove("bg-anthracite-900/95", "shadow-lg", "backdrop-blur-md", "border-gray-800");
                 nav.classList.add("glass", "border-white/5");
             }
-        });
-
-        // Kinetic 3D Tilt + Cursor-Tracking Spotlight Effect
-        const cards = document.querySelectorAll('.glass-card');
-
-        cards.forEach(card => {
-            const isPortfolioCard = card.classList.contains('portfolio-item');
-            const maxTilt = isPortfolioCard ? 9 : 6;
-            const liftY = isPortfolioCard ? -8 : -4;
-            const scaleAmt = isPortfolioCard ? 1.025 : 1.012;
-
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = ((y - centerY) / centerY) * -maxTilt;
-                const rotateY = ((x - centerX) / centerX) * maxTilt;
-
-                card.style.transform = `perspective(850px) translateY(${liftY}px) scale(${scaleAmt}) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(850px) translateY(0px) scale(1) rotateX(0deg) rotateY(0deg)';
-            });
-        });
-
-        // Skill Bar Animation
-        const observerOptions = {
-            threshold: 0.2
-        };
-
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBar = entry.target.querySelector('.skill-bar');
-                    const targetWidth = progressBar.getAttribute('data-width');
-                    progressBar.style.width = targetWidth;
-                    skillObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.skill-bar-container').forEach(el => {
-            skillObserver.observe(el);
-        });
-
-        // Initialize Lightbox
-        const lightbox = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-            loop: true,
-            autoplayVideos: true
-        });
+        }, { passive: true });
 
         // Global Portfolio Filter Function
         window.filterPortfolio = function (filterValue, btnElement) {
-            console.log('Filtering by: ' + filterValue);
-
-            // Update active state
             if (btnElement) {
                 const btns = document.querySelectorAll('.portfolio-filter');
                 btns.forEach(b => b.classList.remove('active'));
                 btnElement.classList.add('active');
             }
-
             const items = document.querySelectorAll('.portfolio-item');
-
             items.forEach(item => {
                 if (filterValue === 'all' || item.classList.contains(filterValue)) {
                     item.classList.remove('hidden');
@@ -2109,51 +1998,100 @@
                     item.style.display = 'none';
                 }
             });
-
-            // Refresh AOS
             if (typeof AOS !== 'undefined') {
                 setTimeout(() => AOS.refresh(), 200);
             }
         };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // Initialize Swiper
-        const swiper = new Swiper('.testimonial-slider', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            loop: true,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                if (typeof AOS !== "undefined") {
+                    AOS.init({ duration: 700, once: true, offset: 80 });
                 }
+            }, 20);
+
+            setTimeout(function () {
+                if (typeof GLightbox !== "undefined") {
+                    GLightbox({
+                        selector: '.glightbox',
+                        touchNavigation: true,
+                        loop: true,
+                        autoplayVideos: true
+                    });
+                }
+            }, 80);
+
+            setTimeout(function () {
+                if (typeof Swiper !== "undefined") {
+                    new Swiper('.testimonial-slider', {
+                        effect: 'coverflow',
+                        grabCursor: true,
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 2,
+                            slideShadows: true,
+                        },
+                        autoplay: {
+                            delay: 3500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        loop: true,
+                        breakpoints: {
+                            320: { slidesPerView: 1, spaceBetween: 20 },
+                            768: { slidesPerView: 2, spaceBetween: 30 },
+                            1024: { slidesPerView: 3, spaceBetween: 40 }
+                        }
+                    });
+                }
+            }, 140);
+
+            // Kinetic 3D Tilt + Cursor-Tracking Spotlight Effect (Desktop pointers only)
+            if (window.matchMedia('(pointer: fine)').matches) {
+                document.querySelectorAll('.glass-card').forEach(card => {
+                    const isPortfolioCard = card.classList.contains('portfolio-item');
+                    const maxTilt = isPortfolioCard ? 9 : 6;
+                    const liftY = isPortfolioCard ? -8 : -4;
+                    const scaleAmt = isPortfolioCard ? 1.025 : 1.012;
+
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        card.style.setProperty('--mouse-x', `${x}px`);
+                        card.style.setProperty('--mouse-y', `${y}px`);
+                        const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -maxTilt;
+                        const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * maxTilt;
+                        card.style.transform = `perspective(850px) translateY(${liftY}px) scale(${scaleAmt}) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+                    }, { passive: true });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(850px) translateY(0px) scale(1) rotateX(0deg) rotateY(0deg)';
+                    }, { passive: true });
+                });
             }
+
+            // Skill Bar Animation
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target.querySelector('.skill-bar');
+                        if (progressBar) {
+                            progressBar.style.width = progressBar.getAttribute('data-width');
+                        }
+                        skillObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.skill-bar-container').forEach(el => skillObserver.observe(el));
         });
     </script>
 
@@ -3269,12 +3207,10 @@
                 }
 
                 if (typeof translation === 'string') {
-                    // Handle inputs and textareas
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.placeholder = translation;
-                    } else {
-                        // Use innerHTML to support standard HTML tags in translations (like <strong>)
-                        element.innerHTML = translation;
+                        if (element.placeholder !== translation) element.placeholder = translation;
+                    } else if (!window.__initialEsSkip || element.closest('#hero') === null) {
+                        if (element.innerHTML !== translation) element.innerHTML = translation;
                     }
                 }
             });
@@ -3293,9 +3229,7 @@
                 activeBtn.classList.add('bg-accent-600', 'text-white');
             }
 
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+            
 
             console.log(`Language changed to: ${lang}`);
         }
@@ -3304,12 +3238,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Check for saved language preference, default to Spanish (es) for review
             const savedLang = localStorage.getItem('preferredLanguage_v2') || 'es';
-            changeLanguage(savedLang);
-
-            // Initialize Portfolio Filter (Default to Web)
-            const webBtn = document.querySelector('.portfolio-filter[data-i18n="portfolio.filters.all"]');
-            if (webBtn) {
-                webBtn.click();
+            if (savedLang !== 'es') {
+                changeLanguage(savedLang);
+            } else {
+                setTimeout(function () {
+                    window.__initialEsSkip = true;
+                    changeLanguage('es');
+                    window.__initialEsSkip = false;
+                }, 40);
             }
         });
     </script>

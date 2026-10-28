@@ -10,71 +10,32 @@
     <link rel="icon" type="image/png" href="images/favicon.png?v=3" />
     <link rel="apple-touch-icon" href="images/favicon.png?v=3" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Lightbox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <!-- Flag Icons Library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', "sans-serif"],
-                    },
-                    colors: {
-                        white: "#faf7f0",
-                        anthracite: {
-                            50: "#faf7f0",
-                            100: "#f2efe6",
-                            200: "#e6e2d6",
-                            300: "#d6d2c4",
-                            400: "#b0ada3",
-                            500: "#8a8a8a",
-                            600: "#6a6a6a",
-                            700: "#4a4a4a",
-                            800: "#363636",
-                            850: "#2b2b2b",
-                            900: "#222222",
-                            950: "#1b1b1b",
-                        },
-                        gray: {
-                            50: "#faf7f0",
-                            100: "#f2efe6",
-                            200: "#e6e2d6",
-                            300: "#d6d2c4",
-                            400: "#a8a59b",
-                            500: "#8a8a8a",
-                            600: "#686868",
-                            700: "#4a4a4a",
-                            800: "#303030",
-                            900: "#1b1b1b",
-                        },
-                        accent: {
-                            300: "#faf7f0",
-                            400: "#d6d2c4",
-                            500: "#c2bdb0",
-                            600: "#d6d2c4",
-                        },
-                        purple: {
-                            300: "#faf7f0",
-                            400: "#d6d2c4",
-                            500: "#b5afa0",
-                        },
-                    },
-                },
-            },
-        };
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <style id="tailwind-precompiled">*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e6e2d6}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-full{bottom:100%}.left-0{left:0px}.left-1\/2{left:50%}.left-3{left:0.75rem}.right-0{right:0px}.right-5{right:1.25rem}.top-0{top:0px}.top-3{top:0.75rem}.top-5{top:1.25rem}.-z-10{z-index:-10}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.mx-3{margin-left:0.75rem;margin-right:0.75rem}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-10{margin-left:2.5rem}.ml-6{margin-left:1.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-1\.5{margin-top:0.375rem}.mt-2{margin-top:0.5rem}.mt-2\.5{margin-top:0.625rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-52{height:13rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[390px\]{height:390px}.h-\[90\%\]{height:90%}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-1\/3{width:33.333333%}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-56{width:14rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[48\%\]{width:48%}.w-\[90\%\]{width:90%}.w-full{width:100%}.w-px{width:1px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[88rem\]{max-width:88rem}.max-w-md{max-width:28rem}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.origin-bottom{transform-origin:bottom}.-translate-x-1\.5{--tw-translate-x:-0.375rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.resize-none{resize:none}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-row-reverse{flex-direction:row-reverse}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-1\.5{column-gap:0.375rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-accent-500\/30{border-color:rgb(194 189 176 / 0.3)}.border-accent-500\/40{border-color:rgb(194 189 176 / 0.4)}.border-anthracite-900{--tw-border-opacity:1;border-color:rgb(34 34 34 / var(--tw-border-opacity, 1))}.border-gray-600{--tw-border-opacity:1;border-color:rgb(138 138 138 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(74 74 74 / var(--tw-border-opacity, 1))}.border-gray-700\/60{border-color:rgb(74 74 74 / 0.6)}.border-gray-700\/70{border-color:rgb(74 74 74 / 0.7)}.border-gray-700\/80{border-color:rgb(74 74 74 / 0.8)}.border-gray-800{--tw-border-opacity:1;border-color:rgb(48 48 48 / var(--tw-border-opacity, 1))}.border-gray-800\/50{border-color:rgb(48 48 48 / 0.5)}.border-gray-800\/60{border-color:rgb(48 48 48 / 0.6)}.border-gray-800\/80{border-color:rgb(48 48 48 / 0.8)}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.border-purple-500\/30{border-color:rgb(181 175 160 / 0.3)}.border-purple-500\/40{border-color:rgb(181 175 160 / 0.4)}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-white\/10{border-color:rgb(250 247 240 / 0.1)}.border-white\/5{border-color:rgb(250 247 240 / 0.05)}.bg-accent-400{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.bg-accent-500{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.bg-accent-500\/10{background-color:rgb(194 189 176 / 0.1)}.bg-accent-500\/15{background-color:rgb(194 189 176 / 0.15)}.bg-accent-500\/20{background-color:rgb(194 189 176 / 0.2)}.bg-accent-500\/5{background-color:rgb(194 189 176 / 0.05)}.bg-accent-500\/80{background-color:rgb(194 189 176 / 0.8)}.bg-accent-600{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.bg-anthracite-800{--tw-bg-opacity:1;background-color:rgb(54 54 54 / var(--tw-bg-opacity, 1))}.bg-anthracite-800\/50{background-color:rgb(54 54 54 / 0.5)}.bg-anthracite-800\/80{background-color:rgb(54 54 54 / 0.8)}.bg-anthracite-800\/90{background-color:rgb(54 54 54 / 0.9)}.bg-anthracite-900{--tw-bg-opacity:1;background-color:rgb(34 34 34 / var(--tw-bg-opacity, 1))}.bg-anthracite-900\/90{background-color:rgb(34 34 34 / 0.9)}.bg-anthracite-900\/95{background-color:rgb(34 34 34 / 0.95)}.bg-anthracite-950{--tw-bg-opacity:1;background-color:rgb(27 27 27 / var(--tw-bg-opacity, 1))}.bg-anthracite-950\/50{background-color:rgb(27 27 27 / 0.5)}.bg-anthracite-950\/85{background-color:rgb(27 27 27 / 0.85)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(138 138 138 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(74 74 74 / var(--tw-bg-opacity, 1))}.bg-gray-800\/50{background-color:rgb(48 48 48 / 0.5)}.bg-green-500\/20{background-color:rgb(34 197 94 / 0.2)}.bg-purple-500\/15{background-color:rgb(181 175 160 / 0.15)}.bg-purple-500\/20{background-color:rgb(181 175 160 / 0.2)}.bg-purple-500\/5{background-color:rgb(181 175 160 / 0.05)}.bg-red-500\/20{background-color:rgb(239 68 68 / 0.2)}.bg-white\/5{background-color:rgb(250 247 240 / 0.05)}.bg-\[linear-gradient\(rgba\(255\2c 255\2c 255\2c 0\.03\)_1px\2c transparent_1px\)\2c linear-gradient\(90deg\2c rgba\(255\2c 255\2c 255\2c 0\.03\)_1px\2c transparent_1px\)\]{background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-\[url\(\'https\:\/\/grainy-gradients\.vercel\.app\/noise\.svg\'\)\]{background-image:url('https://grainy-gradients.vercel.app/noise.svg')}.bg-\[url\(\'images\/hero-bg\.png\'\)\]{background-image:url('images/hero-bg.png')}.from-accent-400{--tw-gradient-from:#d6d2c4 var(--tw-gradient-from-position);--tw-gradient-to:rgb(214 210 196 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-anthracite-900{--tw-gradient-from:#222222 var(--tw-gradient-from-position);--tw-gradient-to:rgb(34 34 34 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-black\/80{--tw-gradient-from:rgb(0 0 0 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-700{--tw-gradient-from:#4a4a4a var(--tw-gradient-from-position);--tw-gradient-to:rgb(74 74 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-900{--tw-gradient-from:#1b1b1b var(--tw-gradient-from-position);--tw-gradient-to:rgb(27 27 27 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-anthracite-900{--tw-gradient-to:rgb(34 34 34 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #222222 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-black\/20{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(0 0 0 / 0.2) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-gray-900{--tw-gradient-to:#1b1b1b var(--tw-gradient-to-position)}.to-indigo-900\/30{--tw-gradient-to:rgb(74 74 74 / 0.3) var(--tw-gradient-to-position)}.to-purple-500{--tw-gradient-to:#b5afa0 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-\[size\:4rem_4rem\]{background-size:4rem 4rem}.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.bg-center{background-position:center}.object-cover{object-fit:cover}.object-\[center_45\%\]{object-position:center 45%}.object-top{object-position:top}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:0.25rem}.pb-10{padding-bottom:2.5rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pb-5{padding-bottom:1.25rem}.pb-8{padding-bottom:2rem}.pl-5{padding-left:1.25rem}.pl-7{padding-left:1.75rem}.pl-9{padding-left:2.25rem}.pr-0{padding-right:0px}.pr-5{padding-right:1.25rem}.pt-1{padding-top:0.25rem}.pt-12{padding-top:3rem}.pt-2{padding-top:0.5rem}.pt-2\.5{padding-top:0.625rem}.pt-20{padding-top:5rem}.pt-24{padding-top:6rem}.pt-3{padding-top:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-accent-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-accent-500\/20{color:rgb(194 189 176 / 0.2)}.text-gray-300{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(168 165 155 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(138 138 138 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(138 138 138 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-accent-500\/50{-webkit-text-decoration-color:rgb(194 189 176 / 0.5);text-decoration-color:rgb(194 189 176 / 0.5)}.underline-offset-4{text-underline-offset:4px}.placeholder-gray-600::placeholder{--tw-placeholder-opacity:1;color:rgb(138 138 138 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.opacity-40{opacity:0.4}.opacity-90{opacity:0.9}.opacity-10{opacity:0.1}.mix-blend-overlay{mix-blend-mode:overlay}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(214\2c 210\2c 196\2c 0\.5\)\]{--tw-shadow:0 0 15px rgba(214,210,196,0.5);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-accent-500\/20{--tw-shadow-color:rgb(194 189 176 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-accent-500\/30{--tw-shadow-color:rgb(194 189 176 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.duration-700{transition-duration:700ms}.\[mask-image\:radial-gradient\(ellipse_60\%_50\%_at_50\%_0\%\2c \#000_70\%\2c transparent_100\%\)\]{-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 70%,transparent 100%);mask-image:radial-gradient(ellipse 60% 50% at 50% 0%,#000 70%,transparent 100%)}.selection\:bg-accent-500 *::selection{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.selection\:bg-accent-500::selection{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-accent-400:hover{--tw-border-opacity:1;border-color:rgb(214 210 196 / var(--tw-border-opacity, 1))}.hover\:border-accent-500:hover{--tw-border-opacity:1;border-color:rgb(194 189 176 / var(--tw-border-opacity, 1))}.hover\:border-accent-500\/40:hover{border-color:rgb(194 189 176 / 0.4)}.hover\:border-accent-500\/50:hover{border-color:rgb(194 189 176 / 0.5)}.hover\:border-purple-500\/50:hover{border-color:rgb(181 175 160 / 0.5)}.hover\:bg-accent-500:hover{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.hover\:bg-accent-500\/15:hover{background-color:rgb(194 189 176 / 0.15)}.hover\:bg-accent-500\/20:hover{background-color:rgb(194 189 176 / 0.2)}.hover\:bg-accent-600:hover{--tw-bg-opacity:1;background-color:rgb(214 210 196 / var(--tw-bg-opacity, 1))}.hover\:bg-accent-600\/30:hover{background-color:rgb(214 210 196 / 0.3)}.hover\:bg-anthracite-800:hover{--tw-bg-opacity:1;background-color:rgb(54 54 54 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(74 74 74 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-800\/30:hover{background-color:rgb(48 48 48 / 0.3)}.hover\:bg-white\/10:hover{background-color:rgb(250 247 240 / 0.1)}.hover\:bg-white\/5:hover{background-color:rgb(250 247 240 / 0.05)}.hover\:pl-5:hover{padding-left:1.25rem}.hover\:text-accent-400:hover{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.focus\:border-accent-500:focus{--tw-border-opacity:1;border-color:rgb(194 189 176 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}.group:focus-within .group-focus-within\:text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:-translate-y-1{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group\/thumb:hover .group-hover\/thumb\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:border-accent-500\/50{border-color:rgb(194 189 176 / 0.5)}.group:hover .group-hover\:bg-accent-500{--tw-bg-opacity:1;background-color:rgb(194 189 176 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:bg-accent-500\/30{background-color:rgb(194 189 176 / 0.3)}.group:hover .group-hover\:bg-purple-500{--tw-bg-opacity:1;background-color:rgb(181 175 160 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-accent-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-accent-400{--tw-text-opacity:1;color:rgb(214 210 196 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-purple-300{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(250 247 240 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:h-\[420px\]{height:420px}.sm\:w-52{width:13rem}.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:flex-wrap{flex-wrap:wrap}.sm\:justify-center{justify-content:center}.sm\:px-0{padding-left:0px;padding-right:0px}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-\[13px\]{font-size:13px}.sm\:text-\[15px\]{font-size:15px}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:left-1\/2{left:50%}.md\:col-span-12{grid-column:span 12 / span 12}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-\[440px\]{height:440px}.md\:w-\[48\%\]{width:48%}.md\:-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:gap-10{gap:2.5rem}.md\:gap-5{gap:1.25rem}.md\:space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.md\:border-none{border-style:none}.md\:p-8{padding:2rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:py-14{padding-top:3.5rem;padding-bottom:3.5rem}.md\:py-16{padding-top:4rem;padding-bottom:4rem}.md\:py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.md\:pb-0{padding-bottom:0px}.md\:pl-0{padding-left:0px}.md\:pl-5{padding-left:1.25rem}.md\:pr-5{padding-right:1.25rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-8{grid-column:span 8 / span 8}.lg\:block{display:block}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width: 1280px){.xl\:block{display:block}.xl\:hidden{display:none}.xl\:text-sm{font-size:0.875rem;line-height:1.25rem}}
+.fi {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.333333em;
+  line-height: 1em;
+}
+.fi:before { content: "\00a0"; }
+.fi.fis { width: 1em; }
+.fi-es { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23c60b1e' d='M0 0h512v128H0zm0 384h512v128H0z'/%3E%3Cpath fill='%23ffc400' d='M0 128h512v256H0z'/%3E%3C/svg%3E"); }
+.fi-de { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffce00' d='M0 341.3h512V512H0z'/%3E%3Cpath fill='%23000' d='M0 0h512v170.7H0z'/%3E%3Cpath fill='%23d00' d='M0 170.7h512v170.6H0z'/%3E%3C/svg%3E"); }
+.fi-fr { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23002654' d='M0 0h170.7v512H0z'/%3E%3Cpath fill='%23ce1126' d='M341.3 0H512v512H341.3z'/%3E%3C/svg%3E"); }
+.fi-gb { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23012169' d='M0 0h512v512H0z'/%3E%3Cpath fill='%23FFF' d='M512 0v64L322 256l190 187v69h-67L254 324 68 512H0v-68l186-187L0 74V0h62l192 188L440 0z'/%3E%3Cpath fill='%23C8102E' d='m184 324 11 34L42 512H0v-3l184-185zm124-12 54 8 150 147v45L308 312zM512 0 320 196l-4-44L466 0h46zM0 1l193 189-59-8L0 49V1z'/%3E%3Cpath fill='%23FFF' d='M176 0v512h160V0H176zM0 176v160h512V176H0z'/%3E%3Cpath fill='%23C8102E' d='M0 208v96h512v-96H0zM208 0v512h96V0h-96z'/%3E%3C/svg%3E"); }
+.text-gray-500, .text-gray-600 { color: #a09d93 !important; }
+</style>
 
     <style>
         /* Prevent horizontal scroll on mobile */
@@ -239,7 +200,7 @@
                             class="flex items-center gap-2 px-3 py-2 text-gray-300 hover:text-white transition-colors whitespace-nowrap">
                             <span id="current-flag" class="fi fi-es fis w-6 rounded-sm shrink-0"></span>
                             <span id="current-lang" class="text-sm font-medium">ES</span>
-                            <i data-lucide="chevron-down" class="w-4 h-4 shrink-0"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-down w-4 h-4 shrink-0"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                         <div style="min-width: 175px; width: max-content;"
                             class="absolute right-0 mt-2 w-44 bg-anthracite-900 border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden z-50 py-1">
@@ -268,7 +229,7 @@
                     <div class="h-6 w-px bg-gray-700"></div>
                     <a href="index.html#portfolio"
                         class="text-gray-300 hover:text-white bg-anthracite-800/80 hover:bg-anthracite-800 border border-gray-700/80 px-3.5 py-1.5 rounded-lg text-xs xl:text-sm font-semibold transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0">
-                        <i data-lucide="arrow-left" class="w-4 h-4 text-accent-400 shrink-0"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-left w-4 h-4 text-accent-400 shrink-0"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                         <span data-i18n="nav.back">Volver al Perfil</span>
                     </a>
                 </div>
@@ -277,11 +238,11 @@
                 <div class="md:hidden flex items-center gap-2">
                     <a href="index.html#portfolio"
                         class="text-accent-400 hover:text-white bg-anthracite-800/90 border border-gray-700 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1 whitespace-nowrap shrink-0">
-                        <i data-lucide="arrow-left" class="w-3.5 h-3.5 shrink-0"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-arrow-left w-3.5 h-3.5 shrink-0"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                         <span data-i18n="nav.back">Volver al Perfil</span>
                     </a>
                     <button onclick="toggleMenu()" class="text-gray-300 hover:text-white p-2">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                     </button>
                 </div>
             </div>
@@ -361,32 +322,31 @@
                 <!-- MUNCHOS 1: Full-Stack Web & Multi-Device Responsive Platform (Web) -->
                 <div class="portfolio-item web glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
                     <div class="h-52 overflow-hidden relative">
-                        <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-web"
+                        <a href="images/portfolio/munchos_responsive.jpg" class="glightbox" data-gallery="munchos-web"
                             data-title="MUNCHOS Digital Platform — Responsive Architecture (iPhone · iPad · Mac)"
                             data-description="Arquitectura Full-Stack Responsive (React 18, Vite, Tailwind CSS, Firebase) con soporte multilingüe (ES/DE/EN), Gourmet Shop y motor de reservas.">
-                            <img src="images/portfolio/munchos_responsive.png" alt="MUNCHOS Digital Platform Responsive"
+                            <img decoding="async" src="images/portfolio/munchos_responsive.jpg" alt="MUNCHOS Digital Platform Responsive"
                                 class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute top-3 left-3 bg-anthracite-950/85 backdrop-blur-md border border-accent-500/40 text-accent-400 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-smartphone w-3.5 h-3.5"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                                 <span>Multi-Device · 5 Vistas</span>
                             </div>
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                         <div class="hidden">
-                            <a href="images/portfolio/munchos_desktop.png" class="glightbox" data-gallery="munchos-web"
+                            <a href="images/portfolio/munchos_desktop.jpg" class="glightbox" data-gallery="munchos-web"
                                 data-title="MUNCHOS — Desktop Hero &amp; Navigation (MacBook Air)"
                                 data-description="Cabecera con navegación modular (Menus &amp; Selection, Experience, Reviews, Gourmet Shop), selector de idioma ES/DE/EN, banner dinámico de promociones y CTAs de conversión."></a>
-                            <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-web"
+                            <a href="images/portfolio/munchos_panel.jpg" class="glightbox" data-gallery="munchos-web"
                                 data-title="MUNCHOS — Panel Interactivo de Categorías &amp; Sticky Booking Bar"
                                 data-description="Configurador interactivo por categorías (Pinchos, Tortillas, Grill &amp; Plancha, Pizzas, Sushi Fusion, Paellas), tarjeta de detalle dinámica y barra inferior persistente de reserva."></a>
-                            <a href="images/portfolio/munchos_tablet.png" class="glightbox" data-gallery="munchos-web"
+                            <a href="images/portfolio/munchos_tablet.jpg" class="glightbox" data-gallery="munchos-web"
                                 data-title="MUNCHOS — Adaptive Tablet UI (iPad Air 5 · 820x1180)"
                                 data-description="Diseño adaptativo para tablet con cabecera compacta, selector i18n visible y promoción interactiva."></a>
-                            <a href="images/portfolio/munchos_mobile.png" class="glightbox" data-gallery="munchos-web"
+                            <a href="images/portfolio/munchos_mobile.jpg" class="glightbox" data-gallery="munchos-web"
                                 data-title="MUNCHOS — Mobile-First UI (iPhone 14 Pro Max · 430x932)"
                                 data-description="Experiencia Mobile-First optimizada para reserva rápida y consulta de menús/precios en un clic."></a>
                         </div>
@@ -400,7 +360,7 @@
                             <a href="https://munchos.web.app/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -409,29 +369,28 @@
                 <!-- MUNCHOS 2: Interactive Panel, Menu Configurator & UX Flows (Web + Wireframes/UX) -->
                 <div class="portfolio-item web wireframes glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
                     <div class="h-52 overflow-hidden relative">
-                        <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-ux"
+                        <a href="images/portfolio/munchos_panel.jpg" class="glightbox" data-gallery="munchos-ux"
                             data-title="MUNCHOS — Panel Interactivo de Categorías &amp; UX de Conversión"
                             data-description="Arquitectura UX del panel selector de 6 categorías con renderizado dinámico de productos, etiquetas de valor (48h Sourdough, Donostia Gildas, AOVE) y barra sticky de conversión.">
-                            <img src="images/portfolio/munchos_panel.png" alt="MUNCHOS Interactive Panel & Configurator"
+                            <img decoding="async" src="images/portfolio/munchos_panel.jpg" alt="MUNCHOS Interactive Panel & Configurator"
                                 class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute top-3 left-3 bg-anthracite-950/85 backdrop-blur-md border border-purple-500/40 text-purple-300 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                                <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-sliders w-3.5 h-3.5"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></svg>
                                 <span>Panel UI &amp; UX Flow</span>
                             </div>
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                         <div class="hidden">
-                            <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-ux"
+                            <a href="images/portfolio/munchos_responsive.jpg" class="glightbox" data-gallery="munchos-ux"
                                 data-title="MUNCHOS — Breakpoints &amp; Responsive System"
                                 data-description="Comparativa de breakpoints Mobile (430px), Tablet (820px) y Desktop (1559px)."></a>
-                            <a href="images/portfolio/munchos_mobile.png" class="glightbox" data-gallery="munchos-ux"
+                            <a href="images/portfolio/munchos_mobile.jpg" class="glightbox" data-gallery="munchos-ux"
                                 data-title="MUNCHOS — Mobile Conversion UX"
                                 data-description="Jerarquía visual y acciones principales al alcance del pulgar en iPhone 14 Pro Max."></a>
-                            <a href="images/portfolio/munchos_tablet.png" class="glightbox" data-gallery="munchos-ux"
+                            <a href="images/portfolio/munchos_tablet.jpg" class="glightbox" data-gallery="munchos-ux"
                                 data-title="MUNCHOS — Tablet UX Layout"
                                 data-description="Escalado fluido de tipografía, banners promocionales y navegación en iPad Air 5."></a>
                         </div>
@@ -445,7 +404,7 @@
                             <a href="https://munchos.web.app/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -454,22 +413,21 @@
                 <!-- MUNCHOS 3: Design System & Multi-Device UI Components (Assets / Design Systems) -->
                 <div class="portfolio-item assets glass-card rounded-xl overflow-hidden group" data-aos="fade-up">
                     <div class="h-52 overflow-hidden relative">
-                        <a href="images/portfolio/munchos_desktop.png" class="glightbox" data-gallery="munchos-ds"
+                        <a href="images/portfolio/munchos_desktop.jpg" class="glightbox" data-gallery="munchos-ds"
                             data-title="MUNCHOS — Design System &amp; Componentes UI"
                             data-description="Sistema de diseño Dark-Luxury en Figma y Tailwind CSS: tokens de color, tipografía display, tarjetas promocionales interactivas y componentes multilingües (ES/DE/EN).">
-                            <img src="images/portfolio/munchos_desktop.png" alt="MUNCHOS Design System"
+                            <img decoding="async" src="images/portfolio/munchos_desktop.jpg" alt="MUNCHOS Design System"
                                 class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                         <div class="hidden">
-                            <a href="images/portfolio/munchos_panel.png" class="glightbox" data-gallery="munchos-ds"
+                            <a href="images/portfolio/munchos_panel.jpg" class="glightbox" data-gallery="munchos-ds"
                                 data-title="MUNCHOS — Componentes del Panel de Menús"
                                 data-description="Tabs interactivos, badges de atributos y barra flotante de reserva."></a>
-                            <a href="images/portfolio/munchos_responsive.png" class="glightbox" data-gallery="munchos-ds"
+                            <a href="images/portfolio/munchos_responsive.jpg" class="glightbox" data-gallery="munchos-ds"
                                 data-title="MUNCHOS — Consistencia Multi-Dispositivo"
                                 data-description="Design System aplicado consistentemente en iOS, iPadOS y Desktop."></a>
                         </div>
@@ -483,7 +441,7 @@
                             <a href="https://munchos.web.app/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -494,12 +452,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/robur_video.mp4" class="glightbox" data-title="ROBUR Video"
                             data-description="Video corporativo ROBUR">
-                            <img src="images/portfolio/robur_spie.png" alt="ROBUR Video"
+                            <img decoding="async" src="images/portfolio/robur_spie.png" alt="ROBUR Video"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="play-circle"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-play-circle text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                             </div>
                         </a>
                     </div>
@@ -514,12 +471,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/RS_1.png" class="glightbox" data-title="RS Components Web"
                             data-description="Desarrollo web y optimización UX para RS Components">
-                            <img src="images/portfolio/RS_1.png" alt="RS Components"
+                            <img decoding="async" src="images/portfolio/RS_1.png" alt="RS Components"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -532,7 +488,7 @@
                             <a href="https://es.rs-online.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -546,12 +502,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/armani.png" class="glightbox" data-title="Armani Exchange"
                             data-description="Activos de campaña para Armani Exchange">
-                            <img src="images/portfolio/armani.png" alt="Armani"
+                            <img decoding="async" src="images/portfolio/armani.png" alt="Armani"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -564,7 +519,7 @@
                             <a href="https://www.armaniexchange.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -574,12 +529,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/fossil_newsletter_1.jpg" class="glightbox" data-title="Fossil Assets"
                             data-description="Variedad de Newsletter - EMEA" data-gallery="fossil-p">
-                            <img src="images/portfolio/fossil_newsletter_1.jpg" alt="Fossil Assets"
+                            <img decoding="async" src="images/portfolio/fossil_newsletter_1.jpg" alt="Fossil Assets"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -603,12 +557,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/cervantes.png" class="glightbox" data-title="Cervantes"
                             data-description="Diseño Web Corporativo">
-                            <img src="images/portfolio/cervantes.png" alt="Cervantes"
+                            <img decoding="async" src="images/portfolio/cervantes.png" alt="Cervantes"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -621,7 +574,7 @@
                             <a href="https://complejocervantes.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -634,12 +587,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/ferreiro.png" class="glightbox" data-title="Joyeria Ferreiros"
                             data-description="Diseño Web Corporativo">
-                            <img src="images/portfolio/ferreiro.png" alt="Joyeria Ferreiros"
+                            <img decoding="async" src="images/portfolio/ferreiro.png" alt="Joyeria Ferreiros"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -652,7 +604,7 @@
                             <a href="https://joyeriaferreiros.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -662,12 +614,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/fm.png" class="glightbox" data-title="FM Control"
                             data-description="Web Corporativa">
-                            <img src="images/portfolio/fm.png" alt="FM Control"
+                            <img decoding="async" src="images/portfolio/fm.png" alt="FM Control"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -680,7 +631,7 @@
                             <a href="https://fmcontrol.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -690,12 +641,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/peter.png" class="glightbox" data-title="Peter Kuett"
                             data-description="Website Personal">
-                            <img src="images/portfolio/peter.png" alt="Peter Kuett"
+                            <img decoding="async" src="images/portfolio/peter.png" alt="Peter Kuett"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -708,7 +658,7 @@
                             <a href="https://www.peter-kuett.org/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -718,12 +668,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/RS_email.png" class="glightbox" data-title="Email Campaigns"
                             data-description="Campañas automatizadas de Email Marketing">
-                            <img src="images/portfolio/RS_email.png" alt="RS Email"
+                            <img decoding="async" src="images/portfolio/RS_email.png" alt="RS Email"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -737,12 +686,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/gulp.png" class="glightbox" data-title="Gulp Project"
                             data-description="SalesForce Project">
-                            <img src="images/portfolio/gulp.png" alt="Gulp Project"
+                            <img decoding="async" src="images/portfolio/gulp.png" alt="Gulp Project"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -754,7 +702,7 @@
                             </div>
                             <button disabled class="p-2 bg-anthracite-900 rounded-lg text-gray-600 cursor-not-allowed"
                                 title="No link available">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </button>
                         </div>
                     </div>
@@ -764,12 +712,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/sgi.png" class="glightbox" data-title="SGI"
                             data-description="Web Corporativa SGI">
-                            <img src="images/portfolio/sgi.png" alt="SGI"
+                            <img decoding="async" src="images/portfolio/sgi.png" alt="SGI"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -782,7 +729,7 @@
                             <a href="https://sgiconsultores.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -792,12 +739,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/peak.png" class="glightbox" data-title="Peak Performance"
                             data-description="E-commerce y UI para Peak Performance">
-                            <img src="images/portfolio/peak.png" alt="Peak"
+                            <img decoding="async" src="images/portfolio/peak.png" alt="Peak"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -810,7 +756,7 @@
                             <a href="https://www.peakperformance.com/" target="_blank"
                                 class="p-2 bg-anthracite-800 rounded-lg hover:bg-accent-600 hover:text-white transition-colors"
                                 title="Visitar Web">
-                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-external-link w-5 h-5"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                             </a>
                         </div>
                     </div>
@@ -820,12 +766,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/costperapp_handy.mp4" class="glightbox" data-title="Cost Controller"
                             data-description="Prototype">
-                            <img src="images/portfolio/cost.png" alt="Cost"
+                            <img decoding="async" src="images/portfolio/cost.png" alt="Cost"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="play-circle"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-play-circle text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                             </div>
                         </a>
                     </div>
@@ -843,12 +788,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/assets_new.png" class="glightbox" data-title="Master Design Asset"
                             data-description="Sistema de diseño maestro">
-                            <img src="images/portfolio/assets_new.png" alt="Master Design"
+                            <img decoding="async" src="images/portfolio/assets_new.png" alt="Master Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -866,12 +810,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/purchasing.png" class="glightbox" data-title="Purchasing System"
                             data-description="Diseño UI de Sistema de Compras">
-                            <img src="images/portfolio/purchasing.png" alt="Purchasing"
+                            <img decoding="async" src="images/portfolio/purchasing.png" alt="Purchasing"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -886,12 +829,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_2.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_2.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_2.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -901,12 +843,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_4.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_4.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_4.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -915,12 +856,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_5.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_5.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_5.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -929,12 +869,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_7.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_7.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_7.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -944,12 +883,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_9.png" class="glightbox" data-title="Offline Design"
                             data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_9.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_9.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -959,12 +897,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_11.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_11.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_11.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -973,12 +910,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_12.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_12.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_12.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -988,12 +924,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_13.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_13.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_13.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1002,12 +937,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_14.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_14.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_14.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1016,12 +950,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_15.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_15.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_15.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1031,12 +964,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_17.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_17.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_17.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1045,12 +977,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_18.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_18.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_18.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1059,12 +990,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_19.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_19.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_19.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1073,12 +1003,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_20.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_20.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_20.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1087,12 +1016,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_21.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_21.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_21.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1101,12 +1029,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_22.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_22.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_22.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1115,12 +1042,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_23.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_23.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_23.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1129,12 +1055,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_24.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_24.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_24.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1143,12 +1068,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_25.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_25.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_25.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1157,12 +1081,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_26.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_26.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_26.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1171,12 +1094,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_27.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_27.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_27.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1186,12 +1108,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_29.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_29.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_29.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1201,12 +1122,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_31.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_31.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_31.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1215,12 +1135,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_32.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_32.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_32.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1229,12 +1148,11 @@
                     <div class="h-52 overflow-hidden relative">
                         <a href="images/portfolio/port_offline/port_33.png" class="glightbox"
                             data-title="Offline Design" data-description="Print & Branding">
-                            <img src="images/portfolio/port_offline/port_33.png" alt="Offline Design"
+                            <img decoding="async" src="images/portfolio/port_offline/port_33.png" alt="Offline Design"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i data-lucide="zoom-in"
-                                    class="text-white w-10 h-10 hover:text-accent-400 transition-colors"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-zoom-in text-white w-10 h-10 hover:text-accent-400 transition-colors"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
                             </div>
                         </a>
                     </div>
@@ -1257,7 +1175,7 @@
                 </footer>
 
                 <script>
-                    lucide.createIcons();
+                    
                     AOS.init({ duration: 800, once: true, offset: 50 });
 
                     // Initialize Lightbox
